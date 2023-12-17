@@ -1,0 +1,24 @@
+.dados {
+  padding-right: 10rem;
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+header {
+  background: url(/assets/red-background.png);
+  background-size: cover;
+  padding-top: 3rem;
+  padding-left: 3rem;
+}
+
+#logo {
+  height: 7rem;
+  width: 20rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nome-personagem {
+  padding-bottom: 3rem;
+}

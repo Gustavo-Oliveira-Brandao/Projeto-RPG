@@ -1,0 +1,6 @@
+main {
+    background: url(/assets/background.png) no-repeat center center;
+    background-size: cover;
+    min-height: 60vh;
+    padding: 3rem;
+}

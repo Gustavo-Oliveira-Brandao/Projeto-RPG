@@ -1,0 +1,69 @@
+.dados {
+  padding-right: 10rem;
+  display: flex;
+  padding-bottom: 2rem;
+}
+
+.atributos {
+  padding-top: 2rem;
+}
+
+.align-cards-flex {
+  display: flex;
+}
+
+.align-atributos{
+  display: block;
+}
+
+.cards {
+  border: solid 1px #ffffff;
+  min-width: 20rem;
+  max-width: 20rem;
+  border-radius: 30px;
+  padding: 2rem;
+  margin-right: 5rem;
+  max-height: 33rem;
+  background: url(../../../assets/red-background.png);
+}
+
+.cards-proficiencia {
+  border: solid 1px #ffffff;
+  min-width: 20rem;
+  max-width: 20rem;
+  border-radius: 30px;
+  padding: 2rem;
+  margin-right: 5rem;
+  background: url(../../../assets/red-background.png);
+}
+
+.inventario-card {
+  border: solid 1px #ffffff;
+  min-width: 20rem;
+  max-width: 20rem;
+  border-radius: 30px;
+  padding: 2rem;
+  margin-right: 5rem;
+  max-height: 22rem;
+  background: url(../../../assets/red-background.png);
+}
+
+.historia-card {
+  margin-left: 0rem;
+  border: solid 1px #ffffff;
+  border-radius: 30px;
+  height: 13rem;
+  min-width: 50rem;
+  max-width: 50rem;
+  padding: 2rem;
+  background: url(../../../assets/red-background.png);
+}
+
+.valorAtributo {
+  text-align: right;
+  margin-top: -22px;
+}
+
+.inputAtributo{
+  max-width: 2rem;
+}
