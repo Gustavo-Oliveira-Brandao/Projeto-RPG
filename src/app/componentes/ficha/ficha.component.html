@@ -4,13 +4,15 @@
     <form class="align-atributos">
       <label for="forca" class="atributos align-atributos">Força</label>
       <input
-        type="number"
+        type="text"
         class="inputAtributo"
         id="forcaInput"
         name="forca"
         [(ngModel)]="forca.atributo"
       />
-      <h3 class="valorAtributo">{{ forca.atributo }}</h3>
+      <h3 class="valorAtributo">
+        {{ forca.atributo }} ({{ forca.modificadorForca }})
+      </h3>
       <label for="destreza" class="atributos align-atributos">Destreza</label>
       <input
         type="number"
@@ -19,7 +21,9 @@
         name="destreza"
         [(ngModel)]="destreza.atributo"
       />
-      <h3 class="valorAtributo">{{ destreza.atributo }}</h3>
+      <h3 class="valorAtributo">
+        {{ destreza.atributo }} ({{ destreza.modificadorDestreza }})
+      </h3>
       <label for="constituicao" class="atributos align-atributos"
         >Constituição</label
       >
@@ -30,7 +34,7 @@
         name="constituicao"
         [(ngModel)]="constituicao.atributo"
       />
-      <h3 class="valorAtributo">{{ constituicao.atributo }}</h3>
+      <h3 class="valorAtributo">{{ constituicao.atributo }} ({{ constituicao.modificadorConstituicao }})</h3>
       <label for="inteligencia" class="atributos align-atributos"
         >Inteligência</label
       >
@@ -41,7 +45,7 @@
         name="inteligencia"
         [(ngModel)]="inteligencia.atributo"
       />
-      <h3 class="valorAtributo">{{ inteligencia.atributo }}</h3>
+      <h3 class="valorAtributo">{{ inteligencia.atributo }} ({{ inteligencia.modificadorInteligencia }})</h3>
       <label for="sabedoria" class="atributos align-atributos">Sabedoria</label>
       <input
         type="number"
@@ -50,7 +54,7 @@
         name="sabedoria"
         [(ngModel)]="sabedoria.atributo"
       />
-      <h3 class="valorAtributo">{{ sabedoria.atributo }}</h3>
+      <h3 class="valorAtributo">{{ sabedoria.atributo }} ({{ sabedoria.modificadorSabedoria }})</h3>
       <label for="carisma" class="atributos align-atributos">Carisma</label>
       <input
         type="number"
@@ -59,7 +63,7 @@
         name="carisma"
         [(ngModel)]="carisma.atributo"
       />
-      <h3 class="valorAtributo">{{ carisma.atributo }}</h3>
+      <h3 class="valorAtributo">{{ carisma.atributo }} ({{ carisma.modificadorCarisma }})</h3>
     </form>
     <button (click)="atualizarAtributos()" class="botao">Atualizar</button>
   </div>
@@ -75,53 +79,53 @@
   <div class="cards">
     <h3>Pericias de ataque e defesa</h3>
     <h4 class="atributos">Luta (For):</h4>
-    <h4 class="atributosValor">+5</h4>
-    <h4 class="atributos">Fortitude (Con + 2):</h4>
-    <h4 class="atributosValor">+3</h4>
+    <h4 class="atributosValor">{{ luta.atributo }}</h4>
+    <h4 class="atributos">Fortitude (Con):</h4>
+    <h4 class="atributosValor">{{ fortitude.atributo }}</h4>
     <h4 class="atributos">Pontaria (Des):</h4>
-    <h4 class="atributosValor">0</h4>
+    <h4 class="atributosValor">{{ pontaria.atributo }}</h4>
     <h4 class="atributos">Reflexos (Des):</h4>
-    <h4 class="atributosValor">0</h4>
+    <h4 class="atributosValor">{{ reflexos.atributo }}</h4>
     <h4 class="atributos">Vontade (Sab):</h4>
-    <h4 class="atributosValor">+5</h4>
+    <h4 class="atributosValor">{{ vontade.atributo }}</h4>
   </div>
   <div class="cards-proficiencia">
     <h3>Pericias</h3>
     <h3>Atributo chave + metade do nivel + Bonus de treinamento (+2)</h3>
     <h4 class="atributos">Acrobacia (Des):</h4>
-    <h4 class="atributosValor">0</h4>
-    <h4 class="atributos">Adestramento (Car): +3</h4>
-    <h4 class="atributosValor">+3</h4>
+    <h4 class="atributosValor">{{ acrobacia.atributo }}</h4>
+    <h4 class="atributos">Adestramento (Car):</h4>
+    <h4 class="atributosValor">{{ adestramento.atributo }}</h4>
     <h4 class="atributos">Atletismo (For):</h4>
-    <h4 class="atributosValor">+3</h4>
+    <h4 class="atributosValor">{{ atletismo.atributo }}</h4>
     <h4 class="atributos">Atuação (Car):</h4>
-    <h4 class="atributosValor">+1</h4>
+    <h4 class="atributosValor">{{ atuacao.atributo }}</h4>
     <h4 class="atributos">Cavalgar (Des):</h4>
-    <h4 class="atributosValor">0</h4>
+    <h4 class="atributosValor">{{ cavalgar.atributo }}</h4>
     <h4 class="atributos">Conhecimento (Int):</h4>
-    <h4 class="atributosValor">-1</h4>
+    <h4 class="atributosValor">{{ conhecimento.atributo }}</h4>
     <h4 class="atributos">Cura (Sab):</h4>
-    <h4 class="atributosValor">+5</h4>
+    <h4 class="atributosValor">{{ cura.atributo }}</h4>
     <h4 class="atributos">Diplomacia (Car):</h4>
-    <h4 class="atributosValor">+1</h4>
+    <h4 class="atributosValor">{{ diplomacia.atributo }}</h4>
     <h4 class="atributos">Enganação (Car):</h4>
-    <h4 class="atributosValor">+1</h4>
+    <h4 class="atributosValor">{{ enganacao.atributo }}</h4>
     <h4 class="atributos">Furtividade (Des):</h4>
-    <h4 class="atributosValor">0</h4>
+    <h4 class="atributosValor">{{ furtividade.atributo }}</h4>
     <h4 class="atributos">Guerra (Int):</h4>
-    <h4 class="atributosValor">-1</h4>
+    <h4 class="atributosValor">{{ guerra.atributo }}</h4>
     <h4 class="atributos">Iniciativa (Des):</h4>
-    <h4 class="atributosValor">0</h4>
+    <h4 class="atributosValor">{{ iniciativa.atributo }}</h4>
     <h4 class="atributos">Intimidação (Car):</h4>
-    <h4 class="atributosValor">+1</h4>
+    <h4 class="atributosValor">{{ intimidacao.atributo }}</h4>
     <h4 class="atributos">Intuição (Sab):</h4>
-    <h4 class="atributosValor">+3</h4>
+    <h4 class="atributosValor">{{ intuicao.atributo }}</h4>
     <h4 class="atributos">Investigação (Int):</h4>
-    <h4 class="atributosValor">-1</h4>
+    <h4 class="atributosValor">{{ investigacao.atributo }}</h4>
     <h4 class="atributos">Percepção (Sab):</h4>
-    <h4 class="atributosValor">+5</h4>
+    <h4 class="atributosValor">{{ percepcao.atributo }}</h4>
     <h4 class="atributos">Sobrevivência (Sab):</h4>
-    <h4 class="atributosValor">+5</h4>
+    <h4 class="atributosValor">{{ sobrevivencia.atributo }}</h4>
   </div>
 </section>
 <div class="align-cards-flex align-cards-column">
