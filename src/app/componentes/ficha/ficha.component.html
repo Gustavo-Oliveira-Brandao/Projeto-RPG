@@ -5,7 +5,7 @@
       <label for="forca" class="atributos alinhar-atributos">Força</label>
       <input
         type="text"
-        class="inputAtributo"
+        class="inputAtributo alinhar-atributos"
         id="forcaInput"
         name="forca"
         [(ngModel)]="forca.atributo"
@@ -16,7 +16,7 @@
       <label for="destreza" class="atributos alinhar-atributos">Destreza</label>
       <input
         type="number"
-        class="inputAtributo"
+        class="inputAtributo alinhar-atributos"
         id="destrezaInput"
         name="destreza"
         [(ngModel)]="destreza.atributo"
@@ -29,52 +29,99 @@
       >
       <input
         type="number"
-        class="inputAtributo"
+        class="inputAtributo alinhar-atributos"
         id="constituicaoInput"
         name="constituicao"
         [(ngModel)]="constituicao.atributo"
       />
-      <h3 class="valorAtributo">{{ constituicao.atributo }} ({{ constituicao.modificadorConstituicao }})</h3>
+      <h3 class="valorAtributo">
+        {{ constituicao.atributo }} ({{ constituicao.modificadorConstituicao }})
+      </h3>
       <label for="inteligencia" class="atributos alinhar-atributos"
         >Inteligência</label
       >
       <input
         type="number"
-        class="inputAtributo"
+        class="inputAtributo alinhar-atributos"
         id="inteligenciaInput"
         name="inteligencia"
         [(ngModel)]="inteligencia.atributo"
       />
-      <h3 class="valorAtributo">{{ inteligencia.atributo }} ({{ inteligencia.modificadorInteligencia }})</h3>
-      <label for="sabedoria" class="atributos alinhar-atributos">Sabedoria</label>
+      <h3 class="valorAtributo">
+        {{ inteligencia.atributo }} ({{ inteligencia.modificadorInteligencia }})
+      </h3>
+      <label for="sabedoria" class="atributos alinhar-atributos"
+        >Sabedoria</label
+      >
       <input
         type="number"
-        class="inputAtributo"
+        class="inputAtributo alinhar-atributos"
         id="sabedoriaInput"
         name="sabedoria"
         [(ngModel)]="sabedoria.atributo"
       />
-      <h3 class="valorAtributo">{{ sabedoria.atributo }} ({{ sabedoria.modificadorSabedoria }})</h3>
+      <h3 class="valorAtributo">
+        {{ sabedoria.atributo }} ({{ sabedoria.modificadorSabedoria }})
+      </h3>
       <label for="carisma" class="atributos alinhar-atributos">Carisma</label>
       <input
         type="number"
-        class="inputAtributo"
+        class="inputAtributo alinhar-atributos"
         id="carismaInput"
         name="carisma"
         [(ngModel)]="carisma.atributo"
       />
-      <h3 class="valorAtributo">{{ carisma.atributo }} ({{ carisma.modificadorCarisma }})</h3>
+      <h3 class="valorAtributo">
+        {{ carisma.atributo }} ({{ carisma.modificadorCarisma }})
+      </h3>
     </form>
     <button (click)="atualizarAtributos()" class="botao">Atualizar</button>
   </div>
 
   <div class="cards">
     <h3>Pontos de vida e mana</h3>
-    <h4 class="atributos">Pontos de vida máximos: 18</h4>
-    <h4 class="atributos">PV atuais: 12</h4>
-    <h4 class="atributos">Pontos de mana máximos: 7</h4>
-    <h4 class="atributos">PM Atuais: 6</h4>
-    <h4 class="atributos">Defesa: 12</h4>
+    <form class="pv-pm">
+      <label for="pvMax" class="atributos alinhar-pv-max">Pontos de vida máximos:</label>
+      <input
+        type="number"
+        class="input-pv-pm alinhar-pv-max inputAtributo"
+        id="pvMaxInput"
+        name="pvMax"
+        placeholder="10"
+      />
+      <label for="pvAtual" class="atributos alinhar-pv-atual">PV atuais:</label>
+      <input
+        type="number"
+        class="input-pv-pm alinhar-pv-atual inputAtributo"
+        id="pvAtual"
+        name="pvAtual"
+        placeholder="10"
+      />
+      <label for="pmMax" class="atributos alinhar-pm-max">Pontos de mana máximos:</label>
+      <input
+        type="number"
+        class="input-pv-pm inputAtributo alinhar-pm-max"
+        id="pmMax"
+        name="pmMax"
+        placeholder="10"
+      />
+      <label for="pmAtual" class="atributos alinhar-pm-atual">PM Atuais:</label>
+      <input
+        type="number"
+        class="input-pv-pm inputAtributo alinhar-pm-atual"
+        id="pmAtual"
+        name="pmAtual"
+        placeholder="10"
+      />
+      <label for="defesa" class="atributos alinhar-defesa">Defesa:</label>
+      <input
+        tyoe="number"
+        class="input-pv-pm inputAtributo alinhar-defesa"
+        id="defesa"
+        name="defesa"
+        placeholder="10"
+      />
+    </form>
   </div>
   <div class="cards">
     <h3>Pericias de ataque e defesa</h3>

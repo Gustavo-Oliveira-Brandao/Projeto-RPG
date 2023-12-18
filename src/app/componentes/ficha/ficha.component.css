@@ -12,7 +12,7 @@
   display: flex;
 }
 
-.alinhar-atributos{
+.alinhar-atributos {
   display: block;
 }
 
@@ -64,6 +64,22 @@
   margin-top: -22px;
 }
 
-.inputAtributo{
+.inputAtributo {
   max-width: 2rem;
+  border: none;
+  color: #ffffff;
+  background: url(../../../assets/red-background.png);
+  display: block;
+}
+
+.pv-pm {
+  display: grid;
+}
+
+.alinhar-pv-max,
+.alinhar-pv-atual,
+.alinhar-pm-max,
+.alinhar-pm-atual,
+.alinhar-defesa {
+  display: inline-flex;
 }

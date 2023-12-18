@@ -1,9 +1,63 @@
 <header class="cabecalho ff-inter">
-  <h1 id="nome-personagem">Nilo</h1>
-  <div class="dados">
-    <h3 class="dados">Raça: Osteon</h3>
-    <h3 class="dados">Classe: Druida</h3>
-    <h3 class="dados">Origem: Taverneiro</h3>
-    <h3>Devoto de Oceano</h3>
-  </div>
+  <form>
+    <label for="nomePersonagem" class="alinharNome" id="nome-personagem"
+      >Nome:</label
+    >
+    <input
+      type="text"
+      id="nomePersonagemInput"
+      class="dadosInput alinharNome"
+      name="nomePersonagem"
+      placeholder="Insira nome do personagem"
+    />
+  </form>
+  <section>
+    <form class="dados">
+      <label for="raca" class="raca">Raça: </label>
+      <input
+        type="text"
+        id="racaInput"
+        class="dadosInput"
+        name="raca"
+        [(ngModel)]="raca.valor"
+        placeholder="Insira sua raça"
+      />
+      <label for="classe" class="classe">Classe:</label>
+      <input
+        type="text"
+        id="classeInput"
+        class="dadosInput"
+        name="classe"
+        [(ngModel)]="classe.valor"
+        placeholder="Insira sua classe"
+      />
+      <label for="origem" class="origem">Origem:</label>
+      <input
+        type="text"
+        id="origemInput"
+        class="dadosInput"
+        name="origem"
+        [(ngModel)]="origem.valor"
+        placeholder="Insira sua origem"
+      />
+      <label for="nivel" class="nivel">Nivel:</label>
+      <input
+        type="number"
+        id="nivelInput"
+        class="dadosInput"
+        name="nivel"
+        [(ngModel)]="nivel.valor"
+        placeholder="Insira seu nivel"
+      />
+      <label for="divindade" class="divindade">Divindade:</label>
+      <input
+        type="text"
+        id="divindadeInput"
+        class="dadosInput"
+        name="divindade"
+        [(ngModel)]="divindade.valor"
+        placeholder="Insira sua divindade"
+      />
+    </form>
+  </section>
 </header>
