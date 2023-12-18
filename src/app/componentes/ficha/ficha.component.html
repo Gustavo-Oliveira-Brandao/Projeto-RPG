@@ -1,8 +1,8 @@
-<section class="align-cards-flex">
+<section class="alinhar-cards-flex">
   <div class="cards">
     <h3>Atributos</h3>
-    <form class="align-atributos">
-      <label for="forca" class="atributos align-atributos">Força</label>
+    <form class="alinhar-atributos">
+      <label for="forca" class="atributos alinhar-atributos">Força</label>
       <input
         type="text"
         class="inputAtributo"
@@ -13,7 +13,7 @@
       <h3 class="valorAtributo">
         {{ forca.atributo }} ({{ forca.modificadorForca }})
       </h3>
-      <label for="destreza" class="atributos align-atributos">Destreza</label>
+      <label for="destreza" class="atributos alinhar-atributos">Destreza</label>
       <input
         type="number"
         class="inputAtributo"
@@ -24,7 +24,7 @@
       <h3 class="valorAtributo">
         {{ destreza.atributo }} ({{ destreza.modificadorDestreza }})
       </h3>
-      <label for="constituicao" class="atributos align-atributos"
+      <label for="constituicao" class="atributos alinhar-atributos"
         >Constituição</label
       >
       <input
@@ -35,7 +35,7 @@
         [(ngModel)]="constituicao.atributo"
       />
       <h3 class="valorAtributo">{{ constituicao.atributo }} ({{ constituicao.modificadorConstituicao }})</h3>
-      <label for="inteligencia" class="atributos align-atributos"
+      <label for="inteligencia" class="atributos alinhar-atributos"
         >Inteligência</label
       >
       <input
@@ -46,7 +46,7 @@
         [(ngModel)]="inteligencia.atributo"
       />
       <h3 class="valorAtributo">{{ inteligencia.atributo }} ({{ inteligencia.modificadorInteligencia }})</h3>
-      <label for="sabedoria" class="atributos align-atributos">Sabedoria</label>
+      <label for="sabedoria" class="atributos alinhar-atributos">Sabedoria</label>
       <input
         type="number"
         class="inputAtributo"
@@ -55,7 +55,7 @@
         [(ngModel)]="sabedoria.atributo"
       />
       <h3 class="valorAtributo">{{ sabedoria.atributo }} ({{ sabedoria.modificadorSabedoria }})</h3>
-      <label for="carisma" class="atributos align-atributos">Carisma</label>
+      <label for="carisma" class="atributos alinhar-atributos">Carisma</label>
       <input
         type="number"
         class="inputAtributo"
@@ -128,8 +128,8 @@
     <h4 class="atributosValor">{{ sobrevivencia.atributo }}</h4>
   </div>
 </section>
-<div class="align-cards-flex align-cards-column">
-  <div class="inventario-card align-cards-column">
+<div class="alinhar-cards-flex alinhar-cards-coluna">
+  <div class="inventario-card alinhar-cards-coluna">
     <h2>Inventario</h2>
     <ul>
       <li>Mochila</li>
