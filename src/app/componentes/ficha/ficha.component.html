@@ -97,23 +97,7 @@
         name="pvAtual"
         placeholder="10"
       />
-      <label for="pmMax" class="atributos alinhar-pm-max">Pontos de mana máximos:</label>
-      <input
-        type="number"
-        class="input-pv-pm inputAtributo alinhar-pm-max"
-        id="pmMax"
-        name="pmMax"
-        placeholder="10"
-      />
-      <label for="pmAtual" class="atributos alinhar-pm-atual">PM Atuais:</label>
-      <input
-        type="number"
-        class="input-pv-pm inputAtributo alinhar-pm-atual"
-        id="pmAtual"
-        name="pmAtual"
-        placeholder="10"
-      />
-      <label for="defesa" class="atributos alinhar-defesa">Defesa:</label>
+      <label for="defesa" class="atributos alinhar-defesa">Classe de armadura:</label>
       <input
         tyoe="number"
         class="input-pv-pm inputAtributo alinhar-defesa"
@@ -124,13 +108,9 @@
     </form>
   </div>
   <div class="cards">
-    <h3>Pericias de ataque e defesa</h3>
-    <h4 class="atributos">Luta (For):</h4>
-    <h4 class="atributosValor">{{ luta.atributo }}</h4>
+    <h3>Pericias de defesa</h3>
     <h4 class="atributos">Fortitude (Con):</h4>
     <h4 class="atributosValor">{{ fortitude.atributo }}</h4>
-    <h4 class="atributos">Pontaria (Des):</h4>
-    <h4 class="atributosValor">{{ pontaria.atributo }}</h4>
     <h4 class="atributos">Reflexos (Des):</h4>
     <h4 class="atributosValor">{{ reflexos.atributo }}</h4>
     <h4 class="atributos">Vontade (Sab):</h4>
@@ -141,36 +121,44 @@
     <h3>Atributo chave + metade do nivel + Bonus de treinamento (+2)</h3>
     <h4 class="atributos">Acrobacia (Des):</h4>
     <h4 class="atributosValor">{{ acrobacia.atributo }}</h4>
-    <h4 class="atributos">Adestramento (Car):</h4>
-    <h4 class="atributosValor">{{ adestramento.atributo }}</h4>
+    <h4 class="atributos">Arcanismo (Int):</h4>
+    <h4 class="atributosValor">{{ arcanismo.atributo }}</h4>
     <h4 class="atributos">Atletismo (For):</h4>
     <h4 class="atributosValor">{{ atletismo.atributo }}</h4>
-    <h4 class="atributos">Atuação (Car):</h4>
-    <h4 class="atributosValor">{{ atuacao.atributo }}</h4>
     <h4 class="atributos">Cavalgar (Des):</h4>
     <h4 class="atributosValor">{{ cavalgar.atributo }}</h4>
-    <h4 class="atributos">Conhecimento (Int):</h4>
+    <h4 class="atributos">Saber:</h4>
     <h4 class="atributosValor">{{ conhecimento.atributo }}</h4>
-    <h4 class="atributos">Cura (Sab):</h4>
-    <h4 class="atributosValor">{{ cura.atributo }}</h4>
+    <h4 class="atributos">Saber:</h4>
+    <h4 class="atributosValor">{{ conhecimento2.atributo }}</h4>
     <h4 class="atributos">Diplomacia (Car):</h4>
     <h4 class="atributosValor">{{ diplomacia.atributo }}</h4>
     <h4 class="atributos">Enganação (Car):</h4>
     <h4 class="atributosValor">{{ enganacao.atributo }}</h4>
     <h4 class="atributos">Furtividade (Des):</h4>
     <h4 class="atributosValor">{{ furtividade.atributo }}</h4>
-    <h4 class="atributos">Guerra (Int):</h4>
-    <h4 class="atributosValor">{{ guerra.atributo }}</h4>
     <h4 class="atributos">Iniciativa (Des):</h4>
     <h4 class="atributosValor">{{ iniciativa.atributo }}</h4>
     <h4 class="atributos">Intimidação (Car):</h4>
     <h4 class="atributosValor">{{ intimidacao.atributo }}</h4>
-    <h4 class="atributos">Intuição (Sab):</h4>
-    <h4 class="atributosValor">{{ intuicao.atributo }}</h4>
-    <h4 class="atributos">Investigação (Int):</h4>
-    <h4 class="atributosValor">{{ investigacao.atributo }}</h4>
+    <h4 class="atributos">Ladroagem (Des):</h4>
+    <h4 class="atributosValor">{{ ladroagem.atributo }}</h4>
+    <h4 class="atributos">Manufatura (Int):</h4>
+    <h4 class="atributosValor">{{ manufatura.atributo }}</h4>
+    <h4 class="atributos">Medicina (Sab):</h4>
+    <h4 class="atributosValor">{{ medicina.atributo }}</h4>
+    <h4 class="atributos">Natureza (Sab):</h4>
+    <h4 class="atributosValor">{{ natureza.atributo }}</h4>
+    <h4 class="atributos">Ocultismo (Int):</h4>
+    <h4 class="atributosValor">{{ ocultismo.atributo }}</h4>
     <h4 class="atributos">Percepção (Sab):</h4>
     <h4 class="atributosValor">{{ percepcao.atributo }}</h4>
+    <h4 class="atributos">Perfomance (Car):</h4>
+    <h4 class="atributosValor">{{ perfomance.atributo }}</h4>
+    <h4 class="atributos">Religião (Sab):</h4>
+    <h4 class="atributosValor">{{ religiao.atributo }}</h4>
+    <h4 class="atributos">Sociedade (Int):</h4>
+    <h4 class="atributosValor">{{ sociedade.atributo }}</h4>
     <h4 class="atributos">Sobrevivência (Sab):</h4>
     <h4 class="atributosValor">{{ sobrevivencia.atributo }}</h4>
   </div>

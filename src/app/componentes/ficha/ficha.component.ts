@@ -48,18 +48,13 @@ export class FichaComponent {
     atributo: 0
   }
 
-  adestramento = {
-    id: 'adestramento',
+  arcanismo = {
+    id: 'arcanismo',
     atributo: 0
   }
 
   atletismo = {
     id: 'atletismo',
-    atributo: 0
-  }
-
-  atuacao = {
-    id: 'atuacao',
     atributo: 0
   }
 
@@ -73,8 +68,8 @@ export class FichaComponent {
     atributo: 0
   }
 
-  cura = {
-    id: 'cura',
+  conhecimento2 = {
+    id: 'conhecimento2',
     atributo: 0
   }
 
@@ -98,11 +93,6 @@ export class FichaComponent {
     atributo: 0
   }
 
-  guerra = {
-    id: 'guerra',
-    atributo: 0
-  }
-
   iniciativa = {
     id: 'iniciativa',
     atributo: 0
@@ -113,18 +103,28 @@ export class FichaComponent {
     atributo: 0
   }
 
-  intuicao = {
-    id: 'intuicao',
+  ladroagem = {
+    id: 'ladroagem',
     atributo: 0
   }
 
-  investigacao = {
-    id: 'investigacao',
+  manufatura = {
+    id: 'manufatura',
     atributo: 0
   }
 
-  luta = {
-    id: 'luta',
+  medicina = {
+    id: 'medicina',
+    atributo: 0
+  }
+
+  natureza = {
+    id: 'natureza',
+    atributo: 0
+  }
+
+  ocultismo = {
+    id: 'ocultismo',
     atributo: 0
   }
 
@@ -133,8 +133,13 @@ export class FichaComponent {
     atributo: 0
   }
 
-  pontaria = {
-    id: 'pontaria',
+  perfomance = {
+    id: 'perfomance',
+    atributo: 0
+  }
+
+  proficiencia = {
+    id:'proficiencia',
     atributo: 0
   }
 
@@ -143,18 +148,28 @@ export class FichaComponent {
     atributo: 0
   }
 
+  religiao = {
+    id: 'religiao',
+    atributo: 0
+  }
+
   sobrevivencia = {
     id: 'sobrevivencia',
     atributo: 0
   }
 
-  vontade = {
-    id: 'vontade',
+  sociedade = {
+    id: 'sociedade',
     atributo: 0
   }
 
-  proficiencia = {
-    id:'proficiencia',
+  velocidade = {
+    id: 'velocidade',
+    atributo: 0
+  }
+
+  vontade = {
+    id: 'vontade',
     atributo: 0
   }
 
