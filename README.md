@@ -12,4 +12,4 @@ This project is a RPG character sheet in which the user can enter their attribut
 
 The project is currently at 30% of its development and I hope to complete it in the first half of 2024.
 
-This project has no comercial purpose or any affiliantion with any existing RPG systems.
+This project has no comercial purpose or any affiliation with any existing RPG systems.
