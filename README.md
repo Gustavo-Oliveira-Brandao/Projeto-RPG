@@ -4,8 +4,7 @@ Esse projeto é uma ficha de RPG no qual o usuário pode inserir seus atributos,
 
 O projeto atualmente se encontra em 30% de seu desenvolvimento e tenho expectativas de finalizá-lo nesse primeiro semestre de 2024.
 
-A ficha é inspirada em Pathfinder 2e da Paizo e o projeto não possui nenhuma finalidade comercial ou qualquer afiliação com os criadores originais desse sistema de RPG.
-
+Esse projeto não possui nenhuma finalidade comercial ou qualquer afiliação com sistemas de RPG existentes.
 
 <h2>Character sheet creator</h2>
 
@@ -13,4 +12,4 @@ This project is a RPG character sheet in which the user can enter their attribut
 
 The project is currently at 30% of its development and I hope to complete it in the first half of 2024.
 
-The character sheet is inspired by Paizo's Pathfinder 2e and the project has no comercial purpose or any affiliantion with its original creators.
+This project has no comercial purpose or any affiliantion with any existing RPG systems.
