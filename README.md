@@ -10,3 +10,7 @@ A ficha é inspirada em Pathfinder 2e da Paizo e o projeto não possui nenhuma f
 <h2>Character sheet creator</h2>
 
 This project is a RPG character sheet in which the user can enter their attributes, skills and other characteristics of a d20 system. I intend to work on an integration with Discord to allow sending skills and dice rolls, in addition to intergrating with a database to be able to store multiple characters per user.
+
+The project is currently at 30% of its development and I hope to complete it in the first half of 2024.
+
+The character sheet is inspired by Paizo's Pathfinder 2e and the project has no comercial purpose or any affiliantion with its original creators.
