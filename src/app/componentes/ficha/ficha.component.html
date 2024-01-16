@@ -1,166 +1,544 @@
-<section class="alinhar-cards-flex">
-  <div class="cards">
-    <h3>Atributos</h3>
-    <form class="alinhar-atributos">
-      <label for="forca" class="atributos alinhar-atributos">Força</label>
-      <input
-        type="text"
-        class="inputAtributo alinhar-atributos"
-        id="forcaInput"
-        name="forca"
-        [(ngModel)]="forca.atributo"
-      />
-      <h3 class="valorAtributo">
-        {{ forca.atributo }} ({{ forca.modificadorForca }})
-      </h3>
-      <label for="destreza" class="atributos alinhar-atributos">Destreza</label>
-      <input
-        type="number"
-        class="inputAtributo alinhar-atributos"
-        id="destrezaInput"
-        name="destreza"
-        [(ngModel)]="destreza.atributo"
-      />
-      <h3 class="valorAtributo">
-        {{ destreza.atributo }} ({{ destreza.modificadorDestreza }})
-      </h3>
-      <label for="constituicao" class="atributos alinhar-atributos"
-        >Constituição</label
-      >
-      <input
-        type="number"
-        class="inputAtributo alinhar-atributos"
-        id="constituicaoInput"
-        name="constituicao"
-        [(ngModel)]="constituicao.atributo"
-      />
-      <h3 class="valorAtributo">
-        {{ constituicao.atributo }} ({{ constituicao.modificadorConstituicao }})
-      </h3>
-      <label for="inteligencia" class="atributos alinhar-atributos"
-        >Inteligência</label
-      >
-      <input
-        type="number"
-        class="inputAtributo alinhar-atributos"
-        id="inteligenciaInput"
-        name="inteligencia"
-        [(ngModel)]="inteligencia.atributo"
-      />
-      <h3 class="valorAtributo">
-        {{ inteligencia.atributo }} ({{ inteligencia.modificadorInteligencia }})
-      </h3>
-      <label for="sabedoria" class="atributos alinhar-atributos"
-        >Sabedoria</label
-      >
-      <input
-        type="number"
-        class="inputAtributo alinhar-atributos"
-        id="sabedoriaInput"
-        name="sabedoria"
-        [(ngModel)]="sabedoria.atributo"
-      />
-      <h3 class="valorAtributo">
-        {{ sabedoria.atributo }} ({{ sabedoria.modificadorSabedoria }})
-      </h3>
-      <label for="carisma" class="atributos alinhar-atributos">Carisma</label>
-      <input
-        type="number"
-        class="inputAtributo alinhar-atributos"
-        id="carismaInput"
-        name="carisma"
-        [(ngModel)]="carisma.atributo"
-      />
-      <h3 class="valorAtributo">
-        {{ carisma.atributo }} ({{ carisma.modificadorCarisma }})
-      </h3>
+<section class="textoFormatado alinhar-cards-flex">
+  <div>
+    <form>
+      <div class="atributo-cards">
+        <label for="forca" class="atributos alinhar-atributos valorForca"
+          >Força</label
+        >
+        <input
+          type="text"
+          id="valorForca"
+          value="forca"
+          name="forca"
+          class="inputAtributo"
+          (change)="atualizarAtributos()"
+          placeholder="10"
+          [(ngModel)]="forca.atributo"
+        />
+        ({{ forca.modificadorForca }})
+      </div>
+
+      <div class="atributo-cards">
+        <label for="destreza" class="valorDestreza atributos alinhar-atributos"
+          >Destreza</label
+        >
+        <input
+          type="text"
+          id="valorDestreza"
+          value="destreza"
+          name="destreza"
+          class="inputAtributo"
+          (change)="atualizarAtributos()"
+          placeholder="10"
+          [(ngModel)]="destreza.atributo"
+        />
+        ({{ destreza.modificadorDestreza }})
+      </div>
+
+      <div class="atributo-cards">
+        <label
+          for="constituicao"
+          class="valorConstituicao atributos alinhar-atributos"
+          >Constituição</label
+        >
+        <input
+          type="text"
+          id="valorConstituicao"
+          value="constituicao"
+          name="constituicao"
+          class="inputAtributo"
+          (change)="atualizarAtributos()"
+          placeholder="10"
+          [(ngModel)]="constituicao.atributo"
+        />
+        ({{ constituicao.modificadorConstituicao }})
+      </div>
+
+      <div class="atributo-cards">
+        <label
+          for="inteligencia"
+          class="valorInteligencia atributos alinhar-atributos"
+          >Inteligência</label
+        >
+        <input
+          type="text"
+          id="valorInteligencia"
+          value="inteligencia"
+          name="inteligencia"
+          class="inputAtributo"
+          (change)="atualizarAtributos()"
+          placeholder="10"
+          [(ngModel)]="inteligencia.atributo"
+        />
+        ({{ inteligencia.modificadorInteligencia }})
+      </div>
+
+      <div class="atributo-cards">
+        <label
+          for="sabedoria"
+          class="valorSabedoria atributos alinhar-atributos"
+          >Sabedoria</label
+        >
+        <input
+          type="text"
+          id="valorSabedoria"
+          value="sabedoria"
+          name="sabedoria"
+          class="inputAtributo"
+          (change)="atualizarAtributos()"
+          placeholder="10"
+          [(ngModel)]="sabedoria.atributo"
+        />
+        ({{ sabedoria.modificadorSabedoria }})
+      </div>
+
+      <div class="atributo-cards">
+        <label for="carisma" class="valorCarisma atributos alinhar-atributos"
+          >Carisma</label
+        ><input
+          type="text"
+          id="valorCarisma"
+          value="carisma"
+          name="carisma"
+          class="inputAtributo"
+          (change)="atualizarAtributos()"
+          placeholder="10"
+          [(ngModel)]="carisma.atributo"
+        />
+        ({{ carisma.modificadorCarisma }})
+      </div>
     </form>
-    <button (click)="atualizarAtributos()" class="botao">Atualizar</button>
   </div>
 
-  <div class="cards">
-    <h3>Pontos de vida e mana</h3>
-    <form class="pv-pm">
-      <label for="pvMax" class="atributos alinhar-pv-max">Pontos de vida máximos:</label>
+  <div class="status-card">
+    <h2>Status</h2>
+    <form class="pv">
+      <label for="pvMax" class="atributos">Pontos de vida máximos:</label>
       <input
-        type="number"
-        class="input-pv-pm alinhar-pv-max inputAtributo"
+        type="text"
+        value="pvMax"
+        class="inputPv"
         id="pvMaxInput"
         name="pvMax"
         placeholder="10"
+        [(ngModel)]="vidaMax.atributo"
       />
-      <label for="pvAtual" class="atributos alinhar-pv-atual">PV atuais:</label>
+      <label for="pvAtual" class="atributos">PV atuais:</label>
       <input
-        type="number"
-        class="input-pv-pm alinhar-pv-atual inputAtributo"
+        type="text"
+        class="inputPv"
+        value="pvAtual"
         id="pvAtual"
         name="pvAtual"
         placeholder="10"
+        [(ngModel)]="vidaAtual.atributo"
       />
-      <label for="defesa" class="atributos alinhar-defesa">Classe de armadura:</label>
+      <label for="defesa" class="atributos">Classe de armadura:</label>
       <input
-        tyoe="number"
-        class="input-pv-pm inputAtributo alinhar-defesa"
+        type="text"
+        class="inputPv"
+        value="defesa"
         id="defesa"
         name="defesa"
         placeholder="10"
+        [(ngModel)]="ca.atributo"
       />
     </form>
   </div>
-  <div class="cards">
-    <h3>Pericias de defesa</h3>
-    <h4 class="atributos">Fortitude (Con):</h4>
-    <h4 class="atributosValor">{{ fortitude.atributo }}</h4>
-    <h4 class="atributos">Reflexos (Des):</h4>
-    <h4 class="atributosValor">{{ reflexos.atributo }}</h4>
-    <h4 class="atributos">Vontade (Sab):</h4>
-    <h4 class="atributosValor">{{ vontade.atributo }}</h4>
+  <div class="status-card">
+    <h3 id="periciasTitulo">Pericias de defesa</h3>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="fortitudeTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Fortitude (Con):</h4>
+      <h4 class="atributosValor">{{ fortitude.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="reflexosTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Reflexos (Des):</h4>
+      <h4 class="atributosValor">{{ reflexos.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="vontadeTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Vontade (Sab):</h4>
+      <h4 class="atributosValor">{{ vontade.atributo }}</h4>
+    </div>
   </div>
   <div class="cards-proficiencia">
-    <h3>Pericias</h3>
-    <h3>Atributo chave + metade do nivel + Bonus de treinamento (+2)</h3>
-    <h4 class="atributos">Acrobacia (Des):</h4>
-    <h4 class="atributosValor">{{ acrobacia.atributo }}</h4>
-    <h4 class="atributos">Arcanismo (Int):</h4>
-    <h4 class="atributosValor">{{ arcanismo.atributo }}</h4>
-    <h4 class="atributos">Atletismo (For):</h4>
-    <h4 class="atributosValor">{{ atletismo.atributo }}</h4>
-    <h4 class="atributos">Cavalgar (Des):</h4>
-    <h4 class="atributosValor">{{ cavalgar.atributo }}</h4>
-    <h4 class="atributos">Saber:</h4>
-    <h4 class="atributosValor">{{ conhecimento.atributo }}</h4>
-    <h4 class="atributos">Saber:</h4>
-    <h4 class="atributosValor">{{ conhecimento2.atributo }}</h4>
-    <h4 class="atributos">Diplomacia (Car):</h4>
-    <h4 class="atributosValor">{{ diplomacia.atributo }}</h4>
-    <h4 class="atributos">Enganação (Car):</h4>
-    <h4 class="atributosValor">{{ enganacao.atributo }}</h4>
-    <h4 class="atributos">Furtividade (Des):</h4>
-    <h4 class="atributosValor">{{ furtividade.atributo }}</h4>
-    <h4 class="atributos">Iniciativa (Des):</h4>
-    <h4 class="atributosValor">{{ iniciativa.atributo }}</h4>
-    <h4 class="atributos">Intimidação (Car):</h4>
-    <h4 class="atributosValor">{{ intimidacao.atributo }}</h4>
-    <h4 class="atributos">Ladroagem (Des):</h4>
-    <h4 class="atributosValor">{{ ladroagem.atributo }}</h4>
-    <h4 class="atributos">Manufatura (Int):</h4>
-    <h4 class="atributosValor">{{ manufatura.atributo }}</h4>
-    <h4 class="atributos">Medicina (Sab):</h4>
-    <h4 class="atributosValor">{{ medicina.atributo }}</h4>
-    <h4 class="atributos">Natureza (Sab):</h4>
-    <h4 class="atributosValor">{{ natureza.atributo }}</h4>
-    <h4 class="atributos">Ocultismo (Int):</h4>
-    <h4 class="atributosValor">{{ ocultismo.atributo }}</h4>
-    <h4 class="atributos">Percepção (Sab):</h4>
-    <h4 class="atributosValor">{{ percepcao.atributo }}</h4>
-    <h4 class="atributos">Perfomance (Car):</h4>
-    <h4 class="atributosValor">{{ perfomance.atributo }}</h4>
-    <h4 class="atributos">Religião (Sab):</h4>
-    <h4 class="atributosValor">{{ religiao.atributo }}</h4>
-    <h4 class="atributos">Sociedade (Int):</h4>
-    <h4 class="atributosValor">{{ sociedade.atributo }}</h4>
-    <h4 class="atributos">Sobrevivência (Sab):</h4>
-    <h4 class="atributosValor">{{ sobrevivencia.atributo }}</h4>
+    <h3 id="periciasTitulo">Pericias</h3>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="acrobaciaTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Acrobacia (Des):</h4>
+      <h4 class="atributosValor">{{ acrobacia.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="arcanismoTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Arcanismo (Int):</h4>
+      <h4 class="atributosValor">{{ arcanismo.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="atletismoTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Atletismo (For):</h4>
+      <h4 class="atributosValor">{{ atletismo.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="cavalgarTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Cavalgar (Des):</h4>
+      <h4 class="atributosValor">{{ cavalgar.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="diplomaciaTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Diplomacia (Car):</h4>
+      <h4 class="atributosValor">{{ diplomacia.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="enganacaoTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Enganação (Car):</h4>
+      <h4 class="atributosValor">{{ enganacao.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="furtividadeTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Furtividade (Des):</h4>
+      <h4 class="atributosValor">{{ furtividade.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="intimidacaoTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Intimidação (Car):</h4>
+      <h4 class="atributosValor">{{ intimidacao.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="ladroagemTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Ladroagem (Des):</h4>
+      <h4 class="atributosValor">{{ ladroagem.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="manufaturaTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Manufatura (Int):</h4>
+      <h4 class="atributosValor">{{ manufatura.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="medicinaTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Medicina (Sab):</h4>
+      <h4 class="atributosValor">{{ medicina.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="naturezaTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Natureza (Sab):</h4>
+      <h4 class="atributosValor">{{ natureza.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="ocultismoTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Ocultismo (Int):</h4>
+      <h4 class="atributosValor">{{ ocultismo.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="percepcaoTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Percepção (Sab):</h4>
+      <h4 class="atributosValor">{{ percepcao.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="perfomanceTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Perfomance (Car):</h4>
+      <h4 class="atributosValor">{{ perfomance.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="religiaoTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Religião (Sab):</h4>
+      <h4 class="atributosValor">{{ religiao.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="saberTreinamento()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Saber:</h4>
+      <h4 class="atributosValor">{{ conhecimento.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="saber2Treinamento()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Saber:</h4>
+      <h4 class="atributosValor">{{ conhecimento2.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="sociedadeTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Sociedade (Int):</h4>
+      <h4 class="atributosValor">{{ sociedade.atributo }}</h4>
+    </div>
+    <div id="alinhar-pericias">
+      <select
+        name="grauTreinamento"
+        class="caixaSelecao"
+        (change)="onSelect($event)"
+        (change)="sobrevivenciaTreinamento()"
+        (change)="atualizarAtributos()"
+      >
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+      <h4 class="pericias">Sobrevivência (Sab):</h4>
+      <h4 class="atributosValor">{{ sobrevivencia.atributo }}</h4>
+    </div>
   </div>
 </section>
 <div class="alinhar-cards-flex alinhar-cards-coluna">

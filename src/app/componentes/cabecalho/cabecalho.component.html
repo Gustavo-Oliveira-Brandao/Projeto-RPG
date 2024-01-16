@@ -19,7 +19,7 @@
         id="racaInput"
         class="dadosInput"
         name="raca"
-        [(ngModel)]="raca.valor"
+        [(ngModel)]="raca.atributo"
         placeholder="Insira sua raça"
       />
       <label for="classe" class="classe">Classe:</label>
@@ -28,7 +28,7 @@
         id="classeInput"
         class="dadosInput"
         name="classe"
-        [(ngModel)]="classe.valor"
+        [(ngModel)]="classe.atributo"
         placeholder="Insira sua classe"
       />
       <label for="origem" class="origem">Origem:</label>
@@ -37,7 +37,7 @@
         id="origemInput"
         class="dadosInput"
         name="origem"
-        [(ngModel)]="origem.valor"
+        [(ngModel)]="origem.atributo"
         placeholder="Insira sua origem"
       />
       <label for="nivel" class="nivel">Nivel:</label>
@@ -46,17 +46,8 @@
         id="nivelInput"
         class="dadosInput"
         name="nivel"
-        [(ngModel)]="nivel.valor"
+        [(ngModel)]="nivel.atributo"
         placeholder="Insira seu nivel"
-      />
-      <label for="divindade" class="divindade">Divindade:</label>
-      <input
-        type="text"
-        id="divindadeInput"
-        class="dadosInput"
-        name="divindade"
-        [(ngModel)]="divindade.valor"
-        placeholder="Insira sua divindade"
       />
     </form>
   </section>

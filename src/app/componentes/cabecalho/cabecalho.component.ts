@@ -4,34 +4,29 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-cabecalho',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule,],
   templateUrl: './cabecalho.component.html',
   styleUrl: './cabecalho.component.css'
 })
 export class CabecalhoComponent {
   raca = {
     id: 'raca',
-    valor: ''
+    atributo: ''
   }
 
   classe = {
     id: 'classe',
-    valor: ''
+    atributo: ''
   }
 
   origem = {
     id: 'origem',
-    valor: ''
+    atributo: ''
   }
 
   nivel = {
     id: 'nivel',
-    valor: 0
-  }
-
-  divindade = {
-    id: 'divindade',
-    valor: ''
+    atributo: 1
   }
 
 }

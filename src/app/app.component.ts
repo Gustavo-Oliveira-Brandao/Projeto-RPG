@@ -6,7 +6,6 @@ import { FichaComponent } from './componentes/ficha/ficha.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ClasseComponent } from './componentes/classe/classe.component';
 import { FormsModule } from '@angular/forms';
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -25,3 +24,4 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   title = 'ficha-de-rpg';
 }
+

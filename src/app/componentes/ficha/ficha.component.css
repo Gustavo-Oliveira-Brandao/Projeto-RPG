@@ -1,32 +1,43 @@
-.dados {
-  padding-right: 10rem;
-  display: flex;
-  padding-bottom: 2rem;
-}
-
-.atributos {
-  padding-top: 2rem;
-}
-
 .alinhar-cards-flex {
   display: flex;
 }
 
-.alinhar-atributos {
-  display: block;
-}
-
-.cards {
+.atributo-cards {
   border: solid 1px #ffffff;
-  min-width: 20rem;
-  max-width: 20rem;
   border-radius: 30px;
-  padding: 2rem;
-  margin-right: 5rem;
-  max-height: 33rem;
+  width: 6rem;
+  height: 6rem;
   background: url(../../../assets/red-background.png);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-right: 4rem;
 }
 
+.status-card {
+  background: url(../../../assets/red-background.png);
+  border: solid 1px #ffffff;
+  border-radius: 30px;
+  width: 23.75rem;
+  height: 18.875rem;
+  padding: 2rem;
+  margin-right: 3rem;
+}
+
+.atributos {
+  width: 333px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.textoFormatado {
+  color: #ffffff;
+  font-family: Inter;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 .cards-proficiencia {
   border: solid 1px #ffffff;
   min-width: 20rem;
@@ -59,27 +70,77 @@
   background: url(../../../assets/red-background.png);
 }
 
-.valorAtributo {
-  text-align: right;
-  margin-top: -22px;
-}
-
 .inputAtributo {
-  max-width: 2rem;
+  height: 3rem;
+  width: 3rem;
   border: none;
   color: #ffffff;
   background: url(../../../assets/red-background.png);
   display: block;
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 1.4rem;
 }
 
-.pv-pm {
-  display: grid;
+#valorForca,
+#valorDestreza,
+#valorConstituicao,
+#valorInteligencia,
+#valorSabedoria,
+#valorCarisma,
+.alinhar-atributos,
+.pv {
+  margin-top: 0.5rem;
 }
 
-.alinhar-pv-max,
-.alinhar-pv-atual,
-.alinhar-pm-max,
-.alinhar-pm-atual,
-.alinhar-defesa {
-  display: inline-flex;
+.botao {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  background: #154580;
+  color: #ffffff;
+  max-width: 270px;
+  width: 7rem;
+  padding: 1rem;
+  border: 2px solid #154580;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+.botao:hover {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background-color: black;
+}
+
+.inputPv{
+  height: 3rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  width: 5rem;
+  border: none;
+  color: #ffffff;
+  background: url(../../../assets/red-background.png);
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#periciasTitulo{
+  margin-bottom: 1rem;
+}
+
+#alinhar-pericias{
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.pericias{
+  margin-right: auto;
+}
+
+.caixaSelecao{
+  background-color: #B63035;
+  border: none;
+  color: #ffffff;
 }
