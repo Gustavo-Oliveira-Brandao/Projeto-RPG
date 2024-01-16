@@ -13,9 +13,9 @@
           class="inputAtributo"
           (change)="atualizarAtributos()"
           placeholder="10"
-          [(ngModel)]="forca.atributo"
+          [(ngModel)]="atributos['forca'].atributo"
         />
-        ({{ forca.modificadorForca }})
+        ({{ atributos['forca'].modificador}})
       </div>
 
       <div class="atributo-cards">
@@ -30,9 +30,9 @@
           class="inputAtributo"
           (change)="atualizarAtributos()"
           placeholder="10"
-          [(ngModel)]="destreza.atributo"
+          [(ngModel)]="atributos['destreza'].atributo"
         />
-        ({{ destreza.modificadorDestreza }})
+        ({{ atributos['destreza'].modificador }})
       </div>
 
       <div class="atributo-cards">
@@ -49,9 +49,9 @@
           class="inputAtributo"
           (change)="atualizarAtributos()"
           placeholder="10"
-          [(ngModel)]="constituicao.atributo"
+          [(ngModel)]="atributos['constituicao'].atributo"
         />
-        ({{ constituicao.modificadorConstituicao }})
+        ({{ atributos['constituicao'].modificador }})
       </div>
 
       <div class="atributo-cards">
@@ -68,9 +68,9 @@
           class="inputAtributo"
           (change)="atualizarAtributos()"
           placeholder="10"
-          [(ngModel)]="inteligencia.atributo"
+          [(ngModel)]="atributos['inteligencia'].atributo"
         />
-        ({{ inteligencia.modificadorInteligencia }})
+        ({{ atributos['inteligencia'].modificador }})
       </div>
 
       <div class="atributo-cards">
@@ -87,9 +87,9 @@
           class="inputAtributo"
           (change)="atualizarAtributos()"
           placeholder="10"
-          [(ngModel)]="sabedoria.atributo"
+          [(ngModel)]="atributos['sabedoria'].atributo"
         />
-        ({{ sabedoria.modificadorSabedoria }})
+        ({{ atributos['sabedoria'].modificador }})
       </div>
 
       <div class="atributo-cards">
@@ -103,9 +103,9 @@
           class="inputAtributo"
           (change)="atualizarAtributos()"
           placeholder="10"
-          [(ngModel)]="carisma.atributo"
+          [(ngModel)]="atributos['carisma'].atributo"
         />
-        ({{ carisma.modificadorCarisma }})
+        ({{ atributos['carisma'].modificador }})
       </div>
     </form>
   </div>
@@ -121,7 +121,7 @@
         id="pvMaxInput"
         name="pvMax"
         placeholder="10"
-        [(ngModel)]="vidaMax.atributo"
+        [(ngModel)]="statusJogador.vidaMax.atributo"
       />
       <label for="pvAtual" class="atributos">PV atuais:</label>
       <input
@@ -131,7 +131,7 @@
         id="pvAtual"
         name="pvAtual"
         placeholder="10"
-        [(ngModel)]="vidaAtual.atributo"
+        [(ngModel)]="statusJogador.vidaAtual.atributo"
       />
       <label for="defesa" class="atributos">CA:</label>
       <input
@@ -141,7 +141,7 @@
         id="defesa"
         name="defesa"
         placeholder="10"
-        [(ngModel)]="ca.atributo"
+        [(ngModel)]="statusJogador.ca.atributo"
       />
     </form>
   </div>
@@ -162,7 +162,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Fortitude (Con):</button>
-      <h4 class="atributosValor">{{ fortitude.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['fortitude'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -179,7 +179,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Reflexos (Des):</button>
-      <h4 class="atributosValor">{{ reflexos.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['reflexos'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -196,7 +196,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Vontade (Sab):</button>
-      <h4 class="atributosValor">{{ vontade.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['vontade'].atributo }}</h4>
     </div>
   </div>
   <div class="cards-proficiencia">
@@ -216,7 +216,7 @@
         <option value="lendario">L</option>
       </select>
       <button id="acrobacia" class="pericias ff-inter" (click)="acrobaciaRolagem()">Acrobacia (Des):</button>
-      <h4 class="atributosValor">{{ acrobacia.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['acrobacia'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -233,7 +233,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Arcanismo (Int):</button>
-      <h4 class="atributosValor">{{ arcanismo.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['arcanismo'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -250,7 +250,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Atletismo (For):</button>
-      <h4 class="atributosValor">{{ atletismo.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['atletismo'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -267,7 +267,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Cavalgar (Des):</button>
-      <h4 class="atributosValor">{{ cavalgar.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['cavalgar'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -284,7 +284,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Diplomacia (Car):</button>
-      <h4 class="atributosValor">{{ diplomacia.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['diplomacia'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -301,7 +301,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Enganação (Car):</button>
-      <h4 class="atributosValor">{{ enganacao.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['enganacao'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -318,7 +318,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Furtividade (Des):</button>
-      <h4 class="atributosValor">{{ furtividade.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['furtividade'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -335,7 +335,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Intimidação (Car):</button>
-      <h4 class="atributosValor">{{ intimidacao.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['intimidacao'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -352,7 +352,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Ladroagem (Des):</button>
-      <h4 class="atributosValor">{{ ladroagem.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['ladroagem'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -369,7 +369,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Manufatura (Int):</button>
-      <h4 class="atributosValor">{{ manufatura.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['manufatura'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -386,7 +386,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Medicina (Sab):</button>
-      <h4 class="atributosValor">{{ medicina.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['medicina'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -403,7 +403,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Natureza (Sab):</button>
-      <h4 class="atributosValor">{{ natureza.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['natureza'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -420,7 +420,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Ocultismo (Int):</button>
-      <h4 class="atributosValor">{{ ocultismo.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['ocultismo'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -437,7 +437,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Percepção (Sab):</button>
-      <h4 class="atributosValor">{{ percepcao.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['percepcao'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -454,7 +454,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Perfomance (Car):</button>
-      <h4 class="atributosValor">{{ perfomance.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['perfomance'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -471,7 +471,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Religião (Sab):</button>
-      <h4 class="atributosValor">{{ religiao.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['religiao'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -487,7 +487,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Saber:</button>
-      <h4 class="atributosValor">{{ conhecimento.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['conhecimento'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -503,7 +503,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Saber:</button>
-      <h4 class="atributosValor">{{ conhecimento2.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['conhecimento2'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -520,7 +520,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Sociedade (Int):</button>
-      <h4 class="atributosValor">{{ sociedade.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['sociedade'].atributo }}</h4>
     </div>
     <div class="alinhar-pericias">
       <select
@@ -537,7 +537,7 @@
         <option value="lendario">L</option>
       </select>
       <button class="pericias ff-inter">Sobrevivência (Sab):</button>
-      <h4 class="atributosValor">{{ sobrevivencia.atributo }}</h4>
+      <h4 class="atributosValor">{{ pericias['sobrevivencia'].atributo }}</h4>
     </div>
   </div>
 </section>
