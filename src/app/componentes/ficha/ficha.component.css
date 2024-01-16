@@ -5,8 +5,8 @@
 .atributo-cards {
   border: solid 1px #ffffff;
   border-radius: 30px;
-  width: 6rem;
-  height: 6rem;
+  width: 50%;
+  height: 50%;
   background: url(../../../assets/red-background.png);
   padding: 1rem;
   margin-bottom: 1rem;
@@ -18,8 +18,8 @@
   background: url(../../../assets/red-background.png);
   border: solid 1px #ffffff;
   border-radius: 30px;
-  width: 23.75rem;
-  height: 18.875rem;
+  width: 100%;
+  height: 100%;
   padding: 2rem;
   margin-right: 3rem;
 }
@@ -40,11 +40,11 @@
 }
 .cards-proficiencia {
   border: solid 1px #ffffff;
-  min-width: 20rem;
-  max-width: 20rem;
+  width: 100%;
+  height: 100%;
   border-radius: 30px;
   padding: 2rem;
-  margin-right: 5rem;
+  margin-right: auto;
   background: url(../../../assets/red-background.png);
 }
 
@@ -82,15 +82,8 @@
   margin-left: 1.4rem;
 }
 
-#valorForca,
-#valorDestreza,
-#valorConstituicao,
-#valorInteligencia,
-#valorSabedoria,
-#valorCarisma,
-.alinhar-atributos,
-.pv {
-  margin-top: 0.5rem;
+.inputAtributo {
+  margin-top: auto;
 }
 
 .botao {
@@ -112,7 +105,7 @@
   background-color: black;
 }
 
-.inputPv{
+.inputPv {
   height: 3rem;
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
@@ -125,22 +118,27 @@
   text-align: center;
 }
 
-#periciasTitulo{
-  margin-bottom: 1rem;
+#periciasTitulo {
+  text-align: center;
+  margin-bottom: 5%;
 }
 
-#alinhar-pericias{
+.alinhar-pericias {
   display: flex;
   align-items: center;
   padding-bottom: 1.5rem;
 }
 
-.pericias{
+.pericias {
   margin-right: auto;
+  border: none;
+  background-color: #b63035;
+  color: white;
+  font-size: 1rem;
 }
 
-.caixaSelecao{
-  background-color: #B63035;
+.caixaSelecao {
+  background-color: #b63035;
   border: none;
   color: #ffffff;
 }

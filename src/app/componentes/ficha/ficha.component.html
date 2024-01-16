@@ -113,7 +113,7 @@
   <div class="status-card">
     <h2>Status</h2>
     <form class="pv">
-      <label for="pvMax" class="atributos">Pontos de vida máximos:</label>
+      <label for="pvMax" class="atributos">PV máximos:</label>
       <input
         type="text"
         value="pvMax"
@@ -133,7 +133,7 @@
         placeholder="10"
         [(ngModel)]="vidaAtual.atributo"
       />
-      <label for="defesa" class="atributos">Classe de armadura:</label>
+      <label for="defesa" class="atributos">CA:</label>
       <input
         type="text"
         class="inputPv"
@@ -147,7 +147,7 @@
   </div>
   <div class="status-card">
     <h3 id="periciasTitulo">Pericias de defesa</h3>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -161,10 +161,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Fortitude (Con):</h4>
+      <button class="pericias ff-inter">Fortitude (Con):</button>
       <h4 class="atributosValor">{{ fortitude.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -178,10 +178,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Reflexos (Des):</h4>
+      <button class="pericias ff-inter">Reflexos (Des):</button>
       <h4 class="atributosValor">{{ reflexos.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -195,13 +195,13 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Vontade (Sab):</h4>
+      <button class="pericias ff-inter">Vontade (Sab):</button>
       <h4 class="atributosValor">{{ vontade.atributo }}</h4>
     </div>
   </div>
   <div class="cards-proficiencia">
     <h3 id="periciasTitulo">Pericias</h3>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -215,10 +215,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Acrobacia (Des):</h4>
+      <button id="acrobacia" class="pericias ff-inter" (click)="acrobaciaRolagem()">Acrobacia (Des):</button>
       <h4 class="atributosValor">{{ acrobacia.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -232,10 +232,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Arcanismo (Int):</h4>
+      <button class="pericias ff-inter">Arcanismo (Int):</button>
       <h4 class="atributosValor">{{ arcanismo.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -249,10 +249,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Atletismo (For):</h4>
+      <button class="pericias ff-inter">Atletismo (For):</button>
       <h4 class="atributosValor">{{ atletismo.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -266,10 +266,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Cavalgar (Des):</h4>
+      <button class="pericias ff-inter">Cavalgar (Des):</button>
       <h4 class="atributosValor">{{ cavalgar.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -283,10 +283,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Diplomacia (Car):</h4>
+      <button class="pericias ff-inter">Diplomacia (Car):</button>
       <h4 class="atributosValor">{{ diplomacia.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -300,10 +300,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Enganação (Car):</h4>
+      <button class="pericias ff-inter">Enganação (Car):</button>
       <h4 class="atributosValor">{{ enganacao.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -317,10 +317,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Furtividade (Des):</h4>
+      <button class="pericias ff-inter">Furtividade (Des):</button>
       <h4 class="atributosValor">{{ furtividade.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -334,10 +334,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Intimidação (Car):</h4>
+      <button class="pericias ff-inter">Intimidação (Car):</button>
       <h4 class="atributosValor">{{ intimidacao.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -351,10 +351,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Ladroagem (Des):</h4>
+      <button class="pericias ff-inter">Ladroagem (Des):</button>
       <h4 class="atributosValor">{{ ladroagem.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -368,10 +368,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Manufatura (Int):</h4>
+      <button class="pericias ff-inter">Manufatura (Int):</button>
       <h4 class="atributosValor">{{ manufatura.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -385,10 +385,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Medicina (Sab):</h4>
+      <button class="pericias ff-inter">Medicina (Sab):</button>
       <h4 class="atributosValor">{{ medicina.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -402,10 +402,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Natureza (Sab):</h4>
+      <button class="pericias ff-inter">Natureza (Sab):</button>
       <h4 class="atributosValor">{{ natureza.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -419,10 +419,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Ocultismo (Int):</h4>
+      <button class="pericias ff-inter">Ocultismo (Int):</button>
       <h4 class="atributosValor">{{ ocultismo.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -436,10 +436,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Percepção (Sab):</h4>
+      <button class="pericias ff-inter">Percepção (Sab):</button>
       <h4 class="atributosValor">{{ percepcao.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -453,10 +453,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Perfomance (Car):</h4>
+      <button class="pericias ff-inter">Perfomance (Car):</button>
       <h4 class="atributosValor">{{ perfomance.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -470,10 +470,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Religião (Sab):</h4>
+      <button class="pericias ff-inter">Religião (Sab):</button>
       <h4 class="atributosValor">{{ religiao.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -486,10 +486,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Saber:</h4>
+      <button class="pericias ff-inter">Saber:</button>
       <h4 class="atributosValor">{{ conhecimento.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -502,10 +502,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Saber:</h4>
+      <button class="pericias ff-inter">Saber:</button>
       <h4 class="atributosValor">{{ conhecimento2.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -519,10 +519,10 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Sociedade (Int):</h4>
+      <button class="pericias ff-inter">Sociedade (Int):</button>
       <h4 class="atributosValor">{{ sociedade.atributo }}</h4>
     </div>
-    <div id="alinhar-pericias">
+    <div class="alinhar-pericias">
       <select
         name="grauTreinamento"
         class="caixaSelecao"
@@ -536,7 +536,7 @@
         <option value="mestre">M</option>
         <option value="lendario">L</option>
       </select>
-      <h4 class="pericias">Sobrevivência (Sab):</h4>
+      <button class="pericias ff-inter">Sobrevivência (Sab):</button>
       <h4 class="atributosValor">{{ sobrevivencia.atributo }}</h4>
     </div>
   </div>
