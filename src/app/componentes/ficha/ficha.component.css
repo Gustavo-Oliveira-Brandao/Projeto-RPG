@@ -137,6 +137,10 @@
   font-size: 1rem;
 }
 
+.pericias:hover{
+  background-color:indigo;
+}
+
 .caixaSelecao {
   background-color: #b63035;
   border: none;

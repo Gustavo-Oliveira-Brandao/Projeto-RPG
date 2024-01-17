@@ -316,27 +316,47 @@ export class FichaComponent {
     this.atualizarPericias();
   }
 
-
   atualizarPericias() {
     Object.keys(this.pericias).forEach((pericia) => {
-      let atributo = this.pericias[pericia].tipoAtributo;
-
       if (this.pericias[pericia].tipoAtributo === this.atributos['forca'].id) {
-        this.pericias[pericia].atributo = this.atributos['forca'].modificador + this.pericias[pericia].valorGrau
-      } else if (this.pericias[pericia].tipoAtributo === this.atributos['destreza'].id){
-        this.pericias[pericia].atributo = this.atributos['destreza'].modificador +  this.pericias[pericia].valorGrau
-      } else if (this.pericias[pericia].tipoAtributo === this.atributos['constituicao'].id){
-        this.pericias[pericia].atributo = this.atributos['constituicao'].modificador + this.pericias[pericia].valorGrau
-      } else if (this.pericias[pericia].tipoAtributo === this.atributos['inteligencia'].id){
-        this.pericias[pericia].atributo = this.atributos['inteligencia'].modificador + this.pericias[pericia].valorGrau
-      } else if (this.pericias[pericia].tipoAtributo === this.atributos['sabedoria'].id){
-        this.pericias[pericia].atributo = this.atributos['sabedoria'].modificador + this.pericias[pericia].valorGrau
-      } else if (this.pericias[pericia].tipoAtributo === this.atributos['carisma'].id){
-        this.pericias[pericia].atributo = this.atributos['carisma'].modificador + this.pericias[pericia].valorGrau
+        this.pericias[pericia].atributo =
+          this.atributos['forca'].modificador +
+          this.pericias[pericia].valorGrau;
+      } else if (
+        this.pericias[pericia].tipoAtributo === this.atributos['destreza'].id
+      ) {
+        this.pericias[pericia].atributo =
+          this.atributos['destreza'].modificador +
+          this.pericias[pericia].valorGrau;
+      } else if (
+        this.pericias[pericia].tipoAtributo ===
+        this.atributos['constituicao'].id
+      ) {
+        this.pericias[pericia].atributo =
+          this.atributos['constituicao'].modificador +
+          this.pericias[pericia].valorGrau;
+      } else if (
+        this.pericias[pericia].tipoAtributo ===
+        this.atributos['inteligencia'].id
+      ) {
+        this.pericias[pericia].atributo =
+          this.atributos['inteligencia'].modificador +
+          this.pericias[pericia].valorGrau;
+      } else if (
+        this.pericias[pericia].tipoAtributo === this.atributos['sabedoria'].id
+      ) {
+        this.pericias[pericia].atributo =
+          this.atributos['sabedoria'].modificador +
+          this.pericias[pericia].valorGrau;
+      } else if (
+        this.pericias[pericia].tipoAtributo === this.atributos['carisma'].id
+      ) {
+        this.pericias[pericia].atributo =
+          this.atributos['carisma'].modificador +
+          this.pericias[pericia].valorGrau;
       }
     });
   }
-
 
   selectedValue?: string;
 
@@ -360,218 +380,19 @@ export class FichaComponent {
     return valor;
   }
 
-  acrobaciaTreinamento() {
-    this.pericias['acrobacia'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['acrobacia'].grau);
-    this.pericias['acrobacia'].valorGrau = valor;
+  treinamento (pericia: string) {
+    this.pericias[pericia].grau = String(this.selectedValue)
+    let valor = this.grauTreinamento(this.pericias[pericia].grau)
+    this.pericias[pericia].valorGrau = valor;
     this.atualizarPericias();
   }
 
-  atletismoTreinamento() {
-    this.pericias['atletismo'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['atletismo'].grau);
-    this.pericias['atletismo'].valorGrau = valor;
-    this.atualizarPericias();
-  }
 
-  arcanismoTreinamento() {
-    this.pericias['arcanismo'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['arcanismo'].grau);
-    this.pericias['arcanismo'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  cavalgarTreinamento() {
-    this.pericias['cavalgar'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['cavalgar'].grau);
-    this.pericias['cavalgar'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  diplomaciaTreinamento() {
-    this.pericias['diplomacia'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['diplomacia'].grau);
-    this.pericias['diplomacia'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  enganacaoTreinamento() {
-    this.pericias['enganacao'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['enganacao'].grau);
-    this.pericias['enganacao'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  fortitudeTreinamento() {
-    this.pericias['fortitude'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['fortitude'].grau);
-    this.pericias['fortitude'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  furtividadeTreinamento() {
-    this.pericias['furtividade'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['furtividade'].grau);
-    this.pericias['furtividade'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  intimidacaoTreinamento() {
-    this.pericias['intimidacao'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['intimidacao'].grau);
-    this.pericias['intimidacao'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  ladroagemTreinamento() {
-    this.pericias['ladroagem'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['ladroagem'].grau);
-    this.pericias['ladroagem'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  manufaturaTreinamento() {
-    this.pericias['manufatura'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['manufatura'].grau);
-    this.pericias['manufatura'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  medicinaTreinamento() {
-    this.pericias['medicina'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['medicina'].grau);
-    this.pericias['medicina'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  naturezaTreinamento() {
-    this.pericias['natureza'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['natureza'].grau);
-    this.pericias['natureza'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  ocultismoTreinamento() {
-    this.pericias['ocultismo'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['ocultismo'].grau);
-    this.pericias['ocultismo'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  percepcaoTreinamento() {
-    this.pericias['percepcao'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['percepcao'].grau);
-    this.pericias['percepcao'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  perfomanceTreinamento() {
-    this.pericias['perfomance'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['perfomance'].grau);
-    this.pericias['perfomance'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  reflexosTreinamento() {
-    this.pericias['reflexos'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['reflexos'].grau);
-    this.pericias['reflexos'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  religiaoTreinamento() {
-    this.pericias['religiao'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['religiao'].grau);
-    this.pericias['religiao'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  saberTreinamento() {
-    this.pericias['conhecimento'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['conhecimento'].grau);
-    this.pericias['conhecimento'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  saber2Treinamento() {
-    this.pericias['conhecimento2'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['conhecimento2'].grau);
-    this.pericias['conhecimento2'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  sociedadeTreinamento() {
-    this.pericias['sociedade'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['sociedade'].grau);
-    this.pericias['sociedade'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  sobrevivenciaTreinamento() {
-    this.pericias['sobrevivencia'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['sobrevivencia'].grau);
-    this.pericias['sobrevivencia'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  vontadeTreinamento() {
-    this.pericias['vontade'].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias['vontade'].grau);
-    this.pericias['vontade'].valorGrau = valor;
-    this.atualizarPericias();
-  }
-
-  rolagemD20() {
+  rolagemPericia(pericia: string) {
     var randomNumber = Math.floor(Math.random() * this.dados.d20.sides) + 1;
-    return randomNumber;
+    let rolagem = randomNumber + this.pericias[pericia].atributo
+    let texto = "Dado natural: " + randomNumber + "\nModificador: " + this.pericias[pericia].atributo + "\nResultaod: " + rolagem;
+    console.log(texto)
   }
 
-  acrobaciaRolagem() {
-    let sla = this.rolagemD20();
-    console.log(sla);
-  }
-
-  atletismoRolagem() {}
-
-  arcanismoRolagem() {}
-
-  cavalgarRolagem() {}
-
-  diplomaciaRolagem() {}
-
-  enganacaoRolagem() {}
-
-  fortitudeRolagem() {}
-
-  furtividadeRolagem() {}
-
-  intimidacaoRolagem() {}
-
-  ladroagemRolagem() {}
-
-  manufaturaRolagem() {}
-
-  medicinaRolagem() {}
-
-  naturezaRolagem() {}
-
-  ocultismoRolagem() {}
-
-  percepcaoRolagem() {}
-
-  perfomanceRolagem() {}
-
-  reflexosRolagem() {}
-
-  religiaoRolagem() {}
-
-  saberRolagem() {}
-
-  saber2Rolagem() {}
-
-  sociedadeRolagem() {}
-
-  sobrevivenciaRolagem() {}
-
-  vontadeRolagem() {}
 }
