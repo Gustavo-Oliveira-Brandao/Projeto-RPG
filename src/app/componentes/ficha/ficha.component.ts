@@ -10,6 +10,24 @@ import { CabecalhoComponent } from '../cabecalho/cabecalho.component';
   styleUrl: './ficha.component.css',
 })
 export class FichaComponent {
+
+  personagem = {
+    nome: {
+      id: '',
+    },
+    raca:{
+      id: ''
+    },
+    classe:{
+      id: ''
+    },
+    nivel:{
+      atributo: 1
+    }
+
+    }
+
+
   atributos: {
     [key: string]: { id: string; atributo: number; modificador: number };
   } = {
@@ -306,6 +324,37 @@ export class FichaComponent {
     },
   };
 
+  ataques: Array<{
+    nome: string;
+    tipoAtributo: string;
+    quantidadeDados: number;
+    dadoDano: number;
+  }> = Array(
+
+  );
+
+
+  adicionarAtaque(
+    nome: string,
+    tipoAtributo: string,
+    quantidadeDados: number,
+    dadoDano: number
+  ) {
+    if (this.atributos[tipoAtributo].id === 'destreza') {
+      this.ataques.push({nome, tipoAtributo, quantidadeDados, dadoDano});
+
+      const para = document.createElement("button")
+      para.setAttribute('class', 'ataque')
+
+      const node = document.createTextNode(nome)
+      para.appendChild(node)
+
+      const element = document.getElementById('ataques')
+      element?.appendChild(para)
+    }
+  }
+
+
   atualizarAtributos() {
     Object.keys(this.atributos).forEach((atributo) => {
       const modificador = Math.trunc(
@@ -380,19 +429,24 @@ export class FichaComponent {
     return valor;
   }
 
-  treinamento (pericia: string) {
-    this.pericias[pericia].grau = String(this.selectedValue)
-    let valor = this.grauTreinamento(this.pericias[pericia].grau)
+  treinamento(pericia: string) {
+    this.pericias[pericia].grau = String(this.selectedValue);
+    let valor = this.grauTreinamento(this.pericias[pericia].grau);
     this.pericias[pericia].valorGrau = valor;
     this.atualizarPericias();
   }
 
-
   rolagemPericia(pericia: string) {
     var randomNumber = Math.floor(Math.random() * this.dados.d20.sides) + 1;
-    let rolagem = randomNumber + this.pericias[pericia].atributo
-    let texto = "Dado natural: " + randomNumber + "\nModificador: " + this.pericias[pericia].atributo + "\nResultaod: " + rolagem;
-    console.log(texto)
+    let rolagem = randomNumber + this.pericias[pericia].atributo;
+    let texto =
+      'Dado natural: ' +
+      randomNumber +
+      '\nModificador: ' +
+      this.pericias[pericia].atributo +
+      '\nResultado: ' +
+      rolagem;
+    console.log(texto);
   }
 
 }

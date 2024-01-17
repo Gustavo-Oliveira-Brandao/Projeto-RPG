@@ -1,10 +1,50 @@
-<section class="textoFormatado alinhar-cards-flex">
-  <div>
+<section class="ff-inter">
+  <div class="alinhar-info">
     <form>
-      <div class="atributo-cards">
-        <label for="forca" class="atributos alinhar-atributos valorForca"
-          >Força</label
-        >
+      <div class="card-info container">
+        <label name="nomePersonagem">Nome do personagem: </label>
+        <input
+          name="nomePersonagem"
+          type="text"
+          value="nome"
+          class="input-info afastarInfo"
+          [(ngModel)]="personagem.nome.id"
+        />
+
+        <label name="racaPersonagem">Raça: </label>
+        <input
+          name="racaPersonagem"
+          type="text"
+          value="raca"
+          class="input-info afastarInfo"
+          [(ngModel)]="personagem.raca.id"
+        />
+
+        <label name="classePersonagem">Classe: </label>
+        <input
+          name="classePersonagem"
+          type="text"
+          value="classe"
+          class="input-info afastarInfo"
+          [(ngModel)]="personagem.classe.id"
+        />
+
+        <label name="nivelPersonagem" class="">Nivel: </label>
+        <input
+          name="nivelPersonagem"
+          type="number"
+          value="nivel"
+          class="input-nivel"
+          [(ngModel)]="personagem.nivel.atributo"
+        />
+   </div>
+    </form>
+  </div>
+
+  <div class="alinhar-cards">
+    <form id="organizarAtributos">
+      <div class="atributos">
+        <button for="forca" class="atributoNome">Força</button>
         <input
           type="text"
           id="valorForca"
@@ -15,13 +55,13 @@
           placeholder="10"
           [(ngModel)]="atributos['forca'].atributo"
         />
-        ({{ atributos["forca"].modificador }})
+        <span class="modificador">
+          ({{ atributos["forca"].modificador }})
+        </span>
       </div>
 
-      <div class="atributo-cards">
-        <label for="destreza" class="valorDestreza atributos alinhar-atributos"
-          >Destreza</label
-        >
+      <div class="atributos">
+        <button for="destreza" class="atributoNome">Destreza</button>
         <input
           type="text"
           id="valorDestreza"
@@ -32,15 +72,13 @@
           placeholder="10"
           [(ngModel)]="atributos['destreza'].atributo"
         />
-        ({{ atributos["destreza"].modificador }})
+        <span class="modificador">
+          ({{ atributos["destreza"].modificador }})
+        </span>
       </div>
 
-      <div class="atributo-cards">
-        <label
-          for="constituicao"
-          class="valorConstituicao atributos alinhar-atributos"
-          >Constituição</label
-        >
+      <div class="atributos">
+        <button for="constituicao" class="atributoNome">Constituição</button>
         <input
           type="text"
           id="valorConstituicao"
@@ -51,15 +89,13 @@
           placeholder="10"
           [(ngModel)]="atributos['constituicao'].atributo"
         />
-        ({{ atributos["constituicao"].modificador }})
+        <span class="modificador">
+          ({{ atributos["constituicao"].modificador }})
+        </span>
       </div>
 
-      <div class="atributo-cards">
-        <label
-          for="inteligencia"
-          class="valorInteligencia atributos alinhar-atributos"
-          >Inteligência</label
-        >
+      <div class="atributos">
+        <button for="inteligencia" class="atributoNome">Inteligência</button>
         <input
           type="text"
           id="valorInteligencia"
@@ -70,15 +106,13 @@
           placeholder="10"
           [(ngModel)]="atributos['inteligencia'].atributo"
         />
-        ({{ atributos["inteligencia"].modificador }})
+        <span class="modificador">
+          ({{ atributos["inteligencia"].modificador }})
+        </span>
       </div>
 
-      <div class="atributo-cards">
-        <label
-          for="sabedoria"
-          class="valorSabedoria atributos alinhar-atributos"
-          >Sabedoria</label
-        >
+      <div class="atributos">
+        <button for="sabedoria" class="atributoNome">Sabedoria</button>
         <input
           type="text"
           id="valorSabedoria"
@@ -89,12 +123,13 @@
           placeholder="10"
           [(ngModel)]="atributos['sabedoria'].atributo"
         />
-        ({{ atributos["sabedoria"].modificador }})
+        <span class="modificador">
+          ({{ atributos["sabedoria"].modificador }})
+        </span>
       </div>
 
-      <div class="atributo-cards">
-        <label for="carisma" class="valorCarisma atributos alinhar-atributos"
-          >Carisma</label
+      <div class="atributos">
+        <button for="carisma" class="atributoNome">Carisma</button
         ><input
           type="text"
           id="valorCarisma"
@@ -105,474 +140,540 @@
           placeholder="10"
           [(ngModel)]="atributos['carisma'].atributo"
         />
-        ({{ atributos["carisma"].modificador }})
+        <span class="modificador">
+          ({{ atributos["carisma"].modificador }})
+        </span>
       </div>
     </form>
-  </div>
+    <div class="alinhar-pericias">
+      <div class="pericias-defesa">
+        <h3 class="periciasTitulo">Pericias de defesa</h3>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('fortitude')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["fortitude"].atributo }}</h4>
 
-  <div class="status-card">
-    <h2>Status</h2>
-    <form class="pv">
-      <label for="pvMax" class="atributos">PV máximos:</label>
-      <input
-        type="text"
-        value="pvMax"
-        class="inputPv"
-        id="pvMaxInput"
-        name="pvMax"
-        placeholder="10"
-        [(ngModel)]="statusJogador.vidaMax.atributo"
+          <button class="textoPericias" (click)="rolagemPericia('fortitude')">
+            Fortitude (Con):
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('reflexos')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["reflexos"].atributo }}</h4>
+
+          <button class="textoPericias" (click)="rolagemPericia('reflexos')">
+            Reflexos (Des):
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('vontade')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["vontade"].atributo }}</h4>
+
+          <button class="textoPericias" (click)="rolagemPericia('vontade')">
+            Vontade (Sab):
+          </button>
+        </div>
+      </div>
+
+      <div id="pericias-card">
+        <h3 class="periciasTitulo">Pericias</h3>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('acrobacia')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["acrobacia"].atributo }}</h4>
+          <button
+            id="acrobacia"
+            class="textoPericias"
+            (click)="rolagemPericia('acrobacia')"
+          >
+            Acrobacia (Des)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('arcanismo')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["arcanismo"].atributo }}</h4>
+          <button class="textoPericias" (click)="rolagemPericia('arcanismo')">
+            Arcanismo (Int)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('atletismo')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["atletismo"].atributo }}</h4>
+          <button class="textoPericias" (click)="rolagemPericia('atletismo')">
+            Atletismo (For)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('cavalgar')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["cavalgar"].atributo }}</h4>
+          <button class="textoPericias" (click)="rolagemPericia('cavalgar')">
+            Cavalgar (Des)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('conhecimento')"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">
+            {{ pericias["conhecimento"].atributo }}
+          </h4>
+
+          <button
+            class="textoPericias"
+            (click)="rolagemPericia('conhecimento')"
+          >
+            Conhecimento (Int)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('conhecimento2')"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">
+            {{ pericias["conhecimento2"].atributo }}
+          </h4>
+
+          <button
+            class="textoPericias"
+            (click)="rolagemPericia('conhecimento2')"
+          >
+            Conhecimento (Int)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('diplomacia')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["diplomacia"].atributo }}</h4>
+          <button class="textoPericias" (click)="rolagemPericia('diplomacia')">
+            Diplomacia (Car)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('enganacao')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["enganacao"].atributo }}</h4>
+          <button class="textoPericias" (click)="rolagemPericia('enganacao')">
+            Enganação (Car)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('furtividade')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["furtividade"].atributo }}</h4>
+          <button class="textoPericias" (click)="rolagemPericia('furtividade')">
+            Furtividade (Des)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('intimidacao')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["intimidacao"].atributo }}</h4>
+          <button class="textoPericias" (click)="rolagemPericia('intimidacao')">
+            Intimidação (Car)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('ladroagem')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["ladroagem"].atributo }}</h4>
+          <button class="textoPericias" (click)="rolagemPericia('ladroagem')">
+            Ladroagem (Des)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('manufatura')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["manufatura"].atributo }}</h4>
+
+          <button class="textoPericias" (click)="rolagemPericia('manufatura')">
+            Manufatura (Int)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('medicina')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["medicina"].atributo }}</h4>
+
+          <button class="textoPericias" (click)="rolagemPericia('medicina')">
+            Medicina (Sab)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('natureza')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["natureza"].atributo }}</h4>
+
+          <button class="textoPericias" (click)="rolagemPericia('natureza')">
+            Natureza (Sab)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('ocultismo')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["ocultismo"].atributo }}</h4>
+
+          <button class="textoPericias" (click)="rolagemPericia('ocultismo')">
+            Ocultismo (Int)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('percepcao')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["percepcao"].atributo }}</h4>
+
+          <button class="textoPericias" (click)="rolagemPericia('percepcao')">
+            Percepção (Sab)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('perfomance')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["perfomance"].atributo }}</h4>
+
+          <button class="textoPericias" (click)="rolagemPericia('perfomance')">
+            Perfomance (Car)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('religiao')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["religiao"].atributo }}</h4>
+
+          <button class="textoPericias" (click)="rolagemPericia('religiao')">
+            Religião (Sab)
+          </button>
+        </div>
+
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('sociedade')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">{{ pericias["sociedade"].atributo }}</h4>
+
+          <button class="textoPericias" (click)="rolagemPericia('sociedade')">
+            Sociedade (Int)
+          </button>
+        </div>
+        <div class="pericias">
+          <select
+            name="grauTreinamento"
+            class="caixaSelecao"
+            (change)="onSelect($event)"
+            (change)="treinamento('sobrevivencia')"
+            (change)="atualizarAtributos()"
+          >
+            <option value="destreinado">D</option>
+            <option value="treinado">T</option>
+            <option value="especialista">E</option>
+            <option value="mestre">M</option>
+            <option value="lendario">L</option>
+          </select>
+          <h4 class="periciasValor">
+            {{ pericias["sobrevivencia"].atributo }}
+          </h4>
+
+          <button
+            class="textoPericias"
+            (click)="rolagemPericia('sobrevivencia')"
+          >
+            Sobrevivência (Sab)
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <form class="inputDefesas">
+        <div class="alinhar-pv-ca">
+          <label for="pvMax" id="pvMaxTitulo">PV máximos</label>
+          <input
+            type="text"
+            value="pvMax"
+            class="inputPVCA"
+            id="pvMaxInput"
+            name="pvMax"
+            placeholder="10"
+            [(ngModel)]="statusJogador.vidaMax.atributo"
+          />
+        </div>
+        <div class="alinhar-pv-ca">
+          <label for="pvAtual" id="pvAtualTitulo">PV atuais</label>
+          <input
+            type="text"
+            class="inputPVCA"
+            value="pvAtual"
+            id="pvAtualInput"
+            name="pvAtual"
+            placeholder="10"
+            [(ngModel)]="statusJogador.vidaAtual.atributo"
+          />
+        </div>
+        <div class="alinhar-pv-ca">
+          <label for="defesa" id="caTitulo">Classe de Armadura</label>
+          <input
+            type="text"
+            class="inputPVCA"
+            value="defesa"
+            id="caInput"
+            name="defesa"
+            placeholder="10"
+            [(ngModel)]="statusJogador.ca.atributo"
+          />
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <img
+        src="../../../assets/personagem placeholder.jpg"
+        id="foto-personagem"
+        alt="foto do personagem"
       />
-      <label for="pvAtual" class="atributos">PV atuais:</label>
-      <input
-        type="text"
-        class="inputPv"
-        value="pvAtual"
-        id="pvAtual"
-        name="pvAtual"
-        placeholder="10"
-        [(ngModel)]="statusJogador.vidaAtual.atributo"
-      />
-      <label for="defesa" class="atributos">CA:</label>
-      <input
-        type="text"
-        class="inputPv"
-        value="defesa"
-        id="defesa"
-        name="defesa"
-        placeholder="10"
-        [(ngModel)]="statusJogador.ca.atributo"
-      />
-    </form>
-  </div>
-  <div class="status-card">
-    <h3 id="periciasTitulo">Pericias de defesa</h3>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('fortitude')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Fortitude (Con):</button>
-      <h4 class="atributosValor">{{ pericias["fortitude"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('reflexos')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Reflexos (Des):</button>
-      <h4 class="atributosValor">{{ pericias["reflexos"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('vontade')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Vontade (Sab):</button>
-      <h4 class="atributosValor">{{ pericias["vontade"].atributo }}</h4>
     </div>
   </div>
-  <div class="cards-proficiencia">
-    <h3 id="periciasTitulo">Pericias</h3>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('acrobacia')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button
-        id="acrobacia"
-        class="pericias ff-inter"
-        (click)="rolagemPericia('acrobacia')"
-      >
-        Acrobacia (Des):
-      </button>
-      <h4 class="atributosValor">{{ pericias["acrobacia"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('arcanismo')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Arcanismo (Int):</button>
-      <h4 class="atributosValor">{{ pericias["arcanismo"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('atletismo')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Atletismo (For):</button>
-      <h4 class="atributosValor">{{ pericias["atletismo"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('cavalgar')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Cavalgar (Des):</button>
-      <h4 class="atributosValor">{{ pericias["cavalgar"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('diplomacia')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Diplomacia (Car):</button>
-      <h4 class="atributosValor">{{ pericias["diplomacia"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('enganacao')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Enganação (Car):</button>
-      <h4 class="atributosValor">{{ pericias["enganacao"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('furtividade')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Furtividade (Des):</button>
-      <h4 class="atributosValor">{{ pericias["furtividade"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('intimidacao')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Intimidação (Car):</button>
-      <h4 class="atributosValor">{{ pericias["intimidacao"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('ladroagem')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Ladroagem (Des):</button>
-      <h4 class="atributosValor">{{ pericias["ladroagem"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('manufatura')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Manufatura (Int):</button>
-      <h4 class="atributosValor">{{ pericias["manufatura"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('medicina')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Medicina (Sab):</button>
-      <h4 class="atributosValor">{{ pericias["medicina"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('natureza')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Natureza (Sab):</button>
-      <h4 class="atributosValor">{{ pericias["natureza"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('ocultismo')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Ocultismo (Int):</button>
-      <h4 class="atributosValor">{{ pericias["ocultismo"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('percepcao')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Percepção (Sab):</button>
-      <h4 class="atributosValor">{{ pericias["percepcao"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('perfomance')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Perfomance (Car):</button>
-      <h4 class="atributosValor">{{ pericias["perfomance"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('religiao')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Religião (Sab):</button>
-      <h4 class="atributosValor">{{ pericias["religiao"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('conhecimento')"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Saber:</button>
-      <h4 class="atributosValor">{{ pericias["conhecimento"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('conhecimento2')"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Saber:</button>
-      <h4 class="atributosValor">{{ pericias["conhecimento2"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('sociedade')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Sociedade (Int):</button>
-      <h4 class="atributosValor">{{ pericias["sociedade"].atributo }}</h4>
-    </div>
-    <div class="alinhar-pericias">
-      <select
-        name="grauTreinamento"
-        class="caixaSelecao"
-        (change)="onSelect($event)"
-        (change)="treinamento('sobrevivencia')"
-        (change)="atualizarAtributos()"
-      >
-        <option value="destreinado">D</option>
-        <option value="treinado">T</option>
-        <option value="especialista">E</option>
-        <option value="mestre">M</option>
-        <option value="lendario">L</option>
-      </select>
-      <button class="pericias ff-inter">Sobrevivência (Sab):</button>
-      <h4 class="atributosValor">{{ pericias["sobrevivencia"].atributo }}</h4>
-    </div>
-  </div>
+  
+
+  <div class=""></div>
 </section>
-<div class="alinhar-cards-flex alinhar-cards-coluna">
-  <div class="inventario-card alinhar-cards-coluna">
-    <h2>Inventario</h2>
-    <ul>
-      <li>Mochila</li>
-      <li>Saco de dormir</li>
-      <li>Traje de viajante</li>
-      <li>Tridente</li>
-      <li>Armadura de couro</li>
-      <li>Escudo leve</li>
-    </ul>
-    <hr />
-    <h2>Dinheiro</h2>
-    <h2>16 Tibar</h2>
-  </div>
-  <div class="historia-card">
-    <h3>Historia</h3>
-    <p>
-      Nilo era um taverneiro que mantinha seus negocios acontecendo a bordo de
-      um grande navio, até que um dia sua embarcação foi invadida e destruida
-      por piratas. Perto da morte ele jurou lealdade ao deus das águas, Oceano,
-      em troca de afundar o navio dos piratas. Tendo suas preces atendidas Nilo
-      adquiriu poderes druidicos e se vingou de seus agressores. Com seu
-      objetivo concluido, tudo que lhe restou foi seguir as condutas que seu
-      deus lhe dava de proteger aqueles que cruzassem o mar, até que ele
-      conheceu um grupo de aventureiros no caminho.
-    </p>
-  </div>
-</div>

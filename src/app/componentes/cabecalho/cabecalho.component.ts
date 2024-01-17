@@ -9,24 +9,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './cabecalho.component.css'
 })
 export class CabecalhoComponent {
-  raca = {
-    id: 'raca',
-    atributo: ''
-  }
-
-  classe = {
-    id: 'classe',
-    atributo: ''
-  }
-
-  origem = {
-    id: 'origem',
-    atributo: ''
-  }
-
-  nivel = {
-    id: 'nivel',
-    atributo: 1
-  }
 
 }

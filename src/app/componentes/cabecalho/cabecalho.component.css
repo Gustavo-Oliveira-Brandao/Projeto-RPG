@@ -1,52 +1,12 @@
-.dados{
-  display: inline-flex;
-  height: 40px;
-  font-size: larger;
-  align-items: center;
-}
-
-.alinharNome{
-  display: inline-flex;
-  align-items: center;
-  font-size: larger;
-}
-
-#nomePersonagemInput{
-  width: 30rem;
-}
-
-.dadosInput {
-  color: #ffffff;
-  background: url(../../../assets/red-background.png);
-  border: none;
-  color: #ffffff;
-  margin-left: 1rem;
-  margin-right: 3rem;
-  height: 40px;
-  font-size: larger;
-}
-
-#nivelInput{
-  max-width: 3rem;
-}
 
 header {
   background: url(../../../assets/red-background.png);
   background-size: cover;
-  padding-top: 3rem;
-  padding-left: 3rem;
-  height: 100%;
-  padding-bottom: 2rem;
+  text-align: center;
+  height: 3rem;
 }
 
-#nome-personagem {
-  padding-bottom: 3rem;
+#nome {
+  padding-top: 0.5rem;
 }
 
-.dadosInput::placeholder {
-  color: #ffffff;
-}
-
-.cabecalho{
-  border-bottom: 1px solid white;
-}
