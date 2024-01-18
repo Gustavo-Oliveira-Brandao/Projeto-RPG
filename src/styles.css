@@ -8,10 +8,9 @@
 .ff-inter {
   color: #ffffff;
   font-family: Inter;
-  font-size: 0.9375rem;
+  font-family: "VT323", monospace;
+  font-weight: 400;
   font-style: normal;
-  font-weight: 600;
-  line-height: normal;
 }
 
 .ff-roboto-mono {
