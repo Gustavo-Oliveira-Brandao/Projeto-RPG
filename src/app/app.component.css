@@ -2,5 +2,33 @@ main {
     background: url(/assets/background.png) no-repeat center center;
     background-size: cover;
     min-height: 60vh;
+    max-height: 100%;
     padding: 3rem;
+}
+
+.botao-aba {
+  border: 1px white solid;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: transparent;
+  color: #ffffff;
+  width: 100px;
+  margin-right: 2rem;
+  font-size: large;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.botao-aba:hover {
+  color: #e50914;
+}
+
+.activebutton{
+  background-color: #b63035;
+}
+
+.activebutton:hover {
+  color: white;
 }

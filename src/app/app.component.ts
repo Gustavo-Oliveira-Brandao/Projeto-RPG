@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
 import { FichaComponent } from './componentes/ficha/ficha.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
-import { ClasseComponent } from './componentes/classe/classe.component';
 import { FormsModule } from '@angular/forms';
+import { MagiasComponent } from './componentes/magias/magias.component';
+import { PetsComponent } from './componentes/pets/pets.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,8 +17,11 @@ import { FormsModule } from '@angular/forms';
     CabecalhoComponent,
     FichaComponent,
     HabilidadesComponent,
-    ClasseComponent,
-    FormsModule
+    MagiasComponent,
+    PetsComponent,
+    FormsModule,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

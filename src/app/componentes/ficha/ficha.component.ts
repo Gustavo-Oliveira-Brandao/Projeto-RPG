@@ -270,6 +270,11 @@ export class FichaComponent {
       atributo: 0,
     },
 
+    vidaTemporaria: {
+      id: 'pvTemporario',
+      atributo:0
+    },
+
     iniciativa: {
       id: 'iniciativa',
       atributo: 0,

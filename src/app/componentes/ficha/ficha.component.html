@@ -1,4 +1,7 @@
 <section class="ff-inter">
+
+
+
   <div class="alinhar-info">
     <form>
       <div class="card-info container">
@@ -7,7 +10,7 @@
           name="nomePersonagem"
           type="text"
           value="nome"
-          class="input-info afastarInfo"
+          class="input-info espacamento-info-direita"
           [(ngModel)]="personagem.nome.id"
         />
 
@@ -16,7 +19,7 @@
           name="racaPersonagem"
           type="text"
           value="raca"
-          class="input-info afastarInfo"
+          class="input-info espacamento-info-direita"
           [(ngModel)]="personagem.raca.id"
         />
 
@@ -25,7 +28,7 @@
           name="classePersonagem"
           type="text"
           value="classe"
-          class="input-info afastarInfo"
+          class="input-info espacamento-info-direita"
           [(ngModel)]="personagem.classe.id"
         />
 
@@ -42,15 +45,15 @@
   </div>
 
   <div class="alinhar-cards">
-    <form id="organizarAtributos">
+    <form>
       <div class="atributos">
-        <button for="forca" class="atributoNome">Força</button>
+        <button for="forca" class="atributo-nome">Força</button>
         <input
           type="text"
-          id="valorForca"
+          id="valor-forca"
           value="forca"
           name="forca"
-          class="inputAtributo"
+          class="input-atributo"
           (change)="atualizarAtributos()"
           placeholder="10"
           [(ngModel)]="atributos['forca'].atributo"
@@ -61,13 +64,13 @@
       </div>
 
       <div class="atributos">
-        <button for="destreza" class="atributoNome">Destreza</button>
+        <button for="destreza" class="atributo-nome">Destreza</button>
         <input
           type="text"
-          id="valorDestreza"
+          id="valor-destreza"
           value="destreza"
           name="destreza"
-          class="inputAtributo"
+          class="input-atributo"
           (change)="atualizarAtributos()"
           placeholder="10"
           [(ngModel)]="atributos['destreza'].atributo"
@@ -78,13 +81,13 @@
       </div>
 
       <div class="atributos">
-        <button for="constituicao" class="atributoNome">Constituição</button>
+        <button for="constituicao" class="atributo-nome">Constituição</button>
         <input
           type="text"
-          id="valorConstituicao"
+          id="valor-constituicao"
           value="constituicao"
           name="constituicao"
-          class="inputAtributo"
+          class="input-atributo"
           (change)="atualizarAtributos()"
           placeholder="10"
           [(ngModel)]="atributos['constituicao'].atributo"
@@ -95,13 +98,13 @@
       </div>
 
       <div class="atributos">
-        <button for="inteligencia" class="atributoNome">Inteligência</button>
+        <button for="inteligencia" class="atributo-nome">Inteligência</button>
         <input
           type="text"
-          id="valorInteligencia"
+          id="valor-inteligencia"
           value="inteligencia"
           name="inteligencia"
-          class="inputAtributo"
+          class="input-atributo"
           (change)="atualizarAtributos()"
           placeholder="10"
           [(ngModel)]="atributos['inteligencia'].atributo"
@@ -112,13 +115,13 @@
       </div>
 
       <div class="atributos">
-        <button for="sabedoria" class="atributoNome">Sabedoria</button>
+        <button for="sabedoria" class="atributo-nome">Sabedoria</button>
         <input
           type="text"
-          id="valorSabedoria"
+          id="valor-sabedoria"
           value="sabedoria"
           name="sabedoria"
-          class="inputAtributo"
+          class="input-atributo"
           (change)="atualizarAtributos()"
           placeholder="10"
           [(ngModel)]="atributos['sabedoria'].atributo"
@@ -129,13 +132,13 @@
       </div>
 
       <div class="atributos">
-        <button for="carisma" class="atributoNome">Carisma</button
+        <button for="carisma" class="atributo-nome">Carisma</button
         ><input
           type="text"
-          id="valorCarisma"
+          id="valor-carisma"
           value="carisma"
           name="carisma"
-          class="inputAtributo"
+          class="input-atributo"
           (change)="atualizarAtributos()"
           placeholder="10"
           [(ngModel)]="atributos['carisma'].atributo"
@@ -145,13 +148,14 @@
         </span>
       </div>
     </form>
+
     <div class="alinhar-pericias">
-      <div class="pericias-defesa">
-        <h3 class="periciasTitulo">Testes de resistência</h3>
+      <div class="teste-resistencia">
+        <h3 class="cards-titulo">Testes de resistência</h3>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('fortitude')"
             (change)="atualizarAtributos()"
@@ -162,16 +166,16 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["fortitude"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["fortitude"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('fortitude')">
+          <button class="texto-pericias" (click)="rolagemPericia('fortitude')">
             Fortitude (Con):
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('reflexos')"
             (change)="atualizarAtributos()"
@@ -182,16 +186,16 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["reflexos"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["reflexos"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('reflexos')">
+          <button class="texto-pericias" (click)="rolagemPericia('reflexos')">
             Reflexos (Des):
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('vontade')"
             (change)="atualizarAtributos()"
@@ -202,21 +206,20 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["vontade"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["vontade"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('vontade')">
+          <button class="texto-pericias" (click)="rolagemPericia('vontade')">
             Vontade (Sab):
           </button>
         </div>
       </div>
 
-      <div class="alinhar-pericia-ataque">
       <div id="pericias-card">
-        <h3 class="periciasTitulo">Pericias</h3>
+        <h3 class="cards-titulo">Pericias</h3>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('acrobacia')"
             (change)="atualizarAtributos()"
@@ -227,10 +230,10 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["acrobacia"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["acrobacia"].atributo }}</h4>
           <button
             id="acrobacia"
-            class="textoPericias"
+            class="texto-pericias"
             (click)="rolagemPericia('acrobacia')"
           >
             Acrobacia (Des)
@@ -239,7 +242,7 @@
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('arcanismo')"
             (change)="atualizarAtributos()"
@@ -250,15 +253,15 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["arcanismo"].atributo }}</h4>
-          <button class="textoPericias" (click)="rolagemPericia('arcanismo')">
+          <h4 class="pericias-valor">{{ pericias["arcanismo"].atributo }}</h4>
+          <button class="texto-pericias" (click)="rolagemPericia('arcanismo')">
             Arcanismo (Int)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('atletismo')"
             (change)="atualizarAtributos()"
@@ -269,15 +272,15 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["atletismo"].atributo }}</h4>
-          <button class="textoPericias" (click)="rolagemPericia('atletismo')">
+          <h4 class="pericias-valor">{{ pericias["atletismo"].atributo }}</h4>
+          <button class="texto-pericias" (click)="rolagemPericia('atletismo')">
             Atletismo (For)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('cavalgar')"
             (change)="atualizarAtributos()"
@@ -288,15 +291,15 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["cavalgar"].atributo }}</h4>
-          <button class="textoPericias" (click)="rolagemPericia('cavalgar')">
+          <h4 class="pericias-valor">{{ pericias["cavalgar"].atributo }}</h4>
+          <button class="texto-pericias" (click)="rolagemPericia('cavalgar')">
             Cavalgar (Des)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('conhecimento')"
           >
@@ -306,12 +309,12 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">
+          <h4 class="pericias-valor">
             {{ pericias["conhecimento"].atributo }}
           </h4>
 
           <button
-            class="textoPericias"
+            class="texto-pericias"
             (click)="rolagemPericia('conhecimento')"
           >
             Conhecimento (Int)
@@ -320,7 +323,7 @@
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('conhecimento2')"
           >
@@ -330,12 +333,12 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">
+          <h4 class="pericias-valor">
             {{ pericias["conhecimento2"].atributo }}
           </h4>
 
           <button
-            class="textoPericias"
+            class="texto-pericias"
             (click)="rolagemPericia('conhecimento2')"
           >
             Conhecimento (Int)
@@ -344,7 +347,7 @@
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('diplomacia')"
             (change)="atualizarAtributos()"
@@ -355,15 +358,15 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["diplomacia"].atributo }}</h4>
-          <button class="textoPericias" (click)="rolagemPericia('diplomacia')">
+          <h4 class="pericias-valor">{{ pericias["diplomacia"].atributo }}</h4>
+          <button class="texto-pericias" (click)="rolagemPericia('diplomacia')">
             Diplomacia (Car)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('enganacao')"
             (change)="atualizarAtributos()"
@@ -374,15 +377,15 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["enganacao"].atributo }}</h4>
-          <button class="textoPericias" (click)="rolagemPericia('enganacao')">
+          <h4 class="pericias-valor">{{ pericias["enganacao"].atributo }}</h4>
+          <button class="texto-pericias" (click)="rolagemPericia('enganacao')">
             Enganação (Car)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('furtividade')"
             (change)="atualizarAtributos()"
@@ -393,15 +396,15 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["furtividade"].atributo }}</h4>
-          <button class="textoPericias" (click)="rolagemPericia('furtividade')">
+          <h4 class="pericias-valor">{{ pericias["furtividade"].atributo }}</h4>
+          <button class="texto-pericias" (click)="rolagemPericia('furtividade')">
             Furtividade (Des)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('intimidacao')"
             (change)="atualizarAtributos()"
@@ -412,15 +415,15 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["intimidacao"].atributo }}</h4>
-          <button class="textoPericias" (click)="rolagemPericia('intimidacao')">
+          <h4 class="pericias-valor">{{ pericias["intimidacao"].atributo }}</h4>
+          <button class="texto-pericias" (click)="rolagemPericia('intimidacao')">
             Intimidação (Car)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('ladroagem')"
             (change)="atualizarAtributos()"
@@ -431,15 +434,15 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["ladroagem"].atributo }}</h4>
-          <button class="textoPericias" (click)="rolagemPericia('ladroagem')">
+          <h4 class="pericias-valor">{{ pericias["ladroagem"].atributo }}</h4>
+          <button class="texto-pericias" (click)="rolagemPericia('ladroagem')">
             Ladroagem (Des)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('manufatura')"
             (change)="atualizarAtributos()"
@@ -450,16 +453,16 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["manufatura"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["manufatura"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('manufatura')">
+          <button class="texto-pericias" (click)="rolagemPericia('manufatura')">
             Manufatura (Int)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('medicina')"
             (change)="atualizarAtributos()"
@@ -470,16 +473,16 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["medicina"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["medicina"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('medicina')">
+          <button class="texto-pericias" (click)="rolagemPericia('medicina')">
             Medicina (Sab)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('natureza')"
             (change)="atualizarAtributos()"
@@ -490,16 +493,16 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["natureza"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["natureza"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('natureza')">
+          <button class="texto-pericias" (click)="rolagemPericia('natureza')">
             Natureza (Sab)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('ocultismo')"
             (change)="atualizarAtributos()"
@@ -510,16 +513,16 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["ocultismo"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["ocultismo"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('ocultismo')">
+          <button class="texto-pericias" (click)="rolagemPericia('ocultismo')">
             Ocultismo (Int)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('percepcao')"
             (change)="atualizarAtributos()"
@@ -530,16 +533,16 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["percepcao"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["percepcao"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('percepcao')">
+          <button class="texto-pericias" (click)="rolagemPericia('percepcao')">
             Percepção (Sab)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('perfomance')"
             (change)="atualizarAtributos()"
@@ -550,16 +553,16 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["perfomance"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["perfomance"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('perfomance')">
+          <button class="texto-pericias" (click)="rolagemPericia('perfomance')">
             Perfomance (Car)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('religiao')"
             (change)="atualizarAtributos()"
@@ -570,9 +573,9 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["religiao"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["religiao"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('religiao')">
+          <button class="texto-pericias" (click)="rolagemPericia('religiao')">
             Religião (Sab)
           </button>
         </div>
@@ -580,7 +583,7 @@
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('sociedade')"
             (change)="atualizarAtributos()"
@@ -591,16 +594,16 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">{{ pericias["sociedade"].atributo }}</h4>
+          <h4 class="pericias-valor">{{ pericias["sociedade"].atributo }}</h4>
 
-          <button class="textoPericias" (click)="rolagemPericia('sociedade')">
+          <button class="texto-pericias" (click)="rolagemPericia('sociedade')">
             Sociedade (Int)
           </button>
         </div>
         <div class="pericias">
           <select
             name="grauTreinamento"
-            class="caixaSelecao"
+            class="caixa-selecao"
             (change)="onSelect($event)"
             (change)="treinamento('sobrevivencia')"
             (change)="atualizarAtributos()"
@@ -611,12 +614,12 @@
             <option value="mestre">M</option>
             <option value="lendario">L</option>
           </select>
-          <h4 class="periciasValor">
+          <h4 class="pericias-valor">
             {{ pericias["sobrevivencia"].atributo }}
           </h4>
 
           <button
-            class="textoPericias"
+            class="texto-pericias"
             (click)="rolagemPericia('sobrevivencia')"
           >
             Sobrevivência (Sab)
@@ -624,41 +627,53 @@
         </div>
       </div>
 
-    </div>
+
   </div>
     <div>
-      <form class="inputDefesas">
+      <form class="input-defesas">
         <div class="alinhar-pv-ca">
-          <label for="pvMax" id="pvMaxTitulo">PV máximos</label>
+          <label for="pvMax">PV máximos</label>
           <input
             type="text"
             value="pvMax"
-            class="inputPVCA"
-            id="pvMaxInput"
+            class="input-pv-ca"
+            id="pv-max-input"
             name="pvMax"
             placeholder="10"
             [(ngModel)]="statusJogador.vidaMax.atributo"
           />
         </div>
         <div class="alinhar-pv-ca">
-          <label for="pvAtual" id="pvAtualTitulo">PV atuais</label>
+          <label for="pvAtual">PV atuais</label>
           <input
             type="text"
-            class="inputPVCA"
+            class="input-pv-ca"
             value="pvAtual"
-            id="pvAtualInput"
+            id="pv-atual-input"
             name="pvAtual"
             placeholder="10"
             [(ngModel)]="statusJogador.vidaAtual.atributo"
           />
         </div>
         <div class="alinhar-pv-ca">
-          <label for="defesa" id="caTitulo">Classe de Armadura</label>
+          <label for="pvTemporario">PV temporários</label>
           <input
             type="text"
-            class="inputPVCA"
+            value="pvTemporario"
+            class="input-pv-ca"
+            id="pv-temporario-input"
+            name="pvTemporario"
+            placeholder="10"
+            [(ngModel)]="statusJogador.vidaTemporaria.atributo"
+          />
+        </div>
+        <div class="alinhar-pv-ca">
+          <label for="defesa">Classe de Armadura</label>
+          <input
+            type="text"
+            class="input-pv-ca"
             value="defesa"
-            id="caInput"
+            id="ca-input"
             name="defesa"
             placeholder="10"
             [(ngModel)]="statusJogador.ca.atributo"
@@ -675,13 +690,15 @@
       />
     </div>
   </div>
+
   <div class="ataque-card">
-    <h3 class="ataque-titulo">Ataques & magias</h3>
+    <h3 class="cards-titulo">Ataques & magias</h3>
     <h4 class="itens">Rapieira</h4>
     <h4 class="itens">Bola de fogo</h4>
   </div>
+
   <div class="inventario-card">
-    <h3 class="inventario-titulo">Inventario</h3>
+    <h3 class="cards-titulo">Inventario</h3>
     <h4 class="itens">Armadura de couro</h4>
     <h4 class="itens">Rapieira</h4>
     <h4 class="itens">Saco de dormir</h4>

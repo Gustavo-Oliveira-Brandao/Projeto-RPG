@@ -8,7 +8,7 @@
 
 }
 
-.afastarInfo{
+.espacamento-info-direita{
   margin-right: 3rem;
 }
 
@@ -36,10 +36,6 @@
   text-align: center;
 
 }
-#organizaratributos {
-  display: flex;
-  flex-direction: column;
-}
 
 .atributos {
   border: 1px solid #ffffffff;
@@ -55,7 +51,7 @@
   margin-left: 12rem;
 }
 
-.inputAtributo {
+.input-atributo {
   background-color: transparent;
   color: #ffffffff;
   width: 2rem;
@@ -70,7 +66,7 @@
   text-align: center;
 }
 
-.atributoNome {
+.atributo-nome {
   position: relative;
   bottom: 1rem;
   background-color: transparent;
@@ -98,13 +94,13 @@
   margin-left: 3rem;
 }
 
-.periciasTitulo {
+.cards-titulo {
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 10px;
+  font-size: large;
 }
 
-.caixaSelecao {
+.caixa-selecao {
   border: none;
   background-color: #4682B4;
   color: #ffffff;
@@ -124,11 +120,12 @@
   flex-direction: row;
 }
 
-.textoPericias {
+.texto-pericias {
   color: #ffffff;
   background-color: #4682B4;
   border: none;
-  margin-left: 3rem;
+  position: absolute;
+  left: 28rem;
   font-family: "VT323", monospace;
   font-weight: 400;
   font-style: normal;
@@ -145,25 +142,32 @@
   font-size: large;
 }
 
-#pvMaxInput {
+#pv-max-input {
   background-image: url(../../../assets/icon\ coracao.svg);
   background-size: 100%;
   background-repeat: no-repeat;
 
 }
 
-#pvAtualInput{
+#pv-atual-input{
   background-image: url(../../../assets/icon\ coracao.svg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
-#caInput{
+#pv-temporario-input{
+  background-image: url(../../../assets/icon\ coracao.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#ca-input{
   background-image: url(../../../assets/shield.png);
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.inputPVCA {
+
+.input-pv-ca {
   background-color: transparent;
   color: #ffffff;
   font-size: xx-large;
@@ -181,17 +185,17 @@
 
 }
 
-.inputDefesas {
+.input-defesas {
   display: flex;
   flex-direction: row;
   margin:auto;
 }
 
-.periciasValor {
+.pericias-valor {
   font-size: large;
 }
 
-.pericias-defesa{
+.teste-resistencia{
   background-color: #4682B4;
   border: 1px solid #ffffff;
   border-radius: 30px;
@@ -232,12 +236,6 @@
   max-height: 80rem;
 }
 
-.inventario-titulo,
-.ataque-titulo {
-  text-align: center;
-  margin-top: 1rem;
-}
-
 .inventario-card{
   background-color: #4682B4;
   border: 1px solid white;
@@ -253,4 +251,10 @@
 .itens {
   margin-left: 2rem;
   padding-bottom: 0.5rem;
+}
+
+
+button:hover{
+  cursor: pointer;
+  color: #e50914;
 }

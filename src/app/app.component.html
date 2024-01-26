@@ -1,6 +1,40 @@
 <app-cabecalho></app-cabecalho>
 <main class="ff-inter">
-<app-ficha></app-ficha>
-
+  <nav>
+    <button
+      routerLink="/ficha"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+      class="botao-aba"
+    >
+      Ficha
+    </button>
+    <button
+      routerLink="/habilidades"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+      class="botao-aba"
+    >
+      Habilidades
+    </button>
+    <button
+      routerLink="/magias"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+      class="botao-aba"
+    >
+      Magias
+    </button>
+    <button
+      routerLink="/pets"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+      class="botao-aba"
+    >
+      Pets
+    </button>
+  </nav>
+  <router-outlet></router-outlet>
 </main>
-<router-outlet></router-outlet>
+
+
