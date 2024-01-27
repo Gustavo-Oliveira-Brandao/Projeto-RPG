@@ -5,7 +5,7 @@
   <div class="alinhar-info">
     <form>
       <div class="card-info container">
-        <label name="nomePersonagem">Nome do personagem: </label>
+        <label>Nome do personagem: </label>
         <input
           name="nomePersonagem"
           type="text"
@@ -14,7 +14,7 @@
           [(ngModel)]="personagem.nome.id"
         />
 
-        <label name="racaPersonagem">Raça: </label>
+        <label>Raça: </label>
         <input
           name="racaPersonagem"
           type="text"
@@ -23,7 +23,7 @@
           [(ngModel)]="personagem.raca.id"
         />
 
-        <label name="classePersonagem">Classe: </label>
+        <label>Classe: </label>
         <input
           name="classePersonagem"
           type="text"
@@ -32,7 +32,7 @@
           [(ngModel)]="personagem.classe.id"
         />
 
-        <label name="nivelPersonagem" class="">Nivel: </label>
+        <label>Nivel: </label>
         <input
           name="nivelPersonagem"
           type="number"
@@ -47,7 +47,7 @@
   <div class="alinhar-cards">
     <form>
       <div class="atributos">
-        <button for="forca" class="atributo-nome">Força</button>
+        <button class="atributo-nome">Força</button>
         <input
           type="text"
           id="valor-forca"
@@ -64,7 +64,7 @@
       </div>
 
       <div class="atributos">
-        <button for="destreza" class="atributo-nome">Destreza</button>
+        <button class="atributo-nome">Destreza</button>
         <input
           type="text"
           id="valor-destreza"
@@ -81,7 +81,7 @@
       </div>
 
       <div class="atributos">
-        <button for="constituicao" class="atributo-nome">Constituição</button>
+        <button class="atributo-nome">Constituição</button>
         <input
           type="text"
           id="valor-constituicao"
@@ -98,7 +98,7 @@
       </div>
 
       <div class="atributos">
-        <button for="inteligencia" class="atributo-nome">Inteligência</button>
+        <button class="atributo-nome">Inteligência</button>
         <input
           type="text"
           id="valor-inteligencia"
@@ -115,7 +115,7 @@
       </div>
 
       <div class="atributos">
-        <button for="sabedoria" class="atributo-nome">Sabedoria</button>
+        <button class="atributo-nome">Sabedoria</button>
         <input
           type="text"
           id="valor-sabedoria"
@@ -132,7 +132,7 @@
       </div>
 
       <div class="atributos">
-        <button for="carisma" class="atributo-nome">Carisma</button
+        <button class="atributo-nome">Carisma</button
         ><input
           type="text"
           id="valor-carisma"
@@ -156,9 +156,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('fortitude')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('fortitude'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -176,9 +174,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('reflexos')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('reflexos') ; atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -196,9 +192,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('vontade')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('vontade'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -220,9 +214,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('acrobacia')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('acrobacia') ; atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -243,9 +235,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('arcanismo')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('arcanismo'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -262,9 +252,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('atletismo')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('atletismo'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -281,9 +269,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('cavalgar')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('cavalgar'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -300,8 +286,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('conhecimento')"
+            (change)="onSelect($event); treinamento('conhecimento')"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -324,8 +309,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('conhecimento2')"
+            (change)="onSelect($event); treinamento('conhecimento2')"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -348,9 +332,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('diplomacia')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('diplomacia'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -367,9 +349,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('enganacao')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('enganacao'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -386,9 +366,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('furtividade')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('furtividade'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -405,9 +383,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('intimidacao')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('intimidacao'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -424,9 +400,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('ladroagem')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('ladroagem'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -443,9 +417,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('manufatura')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('manufatura'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -463,9 +435,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('medicina')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('medicina'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -483,9 +453,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('natureza')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('natureza'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -503,9 +471,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('ocultismo')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('ocultismo'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -523,9 +489,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('percepcao')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('percepcao'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -543,9 +507,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('perfomance')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('perfomance'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -563,9 +525,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('religiao')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('religiao'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -584,9 +544,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('sociedade')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('sociedade'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -604,9 +562,7 @@
           <select
             name="grauTreinamento"
             class="caixa-selecao"
-            (change)="onSelect($event)"
-            (change)="treinamento('sobrevivencia')"
-            (change)="atualizarAtributos()"
+            (change)="onSelect($event); treinamento('sobrevivencia'); atualizarAtributos()"
           >
             <option value="destreinado">D</option>
             <option value="treinado">T</option>
@@ -632,7 +588,7 @@
     <div>
       <form class="input-defesas">
         <div class="alinhar-pv-ca">
-          <label for="pvMax">PV máximos</label>
+          <label>PV máximos</label>
           <input
             type="text"
             value="pvMax"
@@ -644,7 +600,7 @@
           />
         </div>
         <div class="alinhar-pv-ca">
-          <label for="pvAtual">PV atuais</label>
+          <label>PV atuais</label>
           <input
             type="text"
             class="input-pv-ca"
@@ -656,7 +612,7 @@
           />
         </div>
         <div class="alinhar-pv-ca">
-          <label for="pvTemporario">PV temporários</label>
+          <label>PV temporários</label>
           <input
             type="text"
             value="pvTemporario"
@@ -668,7 +624,7 @@
           />
         </div>
         <div class="alinhar-pv-ca">
-          <label for="defesa">Classe de Armadura</label>
+          <label>Classe de Armadura</label>
           <input
             type="text"
             class="input-pv-ca"
@@ -699,9 +655,6 @@
 
   <div class="inventario-card">
     <h3 class="cards-titulo">Inventario</h3>
-    <h4 class="itens">Armadura de couro</h4>
-    <h4 class="itens">Rapieira</h4>
-    <h4 class="itens">Saco de dormir</h4>
   </div>
 
   <div class=""></div>

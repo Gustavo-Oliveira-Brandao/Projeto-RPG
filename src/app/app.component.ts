@@ -7,8 +7,9 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
 import { FormsModule } from '@angular/forms';
 import { MagiasComponent } from './componentes/magias/magias.component';
 import { PetsComponent } from './componentes/pets/pets.component';
+import { MatTableModule } from '@angular/material/table';
 
-@Component({
+  @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
@@ -21,7 +22,8 @@ import { PetsComponent } from './componentes/pets/pets.component';
     PetsComponent,
     FormsModule,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    MatTableModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

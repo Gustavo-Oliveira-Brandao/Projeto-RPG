@@ -1,11 +1,13 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CabecalhoComponent } from '../cabecalho/cabecalho.component';
+import { MatTableModule } from '@angular/material/table';
+
 
 @Component({
   selector: 'app-ficha',
   standalone: true,
-  imports: [FormsModule, CabecalhoComponent],
+  imports: [FormsModule, CabecalhoComponent, MatTableModule],
   templateUrl: './ficha.component.html',
   styleUrl: './ficha.component.css',
 })
@@ -26,7 +28,6 @@ export class FichaComponent {
     }
 
     }
-
 
   atributos: {
     [key: string]: { id: string; atributo: number; modificador: number };
@@ -338,25 +339,8 @@ export class FichaComponent {
 
   );
 
+  adicionarAtaque(){
 
-  adicionarAtaque(
-    nome: string,
-    tipoAtributo: string,
-    quantidadeDados: number,
-    dadoDano: number
-  ) {
-    if (this.atributos[tipoAtributo].id === 'destreza') {
-      this.ataques.push({nome, tipoAtributo, quantidadeDados, dadoDano});
-
-      const para = document.createElement("button")
-      para.setAttribute('class', 'ataque')
-
-      const node = document.createTextNode(nome)
-      para.appendChild(node)
-
-      const element = document.getElementById('ataques')
-      element?.appendChild(para)
-    }
   }
 
 
