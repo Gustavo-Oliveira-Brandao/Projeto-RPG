@@ -17,17 +17,21 @@ export class FichaComponent {
     nome: {
       id: '',
     },
-    raca:{
+    raca: {
       id: ''
     },
-    classe:{
+    classe: {
       id: ''
     },
-    nivel:{
+    nivel: {
       atributo: 1
+    },
+
+    exp: {
+      atributo: 0
     }
 
-    }
+  }
 
   atributos: {
     [key: string]: { id: string; atributo: number; modificador: number };
@@ -48,6 +52,7 @@ export class FichaComponent {
       atributo: 10,
       modificador: 0,
     },
+
     inteligencia: {
       id: 'inteligencia',
       atributo: 10,
@@ -74,6 +79,7 @@ export class FichaComponent {
       grau: string;
       valorGrau: number;
       tipoAtributo: string;
+      passiva?: number
     };
   } = {
     acrobacia: {
@@ -209,6 +215,7 @@ export class FichaComponent {
       grau: 'D',
       valorGrau: 0,
       tipoAtributo: 'sabedoria',
+      passiva: 10
     },
 
     perfomance: {
@@ -273,7 +280,7 @@ export class FichaComponent {
 
     vidaTemporaria: {
       id: 'pvTemporario',
-      atributo:0
+      atributo: 0
     },
 
     iniciativa: {
@@ -339,7 +346,7 @@ export class FichaComponent {
 
   );
 
-  adicionarAtaque(){
+  adicionarAtaque(nome: string, tipoAtributo: string, quantidadeDados: number, dadoDano: number) {
 
   }
 
@@ -394,6 +401,7 @@ export class FichaComponent {
           this.pericias[pericia].valorGrau;
       }
     });
+    this.pericias['percepcao'].passiva = 10 + this.pericias['percepcao'].atributo;
   }
 
   selectedValue?: string;
@@ -426,7 +434,7 @@ export class FichaComponent {
   }
 
   rolagemPericia(pericia: string) {
-    var randomNumber = Math.floor(Math.random() * this.dados.d20.sides) + 1;
+    let randomNumber = Math.floor(Math.random() * this.dados.d20.sides) + 1;
     let rolagem = randomNumber + this.pericias[pericia].atributo;
     let texto =
       'Dado natural: ' +
@@ -437,5 +445,4 @@ export class FichaComponent {
       rolagem;
     console.log(texto);
   }
-
 }

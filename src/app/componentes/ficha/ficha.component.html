@@ -37,15 +37,24 @@
           name="nivelPersonagem"
           type="number"
           value="nivel"
-          class="input-nivel"
+          class="input-nivel espacamento-info-direita"
           [(ngModel)]="personagem.nivel.atributo"
+        />
+
+        <label>Exp: </label>
+        <input
+          name="expPersonagem"
+          type="number"
+          value="exp"
+          class="input-info espacamento-info-direita"
+          [(ngModel)]="personagem.exp.atributo"
         />
       </div>
     </form>
   </div>
 
-  <div class="alinhar-cards">
-    <form>
+<div class="alinhar-atributos-pericias">
+    <form class="alinhar-atributos">
       <div class="atributos">
         <button class="atributo-nome">Força</button>
         <input
@@ -147,9 +156,11 @@
           ({{ atributos["carisma"].modificador }})
         </span>
       </div>
+
     </form>
 
     <div class="alinhar-pericias">
+      <div class="alinhar-pericias-ataque">
       <div class="teste-resistencia">
         <h3 class="cards-titulo">Testes de resistência</h3>
         <div class="pericias">
@@ -167,7 +178,7 @@
           <h4 class="pericias-valor">{{ pericias["fortitude"].atributo }}</h4>
 
           <button class="texto-pericias" (click)="rolagemPericia('fortitude')">
-            Fortitude (Con):
+            Fortitude (Con)
           </button>
         </div>
         <div class="pericias">
@@ -185,7 +196,7 @@
           <h4 class="pericias-valor">{{ pericias["reflexos"].atributo }}</h4>
 
           <button class="texto-pericias" (click)="rolagemPericia('reflexos')">
-            Reflexos (Des):
+            Reflexos (Des)
           </button>
         </div>
         <div class="pericias">
@@ -203,10 +214,93 @@
           <h4 class="pericias-valor">{{ pericias["vontade"].atributo }}</h4>
 
           <button class="texto-pericias" (click)="rolagemPericia('vontade')">
-            Vontade (Sab):
+            Vontade (Sab)
           </button>
         </div>
       </div>
+
+        <div class="alinhar-foto-pv">
+        <div class="alinhar-pv-ataques">
+          <form class="input-defesas">
+            <div class="alinhar-pv-ca">
+              <label>PV máximos</label>
+              <input
+                type="text"
+                class="input-pv-ca"
+                id="pv-max-input"
+                name="pvMax"
+                [(ngModel)]="statusJogador.vidaMax.atributo"
+              />
+            </div>
+            <div class="alinhar-pv-ca">
+              <label>PV atuais</label>
+              <input
+                type="text"
+                class="input-pv-ca"
+                id="pv-atual-input"
+                name="pvAtual"
+                [(ngModel)]="statusJogador.vidaAtual.atributo"
+              />
+            </div>
+
+            <div class="alinhar-pv-ca">
+              <label>Classe de Armadura</label>
+              <input
+                type="text"
+                class="input-pv-ca"
+                id="ca-input"
+                name="defesa"
+                [(ngModel)]="statusJogador.ca.atributo"
+              />
+            </div>
+            <div class="alinhar-pv-ca">
+              <label>PV temporários</label>
+              <input
+                type="text"
+                class="input-pv-ca"
+                id="pv-temporario-input"
+                name="pvTemporario"
+                [(ngModel)]="statusJogador.vidaTemporaria.atributo"
+              />
+            </div>
+            <div class="alinhar-pv-ca">
+              <label>Deslocamento</label>
+              <input
+                type="text"
+                class="input-pv-ca"
+                id="deslocamento-input"
+                name="deslocamento"
+                [(ngModel)]="statusJogador.velocidade.atributo"
+              />
+            </div>
+          </form>
+        </div>
+          <div class="alinhar-ataque-inventario">
+            <div class="ataque-card">
+              <h3 class="cards-titulo">Ataques & magias</h3>
+              <div class="alinhar-nomes-ataque">
+                <h4 class="nome-ataque">Nome</h4>
+                <h4 class="qntd-bonus">ATQ</h4>
+                <h4 class="qntd-dano">Dano/Tipo</h4>
+              </div>
+
+              <div class="alinhar-ataques">
+                <button class="ataque">Espada Longa</button>
+                <button class="bonus">+5</button>
+                <button class="dano">1d8/Cortante</button>
+              </div>
+              <button class="adicionar">+</button>
+            </div>
+
+            <div class="inventario-card">
+              <h3 class="cards-titulo">Inventario</h3>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
 
       <div id="pericias-card">
         <h3 class="cards-titulo">Pericias</h3>
@@ -584,78 +678,6 @@
       </div>
 
 
+      </div>
   </div>
-    <div>
-      <form class="input-defesas">
-        <div class="alinhar-pv-ca">
-          <label>PV máximos</label>
-          <input
-            type="text"
-            value="pvMax"
-            class="input-pv-ca"
-            id="pv-max-input"
-            name="pvMax"
-            placeholder="10"
-            [(ngModel)]="statusJogador.vidaMax.atributo"
-          />
-        </div>
-        <div class="alinhar-pv-ca">
-          <label>PV atuais</label>
-          <input
-            type="text"
-            class="input-pv-ca"
-            value="pvAtual"
-            id="pv-atual-input"
-            name="pvAtual"
-            placeholder="10"
-            [(ngModel)]="statusJogador.vidaAtual.atributo"
-          />
-        </div>
-        <div class="alinhar-pv-ca">
-          <label>PV temporários</label>
-          <input
-            type="text"
-            value="pvTemporario"
-            class="input-pv-ca"
-            id="pv-temporario-input"
-            name="pvTemporario"
-            placeholder="10"
-            [(ngModel)]="statusJogador.vidaTemporaria.atributo"
-          />
-        </div>
-        <div class="alinhar-pv-ca">
-          <label>Classe de Armadura</label>
-          <input
-            type="text"
-            class="input-pv-ca"
-            value="defesa"
-            id="ca-input"
-            name="defesa"
-            placeholder="10"
-            [(ngModel)]="statusJogador.ca.atributo"
-          />
-        </div>
-      </form>
-    </div>
-
-    <div>
-      <img
-        src="../../../assets/personagem placeholder.jpg"
-        id="foto-personagem"
-        alt="foto do personagem"
-      />
-    </div>
-  </div>
-
-  <div class="ataque-card">
-    <h3 class="cards-titulo">Ataques & magias</h3>
-    <h4 class="itens">Rapieira</h4>
-    <h4 class="itens">Bola de fogo</h4>
-  </div>
-
-  <div class="inventario-card">
-    <h3 class="cards-titulo">Inventario</h3>
-  </div>
-
-  <div class=""></div>
 </section>

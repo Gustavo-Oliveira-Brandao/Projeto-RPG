@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 256 256"
+   version="1.1"
+   sodipodi:docname="shield.svg"
+   width="256"
+   height="256"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview40"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">.cls-1{fill:#f7feff;}.cls-2{fill:#231e2b;}.cls-3{fill:#892727;}.cls-4{fill:#cf8934;}.cls-5{fill:#e2b436;}.cls-6{fill:#b0392e;}.cls-7{fill:#f5f38e;}.cls-8{fill:#cf6b55;}</style>
+  </defs>
+  <title
+     id="title1">shield</title>
+  <rect
+     class="cls-1"
+     x="6"
+     y="15"
+     width="4"
+     height="1"
+     id="rect1" />
+  <rect
+     class="cls-1"
+     x="10"
+     y="14"
+     width="1"
+     height="1"
+     id="rect2" />
+  <rect
+     class="cls-2"
+     x="6"
+     y="14"
+     width="4"
+     height="1"
+     id="rect3" />
+  <rect
+     class="cls-1"
+     x="5"
+     y="14"
+     width="1"
+     height="1"
+     id="rect4" />
+  <rect
+     class="cls-1"
+     x="11"
+     y="13"
+     width="1"
+     height="1"
+     id="rect5" />
+  <rect
+     class="cls-2"
+     x="10"
+     y="13"
+     width="1"
+     height="1"
+     id="rect6" />
+  <rect
+     class="cls-3"
+     x="8"
+     y="13"
+     width="2"
+     height="1"
+     id="rect7" />
+  <rect
+     class="cls-4"
+     x="6"
+     y="13"
+     width="2"
+     height="1"
+     id="rect8" />
+  <rect
+     class="cls-2"
+     x="5"
+     y="13"
+     width="1"
+     height="1"
+     id="rect9" />
+  <rect
+     class="cls-1"
+     x="4"
+     y="13"
+     width="1"
+     height="1"
+     id="rect10" />
+  <rect
+     class="cls-1"
+     x="12"
+     y="12"
+     width="1"
+     height="1"
+     id="rect11" />
+  <rect
+     class="cls-2"
+     x="11"
+     y="12"
+     width="1"
+     height="1"
+     id="rect12" />
+  <rect
+     class="cls-3"
+     x="10"
+     y="12"
+     width="1"
+     height="1"
+     id="rect13" />
+  <polygon
+     class="cls-5"
+     points="3,8 3,10 4,10 4,11 5,11 5,12 6,12 6,13 8,13 8,8 "
+     id="polygon13" />
+  <rect
+     class="cls-4"
+     x="5"
+     y="12"
+     width="1"
+     height="1"
+     id="rect14" />
+  <rect
+     class="cls-2"
+     x="4"
+     y="12"
+     width="1"
+     height="1"
+     id="rect15" />
+  <rect
+     class="cls-1"
+     x="3"
+     y="12"
+     width="1"
+     height="1"
+     id="rect16" />
+  <rect
+     class="cls-1"
+     x="13"
+     y="11"
+     width="1"
+     height="1"
+     id="rect17" />
+  <rect
+     class="cls-2"
+     x="12"
+     y="11"
+     width="1"
+     height="1"
+     id="rect18" />
+  <rect
+     class="cls-3"
+     x="11"
+     y="11"
+     width="1"
+     height="1"
+     id="rect19" />
+  <rect
+     class="cls-4"
+     x="4"
+     y="11"
+     width="1"
+     height="1"
+     id="rect20" />
+  <rect
+     class="cls-2"
+     x="3"
+     y="11"
+     width="1"
+     height="1"
+     id="rect21" />
+  <rect
+     class="cls-1"
+     x="2"
+     y="11"
+     width="1"
+     height="1"
+     id="rect22" />
+  <rect
+     class="cls-3"
+     x="12"
+     y="10"
+     width="1"
+     height="1"
+     id="rect23" />
+  <rect
+     class="cls-4"
+     x="3"
+     y="10"
+     width="1"
+     height="1"
+     id="rect24" />
+  <polygon
+     class="cls-2"
+     points="5,3 2,3 2,11 3,11 3,4 5,4 "
+     id="polygon24" />
+  <rect
+     class="cls-1"
+     x="1"
+     y="3"
+     width="1"
+     height="8"
+     id="rect25" />
+  <polygon
+     class="cls-6"
+     points="10,13 10,12 11,12 11,11 12,11 12,10 13,10 13,8 8,8 8,13 "
+     id="polygon25" />
+  <rect
+     class="cls-1"
+     x="14"
+     y="3"
+     width="1"
+     height="8"
+     id="rect26" />
+  <rect
+     class="cls-7"
+     x="11"
+     y="4"
+     width="2"
+     height="1"
+     id="rect27" />
+  <polygon
+     class="cls-6"
+     points="3,5 3,8 8,8 8,3 7,3 7,4 5,4 5,5 "
+     id="polygon27" />
+  <rect
+     class="cls-8"
+     x="3"
+     y="4"
+     width="2"
+     height="1"
+     id="rect28" />
+  <polygon
+     class="cls-2"
+     points="13,4 13,11 14,11 14,3 11,3 11,4 "
+     id="polygon28" />
+  <rect
+     class="cls-7"
+     x="9"
+     y="3"
+     width="2"
+     height="1"
+     id="rect29" />
+  <polygon
+     class="cls-5"
+     points="13,5 11,5 11,4 9,4 9,3 8,3 8,8 13,8 "
+     id="polygon29" />
+  <rect
+     class="cls-8"
+     x="5"
+     y="3"
+     width="2"
+     height="1"
+     id="rect30" />
+  <rect
+     class="cls-1"
+     x="11"
+     y="2"
+     width="3"
+     height="1"
+     id="rect31" />
+  <rect
+     class="cls-2"
+     x="9"
+     y="2"
+     width="2"
+     height="1"
+     id="rect32" />
+  <rect
+     class="cls-7"
+     x="8"
+     y="2"
+     width="1"
+     height="1"
+     id="rect33" />
+  <rect
+     class="cls-8"
+     x="7"
+     y="2"
+     width="1"
+     height="1"
+     id="rect34" />
+  <rect
+     class="cls-2"
+     x="5"
+     y="2"
+     width="2"
+     height="1"
+     id="rect35" />
+  <rect
+     class="cls-1"
+     x="2"
+     y="2"
+     width="3"
+     height="1"
+     id="rect36" />
+  <rect
+     class="cls-1"
+     x="9"
+     y="1"
+     width="2"
+     height="1"
+     id="rect37" />
+  <rect
+     class="cls-2"
+     x="7"
+     y="1"
+     width="2"
+     height="1"
+     id="rect38" />
+  <rect
+     class="cls-1"
+     x="5"
+     y="1"
+     width="2"
+     height="1"
+     id="rect39" />
+  <rect
+     class="cls-1"
+     x="7"
+     width="2"
+     height="1"
+     id="rect40"
+     y="0" />
+  <path
+     style="fill:#2939af;fill-opacity:1;stroke-width:0.0139159"
+     d="M 3.0128027,6.4987476 V 5.0097412 H 4.0077929 5.0027832 V 4.508767 4.0077929 H 6.0047314 7.0066797 V 3.5068188 3.0058447 H 7.5006958 7.9947119 V 5.4967993 7.987754 H 5.5037573 3.0128027 Z"
+     id="path40" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.0139159"
+     d="M 5.0027832,3.4998608 V 3.0058447 H 5.9977734 6.9927637 V 3.4998608 3.993877 H 5.9977734 5.0027832 Z"
+     id="path42" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.0139159"
+     d="M 7.0066797,2.4979126 V 2.0038965 H 7.5006958 7.9947119 V 2.4979126 2.9919288 H 7.5006958 7.0066797 Z"
+     id="path43" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.0139159"
+     d="M 3.0128027,4.5018091 V 4.0077929 H 4.000835 4.9888672 V 4.5018091 4.9958252 H 4.000835 3.0128027 Z"
+     id="path44" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="m 3.0116597,4.5019531 c 10e-8,-0.2728515 4.659e-4,-0.3838967 0.00104,-0.246767 5.693e-4,0.1371297 5.692e-4,0.3603719 -2e-7,0.4960937 -5.694e-4,0.1357219 -0.00104,0.023525 -0.00103,-0.2493267 z"
+     id="path45" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="M 3.0136719,4.5 V 4.0078125 H 4 4.9863281 V 4.5 4.9921875 H 4 3.0136719 Z"
+     id="path47" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="m 4.9999416,4.5 c 0,-0.2760742 4.655e-4,-0.3890137 0.00103,-0.2509766 5.689e-4,0.1380371 5.689e-4,0.3639161 0,0.5019532 C 5.0004071,4.8890137 4.9999416,4.7760742 4.9999416,4.5 Z"
+     id="path48" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="m 4.9882219,4.5 c 0,-0.2717773 4.659e-4,-0.382959 0.00104,-0.2470703 5.694e-4,0.1358887 5.694e-4,0.3582519 0,0.4941406 C 4.9886878,4.882959 4.9882219,4.7717773 4.9882219,4.5 Z"
+     id="path49" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="M 3.0019531,4.5 V 4 H 4 4.9980469 V 4.5 5 H 4 3.0019531 Z M 4.9902344,4.50195 V 4.0078125 H 4 3.0097656 V 4.5019531 4.9960937 H 4 4.9902344 Z"
+     id="path50" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="m 4.988038,4.1113281 c -2.1e-6,-0.058008 5.415e-4,-0.082283 0.00121,-0.053945 6.665e-4,0.028338 6.683e-4,0.075799 3.8e-6,0.1054688 -6.644e-4,0.029669 -0.00121,0.00648 -0.00121,-0.051524 z"
+     id="path51" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="m 5.0019531,4.0039062 c 0,-0.00259 0.3359375,-0.00391 1,-0.00391 h 1 V 3.5 3 L 7.5009766,3.0009615 8,3.001923 7.5029297,3.0029296 7.0058594,3.0039361 V 3.5058743 4.0078125 H 6.0039062 c -0.6653645,0 -1.0019531,-0.00131 -1.0019531,-0.00391 z"
+     id="path53" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="M 5.9970703,3.9970704 6.9941406,3.9960787 V 3.5 3.0039213 L 5.9970703,3.0029297 5,3.001938 5.9990234,3.000969 6.9980469,3 V 3.5 4 L 5.9990234,3.999031 5,3.998062 Z"
+     id="path54" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="M 5.0058594,3.5 V 3.0078125 H 5.9980469 6.9902344 V 3.5 3.9921875 H 5.9980469 5.0058594 Z"
+     id="path55" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="M 5.0058594,3.5 V 3.0078125 H 5.9980469 6.9902344 V 3.5 3.9921875 H 5.9980469 5.0058594 Z"
+     id="path56" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="M 5.0058594,3.5 V 3.0078125 H 5.9980469 6.9902344 V 3.5 3.9921875 H 5.9980469 5.0058594 Z"
+     id="path57" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="M 5.0058594,3.5 V 3.0078125 H 5.9980469 6.9902344 V 3.5 3.9921875 H 5.9980469 5.0058594 Z"
+     id="path58" />
+  <path
+     style="fill:#4f5aad;fill-opacity:1;stroke-width:0.00390625"
+     d="M 5.0058594,3.5 V 3.0078125 H 5.9980469 6.9902344 V 3.5 3.9921875 H 5.9980469 5.0058594 Z"
+     id="path59" />
+  <path
+     style="fill:#2939af;fill-opacity:1;stroke-width:0.015625"
+     d="M 8.0078125,10.5 V 8 H 10.5 12.992187 v 1 1 h -0.5 -0.5 v 0.5 0.5 h -0.5 -0.5 v 0.5 0.5 h -0.5 -0.4999995 V 12.5 13 H 9 8.0078125 Z"
+     id="path60" />
+  <path
+     style="fill:#202c84;fill-opacity:1;stroke-width:0.015625"
+     d="M 8.0078125,13.5 V 13 H 9 9.9921875 V 13.5 14 H 9 8.0078125 Z"
+     id="path61" />
+  <path
+     style="fill:#202c84;fill-opacity:1;stroke-width:0.015625"
+     d="M 10.007812,12.5 V 12 H 10.5 10.992187 V 12.5 13 H 10.5 10.007812 Z"
+     id="path62" />
+  <path
+     style="fill:#202c84;fill-opacity:1;stroke-width:0.015625"
+     d="M 11.007812,11.5 V 11 H 11.5 11.992187 V 11.5 12 H 11.5 11.007812 Z"
+     id="path63" />
+  <path
+     style="fill:#202c84;fill-opacity:1;stroke-width:0.015625"
+     d="M 12.007812,10.5 V 10 H 12.5 12.992187 V 10.5 11 H 12.5 12.007812 Z"
+     id="path64" />
+  <path
+     style="fill:#252738;fill-opacity:1;stroke-width:0.015625"
+     d="M 8.0078125,5.5 V 3 H 8.5 8.9921875 V 3.5 4 h 1 0.9999995 V 4.5 5 h 1 1 V 6.5 8 H 10.5 8.0078125 Z"
+     id="path66" />
+  <path
+     style="fill:#252738;fill-opacity:1;stroke-width:0.015625"
+     d="M 6.0078125,12.5 V 12 h -0.5 -0.5 V 11.5 11 h -0.5 -0.5 V 10.5 10 h -0.5 -0.5 V 9 8 H 5.5 7.9921875 V 10.5 13 H 7 6.0078125 Z"
+     id="path67" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.015625"
+     d="M 3.0078125,10.5 V 10 H 3.5 3.9921875 V 10.5 11 H 3.5 3.0078125 Z"
+     id="path68" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.015625"
+     d="M 4.0078125,11.5 V 11 H 4.5 4.9921875 V 11.5 12 H 4.5 4.0078125 Z"
+     id="path69" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.015625"
+     d="M 5.0078125,12.5 V 12 H 5.5 5.9921875 V 12.5 13 H 5.5 5.0078125 Z"
+     id="path70" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.015625"
+     d="M 6.0078125,13.5 V 13 H 7 7.9921875 V 13.5 14 H 7 6.0078125 Z"
+     id="path71" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.00390625"
+     d="m 4.0077541,10.5 c 0,-0.276074 4.655e-4,-0.389014 0.00103,-0.250977 5.689e-4,0.138038 5.689e-4,0.363916 0,0.501954 -5.69e-4,0.138037 -0.00103,0.0251 -0.00103,-0.250977 z"
+     id="path72" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.00390625"
+     d="m 3.9960353,10.5 c 0,-0.276074 4.655e-4,-0.389014 0.00103,-0.250977 5.69e-4,0.138038 5.69e-4,0.363916 0,0.501954 -5.69e-4,0.138037 -0.00103,0.0251 -0.00103,-0.250977 z"
+     id="path73" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.00390625"
+     d="m 3.9958342,10.904297 c -2.4e-6,-0.05371 5.478e-4,-0.07623 0.00122,-0.05003 6.748e-4,0.02619 6.767e-4,0.07014 4.3e-6,0.09766 -6.724e-4,0.02752 -0.00122,0.0061 -0.00123,-0.04762 z"
+     id="path74" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.00390625"
+     d="M 3.0097656,10.5 V 10 H 3.5 3.9902344 V 10.5 11 H 3.5 3.0097656 Z"
+     id="path76" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.00390625"
+     d="m 3.9952579,10.826172 c 2.93e-5,-0.01074 7.879e-4,-0.01467 0.00169,-0.0087 8.978e-4,0.0059 8.739e-4,0.01473 -5.33e-5,0.01953 -9.272e-4,0.0048 -0.00166,-5.4e-5 -0.00163,-0.0108 z"
+     id="path77" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.00390625"
+     d="m 3.9999416,10.5 c 0,-0.276074 4.655e-4,-0.389014 0.00103,-0.250977 5.689e-4,0.138038 5.689e-4,0.363916 0,0.501954 -5.69e-4,0.138037 -0.00103,0.0251 -0.00103,-0.250977 z"
+     id="path78" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.00390625"
+     d="m 4.0075529,10.904297 c -2.3e-6,-0.05371 5.478e-4,-0.07623 0.00122,-0.05003 6.748e-4,0.02619 6.768e-4,0.07014 4.4e-6,0.09766 -6.725e-4,0.02752 -0.00122,0.0061 -0.00123,-0.04762 z"
+     id="path83" />
+  <path
+     style="fill:#1b1b21;fill-opacity:1;stroke-width:0.00390625"
+     d="m 4.0069766,10.826172 c 2.93e-5,-0.01074 7.88e-4,-0.01467 0.00169,-0.0087 8.979e-4,0.0059 8.739e-4,0.01473 -5.33e-5,0.01953 -9.272e-4,0.0048 -0.00166,-5.4e-5 -0.00163,-0.0108 z"
+     id="path84" />
+  <path
+     style="fill:#353956;fill-opacity:1;stroke-width:0.015625"
+     d="M 8.0078125,2.5 V 2 H 8.5 8.9921875 V 2.5 3 H 8.5 8.0078125 Z"
+     id="path85" />
+  <path
+     style="fill:#353956;fill-opacity:1;stroke-width:0.015625"
+     d="M 9.0078125,3.5 V 3 H 10 10.992187 V 3.5 4 H 10 9.0078125 Z"
+     id="path86" />
+  <path
+     style="fill:#353956;fill-opacity:1;stroke-width:0.015625"
+     d="M 11.007812,4.5 V 4 H 12 12.992187 V 4.5 5 H 12 11.007812 Z"
+     id="path87" />
+</svg>
