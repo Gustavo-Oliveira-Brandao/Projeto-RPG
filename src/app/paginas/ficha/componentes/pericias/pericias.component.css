@@ -1,0 +1,70 @@
+
+.percepcao-passiva{
+  font-size: x-large;
+  font-style: normal;
+  font-weight: 400;
+  margin: auto;
+}
+
+.caixa-selecao {
+  border: none;
+  background-color: #202124;
+  color: #ffffff;
+  font-size: medium;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pericias {
+  display: flex;
+  margin-bottom: 0.35rem;
+}
+
+
+.texto-pericias {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: medium;
+  position: relative;
+  left: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+#pericias-card {
+  background-color: #202124;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  height: 77%;
+  width: 240px;
+  padding: 5px 5px 15px;
+  box-sizing: border-box;
+}
+
+.teste-resistencia{
+  background-color: #202124;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  height: 8rem;
+  padding: 5px 5px 15px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  width: 15rem;
+  margin-right: 2rem;
+}
+
+.pericias-valor {
+  font-size: large;
+  color: white;
+  font-weight: 500;
+}
+
+
+button:hover{
+  cursor: pointer;
+  color: #e50914;
+}

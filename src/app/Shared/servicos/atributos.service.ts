@@ -1,37 +1,11 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { CabecalhoComponent } from '../cabecalho/cabecalho.component';
-import { MatTableModule } from '@angular/material/table';
+import { Injectable } from '@angular/core';
 
-
-@Component({
-  selector: 'app-ficha',
-  standalone: true,
-  imports: [FormsModule, CabecalhoComponent, MatTableModule],
-  templateUrl: './ficha.component.html',
-  styleUrl: './ficha.component.css',
+@Injectable({
+  providedIn: 'root'
 })
-export class FichaComponent {
+export class AtributosService {
 
-  personagem = {
-    nome: {
-      id: '',
-    },
-    raca: {
-      id: ''
-    },
-    classe: {
-      id: ''
-    },
-    nivel: {
-      atributo: 1
-    },
-
-    exp: {
-      atributo: 0
-    }
-
-  }
+  constructor() { }
 
   atributos: {
     [key: string]: { id: string; atributo: number; modificador: number };
@@ -71,6 +45,15 @@ export class FichaComponent {
       modificador: 0,
     },
   };
+
+  atualizarAtributos() {
+    Object.keys(this.atributos).forEach((atributo) => {
+      this.atributos[atributo].modificador = Math.trunc(
+        (this.atributos[atributo].atributo - 10) / 2
+      );
+    });
+
+  }
 
   pericias: {
     [key: string]: {
@@ -267,97 +250,8 @@ export class FichaComponent {
     },
   };
 
-  statusJogador = {
-    vidaMax: {
-      id: 'pvMax',
-      atributo: 0,
-    },
-
-    vidaAtual: {
-      id: 'pvAtual',
-      atributo: 0,
-    },
-
-    vidaTemporaria: {
-      id: 'pvTemporario',
-      atributo: 0
-    },
-
-    iniciativa: {
-      id: 'iniciativa',
-      atributo: 0,
-      tipoAtributo: 'destreza',
-    },
-
-    ca: {
-      id: 'classeArmadura',
-      atributo: 10,
-    },
-
-    velocidade: {
-      id: 'velocidade',
-      atributo: 0,
-    },
-  };
-
-  dados = {
-    d4: {
-      id: 'd4',
-      sides: 4,
-    },
-
-    d6: {
-      id: 'd6',
-      sides: 6,
-    },
-
-    d8: {
-      id: 'd8',
-      sides: 8,
-    },
-
-    d10: {
-      id: 'd10',
-      sides: 10,
-    },
-
-    d12: {
-      id: 'd12',
-      sides: 12,
-    },
-
-    d20: {
-      id: 'd20',
-      sides: 20,
-    },
-
-    d100: {
-      id: 'd100',
-      sides: 100,
-    },
-  };
-
-  ataques: Array<{
-    nome: string;
-    tipoAtributo: string;
-    quantidadeDados: number;
-    dadoDano: number;
-  }> = Array(
-
-  );
-
-  adicionarAtaque(nome: string, tipoAtributo: string, quantidadeDados: number, dadoDano: number) {
-
-  }
-
-
-  atualizarAtributos() {
-    Object.keys(this.atributos).forEach((atributo) => {
-      const modificador = Math.trunc(
-        (this.atributos[atributo].atributo - 10) / 2
-      );
-      this.atributos[atributo].modificador = modificador;
-    });
+  atualizar(){
+    this.atualizarAtributos();
     this.atualizarPericias();
   }
 
@@ -428,13 +322,12 @@ export class FichaComponent {
 
   treinamento(pericia: string) {
     this.pericias[pericia].grau = String(this.selectedValue);
-    let valor = this.grauTreinamento(this.pericias[pericia].grau);
-    this.pericias[pericia].valorGrau = valor;
+    this.pericias[pericia].valorGrau = this.grauTreinamento(this.pericias[pericia].grau);
     this.atualizarPericias();
   }
 
   rolagemPericia(pericia: string) {
-    let randomNumber = Math.floor(Math.random() * this.dados.d20.sides) + 1;
+    let randomNumber = Math.floor(Math.random() * 20) + 1;
     let rolagem = randomNumber + this.pericias[pericia].atributo;
     let texto =
       'Dado natural: ' +
@@ -445,4 +338,6 @@ export class FichaComponent {
       rolagem;
     console.log(texto);
   }
+
+
 }

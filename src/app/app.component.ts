@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
-import { FichaComponent } from './componentes/ficha/ficha.component';
-import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
+import { CabecalhoComponent } from './Shared/cabecalho/cabecalho.component';
+import { FichaComponent } from './paginas/ficha/ficha.component';
+import { HabilidadesComponent } from './paginas/habilidades/habilidades.component';
+import { MagiasComponent } from './paginas/magias/magias.component';
+import { PetsComponent } from './paginas/pets/pets.component';
 import { FormsModule } from '@angular/forms';
-import { MagiasComponent } from './componentes/magias/magias.component';
-import { PetsComponent } from './componentes/pets/pets.component';
+import { RolagensService } from './Shared/servicos/rolagens.service';
 import { MatTableModule } from '@angular/material/table';
 
   @Component({
@@ -23,7 +24,6 @@ import { MatTableModule } from '@angular/material/table';
     FormsModule,
     RouterLink,
     RouterLinkActive,
-    MatTableModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

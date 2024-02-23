@@ -1,0 +1,15 @@
+
+.inventario-card{
+  background-color: #202124;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 25rem;
+  min-height: 15rem;
+  max-height: 80rem;
+  margin-left: 2rem;
+}
+
+.itens {
+  margin-left: 2rem;
+  padding-bottom: 0.5rem;
+}

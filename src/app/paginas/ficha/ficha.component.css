@@ -1,0 +1,10 @@
+.alinhar-atributos-pericias-defesas{
+  display: flex;
+}
+
+.alinhar-ataques-inventario{
+  display: flex;
+  position: relative;
+  left: 25rem;
+  bottom: 35rem;
+}

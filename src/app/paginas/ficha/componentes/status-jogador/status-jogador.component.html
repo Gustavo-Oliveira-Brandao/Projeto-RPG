@@ -1,0 +1,53 @@
+<form class="input-defesas">
+  <div class="alinhar-pv-ca">
+    <label>PV máximos</label>
+    <input
+      type="text"
+      class="input-pv-ca"
+      id="pv-max-input"
+      name="pvMax"
+      [(ngModel)]="statusJogador.vidaMax.atributo"
+    />
+  </div>
+  <div class="alinhar-pv-ca">
+    <label>PV atuais</label>
+    <input
+      type="text"
+      class="input-pv-ca"
+      id="pv-atual-input"
+      name="pvAtual"
+      [(ngModel)]="statusJogador.vidaAtual.atributo"
+    />
+  </div>
+
+  <div class="alinhar-pv-ca">
+    <label>Classe de Armadura</label>
+    <input
+      type="text"
+      class="input-pv-ca"
+      id="ca-input"
+      name="defesa"
+      [(ngModel)]="statusJogador.ca.atributo"
+    />
+  </div>
+  <div class="alinhar-pv-ca">
+    <label>PV temporários</label>
+    <input
+      type="text"
+      class="input-pv-ca"
+      id="pv-temporario-input"
+      name="pvTemporario"
+      [(ngModel)]="statusJogador.vidaTemporaria.atributo"
+    />
+  </div>
+  <div class="alinhar-pv-ca">
+    <label>Deslocamento</label>
+    <input
+      type="text"
+      class="input-pv-ca"
+      id="deslocamento-input"
+      name="deslocamento"
+      [(ngModel)]="statusJogador.velocidade.atributo"
+    />
+  </div>
+</form>

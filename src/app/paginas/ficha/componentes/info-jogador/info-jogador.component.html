@@ -1,0 +1,48 @@
+<form>
+  <div class="card-info container">
+    <label>Nome do personagem: </label>
+    <input
+      name="nomePersonagem"
+      type="text"
+      value="nome"
+      class="input-info espacamento-info-direita"
+      [(ngModel)]="personagem.nome.id"
+    />
+
+    <label>Raça: </label>
+    <input
+      name="racaPersonagem"
+      type="text"
+      value="raca"
+      class="input-info espacamento-info-direita"
+      [(ngModel)]="personagem.raca.id"
+    />
+
+    <label>Classe: </label>
+    <input
+      name="classePersonagem"
+      type="text"
+      value="classe"
+      class="input-info espacamento-info-direita"
+      [(ngModel)]="personagem.classe.id"
+    />
+
+    <label>Nivel: </label>
+    <input
+      name="nivelPersonagem"
+      type="number"
+      value="nivel"
+      class="input-nivel espacamento-info-direita"
+      [(ngModel)]="personagem.nivel.atributo"
+    />
+
+    <label>Exp: </label>
+    <input
+      name="expPersonagem"
+      type="number"
+      value="exp"
+      class="input-info espacamento-info-direita"
+      [(ngModel)]="personagem.exp.atributo"
+    />
+  </div>
+</form>

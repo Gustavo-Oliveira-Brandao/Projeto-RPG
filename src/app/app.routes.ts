@@ -1,8 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
-import { FichaComponent } from './componentes/ficha/ficha.component';
-import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
-import { MagiasComponent } from './componentes/magias/magias.component';
-import { PetsComponent } from './componentes/pets/pets.component';
+import { FichaComponent } from './paginas/ficha/ficha.component';
+import { HabilidadesComponent } from './paginas/habilidades/habilidades.component';
+import { MagiasComponent } from './paginas/magias/magias.component';
+import { PetsComponent } from './paginas/pets/pets.component';
 import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
