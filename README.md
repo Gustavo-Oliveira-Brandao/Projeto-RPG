@@ -14,6 +14,7 @@ Currently, the project is at the 30% development stage, and I am targeting to co
 
 
 <h2>TODO list</h2>
+
 * Finalizar ataques
   - Adição de ataques contra teste de salvamento
   - Adição de rolagem de dados ao clicar em um dos 3 campos
