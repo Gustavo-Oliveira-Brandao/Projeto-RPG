@@ -7,6 +7,26 @@ export class AtributosService {
 
   constructor() { }
 
+  personagem = {
+    nome: {
+      id: '',
+    },
+    raca: {
+      id: ''
+    },
+    classe: {
+      id: ''
+    },
+    nivel: {
+      atributo: 1
+    },
+
+    exp: {
+      atributo: 0
+    }
+
+  }
+
   atributos: {
     [key: string]: { id: string; atributo: number; modificador: number };
   } = {
@@ -253,50 +273,91 @@ export class AtributosService {
   atualizar(){
     this.atualizarAtributos();
     this.atualizarPericias();
+
   }
 
   atualizarPericias() {
     Object.keys(this.pericias).forEach((pericia) => {
       if (this.pericias[pericia].tipoAtributo === this.atributos['forca'].id) {
+        if(this.pericias[pericia].grau === "D"){
         this.pericias[pericia].atributo =
           this.atributos['forca'].modificador +
           this.pericias[pericia].valorGrau;
+        } else {
+          this.pericias[pericia].atributo =
+            this.atributos['forca'].modificador +
+            this.pericias[pericia].valorGrau + this.personagem.nivel.atributo;
+        }
       } else if (
         this.pericias[pericia].tipoAtributo === this.atributos['destreza'].id
       ) {
-        this.pericias[pericia].atributo =
-          this.atributos['destreza'].modificador +
-          this.pericias[pericia].valorGrau;
+        if(this.pericias[pericia].grau === "D"){
+          this.pericias[pericia].atributo =
+            this.atributos['destreza'].modificador +
+            this.pericias[pericia].valorGrau;
+        } else{
+          this.pericias[pericia].atributo =
+            this.atributos['destreza'].modificador +
+            this.pericias[pericia].valorGrau + this.personagem.nivel.atributo;
+        }
       } else if (
         this.pericias[pericia].tipoAtributo ===
         this.atributos['constituicao'].id
       ) {
+        if (this.pericias[pericia].grau === "D"){
         this.pericias[pericia].atributo =
           this.atributos['constituicao'].modificador +
           this.pericias[pericia].valorGrau;
+        } else {
+          this.pericias[pericia].atributo =
+            this.atributos['constituicao'].modificador +
+            this.pericias[pericia].valorGrau + this.personagem.nivel.atributo;
+        }
       } else if (
         this.pericias[pericia].tipoAtributo ===
         this.atributos['inteligencia'].id
       ) {
+        if (this.pericias[pericia].grau === "D"){
         this.pericias[pericia].atributo =
           this.atributos['inteligencia'].modificador +
           this.pericias[pericia].valorGrau;
+        } else {
+          this.pericias[pericia].atributo =
+            this.atributos['inteligencia'].modificador +
+            this.pericias[pericia].valorGrau + this.personagem.nivel.atributo;
+        }
       } else if (
         this.pericias[pericia].tipoAtributo === this.atributos['sabedoria'].id
       ) {
-        this.pericias[pericia].atributo =
+        if (this.pericias[pericia].grau === "D"){
+          this.pericias[pericia].atributo =
           this.atributos['sabedoria'].modificador +
           this.pericias[pericia].valorGrau;
+        } else {
+          this.pericias[pericia].atributo =
+            this.atributos['sabedoria'].modificador +
+            this.pericias[pericia].valorGrau + this.personagem.nivel.atributo;
+        }
       } else if (
         this.pericias[pericia].tipoAtributo === this.atributos['carisma'].id
       ) {
+        if (this.pericias[pericia].grau === "D"){
         this.pericias[pericia].atributo =
           this.atributos['carisma'].modificador +
           this.pericias[pericia].valorGrau;
+        } else {
+          this.pericias[pericia].atributo =
+            this.atributos['carisma'].modificador +
+            this.pericias[pericia].valorGrau + this.personagem.nivel.atributo;
+        }
       }
+
     });
+
     this.pericias['percepcao'].passiva = 10 + this.pericias['percepcao'].atributo;
   }
+
+
 
   selectedValue?: string;
 
@@ -324,19 +385,6 @@ export class AtributosService {
     this.pericias[pericia].grau = String(this.selectedValue);
     this.pericias[pericia].valorGrau = this.grauTreinamento(this.pericias[pericia].grau);
     this.atualizarPericias();
-  }
-
-  rolagemPericia(pericia: string) {
-    let randomNumber = Math.floor(Math.random() * 20) + 1;
-    let rolagem = randomNumber + this.pericias[pericia].atributo;
-    let texto =
-      'Dado natural: ' +
-      randomNumber +
-      '\nModificador: ' +
-      this.pericias[pericia].atributo +
-      '\nResultado: ' +
-      rolagem;
-    console.log(texto);
   }
 
 

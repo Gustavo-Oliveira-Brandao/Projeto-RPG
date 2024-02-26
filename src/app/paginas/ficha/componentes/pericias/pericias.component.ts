@@ -1,7 +1,6 @@
-import { AtributosService } from './../../../../Shared/servicos/atributos.service';
-import { AtributosComponent } from './../atributos/atributos.component';
+import { AtributosService } from '../../../../Shared/servicos/atributos.service';
 import { Component } from '@angular/core';
-import { RolagensService } from '../../../../Shared/servicos/rolagens.service';
+import {RolagensService} from "../../../../Shared/servicos/rolagens.service";
 
 @Component({
   selector: 'app-pericias',
@@ -11,5 +10,5 @@ import { RolagensService } from '../../../../Shared/servicos/rolagens.service';
   styleUrl: './pericias.component.css'
 })
 export class PericiasComponent {
-  constructor(public AtributosService:AtributosService){}
+  constructor(public AtributosService:AtributosService, protected RolagensService:RolagensService){}
 }

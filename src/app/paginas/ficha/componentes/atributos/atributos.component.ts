@@ -1,4 +1,4 @@
-import { AtributosService } from './../../../../Shared/servicos/atributos.service';
+import { AtributosService } from '../../../../Shared/servicos/atributos.service';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -11,6 +11,5 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class AtributosComponent {
-
   constructor(public AtributosService:AtributosService){}
 }

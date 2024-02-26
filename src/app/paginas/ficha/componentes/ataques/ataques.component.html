@@ -6,10 +6,38 @@
     <h4 class="qntd-dano">Dano/Tipo</h4>
   </div>
 
-  <div class="alinhar-ataques">
-    <button class="ataque">Espada Longa</button>
-    <button class="bonus">+5</button>
-    <button class="dano">1d8/Cortante</button>
+  <div id="ataques">
   </div>
-  <button class="adicionar">+</button>
+
+  <mat-expansion-panel hideToggle class="bg-transparente mat-elevation-z0">
+    <mat-expansion-panel-header class="expandir">
+    <button class="adicionar">+</button>
+  </mat-expansion-panel-header>
+    <div class="alinhar-ataque">
+      <h4 class="ff-inter nome-ataque-dano">Nome</h4>
+      <input id="input-ataque" class="ataque ff-inter" placeholder="Nome do ataque/magia">
+      <select id="atributo-ataque" class="selecao-dado ff-inter">
+        <option value="default">-</option>
+        <option value="forca">For</option>
+        <option value="destreza">Des</option>
+        <option value="inteligencia">Int</option>
+        <option value="Sabedoria">Sab</option>
+        <option value="Carisma">Car</option>
+      </select>
+      <h4 class="ff-inter grau nome-ataque-dano">Grau</h4>
+      <select id="grau-ataque" class="ff-inter selecao-dado">
+        <option value="destreinado">D</option>
+        <option value="treinado">T</option>
+        <option value="especialista">E</option>
+        <option value="mestre">M</option>
+        <option value="lendario">L</option>
+      </select>
+    </div>
+    <div class="alinhar-ataque">
+      <h4 class="ff-inter nome-ataque-dano">Dano</h4>
+      <input id="input-dano" class="input-dano quantidade ff-inter" placeholder="1d6" />
+      <input id="input-tipo" class="ff-inter tipo-dano" placeholder="Tipo de dano" />
+    </div>
+    <button class="" (click)="adicionarAtaque()">Adicionar</button>
+</mat-expansion-panel>
 </div>

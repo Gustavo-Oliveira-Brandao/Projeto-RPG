@@ -19,7 +19,6 @@
 .nome-ataque{
   margin-left: 1.5rem;
   margin-right: 9.5rem;
-
   font-weight: 500;
 }
 
@@ -32,37 +31,116 @@
   font-weight: 500;
 }
 
-.ataque{
+.bg-transparente{
+  background-color: transparent;
+}
+
+:host ::ng-deep .ataque{
   width: 10rem;
   height: 1.5rem;
   margin-right: 1rem;
-  border: none;
-  border-radius: 8px;
+  border-bottom: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
   margin-left: 1rem;
   padding-left: 0.5rem;
-  text-align: left;
+  text-align: center;
+  background-color: #202124;
+  color:#ffffff;
+
 }
 
-.bonus{
+:host ::ng-deep .bonus{
   width: 3rem;
   height: 1.5rem;
-  border: none;
-  border-radius: 8px;
   margin-right: 1rem;
+  background-color: #202124;
+  color:#ffffff;
+  border-bottom: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
 }
 
-.dano{
+:host ::ng-deep .dano{
   width: 8rem;
-  border: none;
-  border-radius: 8px;
   text-align: left;
   padding-left: 0.5rem;
   height: 1.5rem;
+  background-color: #202124;
+  color:#ffffff;
+  border-bottom: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
 }
 
 .adicionar{
   margin-top: 0.5rem;
-  margin-left: 1rem;
   width: 1.5rem;
   height: 1.5rem;
+}
+
+:host ::ng-deep .ataques-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alinhar-ataque{
+  display: flex;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grau{
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+.quantidade{
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  width: 1.5rem;
+  border-radius: 0;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.tipo-dano{
+  border-bottom: 1px solid white;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+  text-align: center;
+  background-color: transparent;
+  padding-top: 0.5rem;
+  font-size: small;
+}
+
+.selecao-dado{
+  background-color: #202124;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  height: 1rem;
+  margin-top: 0.5rem;
+}
+
+:host ::ng-deep button:hover{
+  cursor: pointer;
+  color: #e50914;
+}
+
+.nome-ataque-dano{
+  padding-top: 0.5rem;
 }

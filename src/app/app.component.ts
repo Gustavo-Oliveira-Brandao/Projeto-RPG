@@ -7,10 +7,8 @@ import { HabilidadesComponent } from './paginas/habilidades/habilidades.componen
 import { MagiasComponent } from './paginas/magias/magias.component';
 import { PetsComponent } from './paginas/pets/pets.component';
 import { FormsModule } from '@angular/forms';
-import { RolagensService } from './Shared/servicos/rolagens.service';
-import { MatTableModule } from '@angular/material/table';
 
-  @Component({
+@Component({
   selector: 'app-root',
   standalone: true,
   imports: [

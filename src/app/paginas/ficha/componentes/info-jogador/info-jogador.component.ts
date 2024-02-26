@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {AtributosService} from "../../../../Shared/servicos/atributos.service";
+import {AtaquesService} from "../../../../Shared/servicos/ataques.service";
 
 @Component({
   selector: 'app-info-jogador',
@@ -10,24 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class InfoJogadorComponent {
 
-  personagem = {
-    nome: {
-      id: '',
-    },
-    raca: {
-      id: ''
-    },
-    classe: {
-      id: ''
-    },
-    nivel: {
-      atributo: 1
-    },
-
-    exp: {
-      atributo: 0
-    }
-
-  }
+ constructor(public AtributosService:AtributosService, public AtaquesService:AtaquesService) {
+ }
 
 }

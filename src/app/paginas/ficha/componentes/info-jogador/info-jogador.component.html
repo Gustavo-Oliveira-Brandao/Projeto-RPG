@@ -6,7 +6,7 @@
       type="text"
       value="nome"
       class="input-info espacamento-info-direita"
-      [(ngModel)]="personagem.nome.id"
+      [(ngModel)]="AtributosService.personagem.nome.id"
     />
 
     <label>Raça: </label>
@@ -15,7 +15,7 @@
       type="text"
       value="raca"
       class="input-info espacamento-info-direita"
-      [(ngModel)]="personagem.raca.id"
+      [(ngModel)]="AtributosService.personagem.raca.id"
     />
 
     <label>Classe: </label>
@@ -24,7 +24,7 @@
       type="text"
       value="classe"
       class="input-info espacamento-info-direita"
-      [(ngModel)]="personagem.classe.id"
+      [(ngModel)]="AtributosService.personagem.classe.id"
     />
 
     <label>Nivel: </label>
@@ -33,7 +33,8 @@
       type="number"
       value="nivel"
       class="input-nivel espacamento-info-direita"
-      [(ngModel)]="personagem.nivel.atributo"
+      [(ngModel)]="AtributosService.personagem.nivel.atributo"
+      (change)="AtributosService.atualizar()"
     />
 
     <label>Exp: </label>
@@ -42,7 +43,7 @@
       type="number"
       value="exp"
       class="input-info espacamento-info-direita"
-      [(ngModel)]="personagem.exp.atributo"
+      [(ngModel)]="AtributosService.personagem.exp.atributo"
     />
   </div>
 </form>

@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import {AtributosService} from "./atributos.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class RolagensService {
 
-  constructor() {}
+  constructor(private AtributosService:AtributosService) {}
   dados = {
     d4: {
       id: 'd4',
@@ -43,6 +44,17 @@ export class RolagensService {
     },
   };
 
-
+  rolagemPericia(pericia: string) {
+    let randomNumber = Math.floor(Math.random() * this.dados.d20.sides) + 1;
+    let rolagem = randomNumber + this.AtributosService.pericias[pericia].atributo;
+    let texto =
+      'Dado natural: ' +
+      randomNumber +
+      '\nModificador: ' +
+      this.AtributosService.pericias[pericia].atributo +
+      '\nResultado: ' +
+      rolagem;
+    console.log(texto);
+  }
 
 }

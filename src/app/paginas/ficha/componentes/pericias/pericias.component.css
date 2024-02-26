@@ -30,9 +30,10 @@
   font-weight: 400;
   font-style: normal;
   font-size: medium;
-  position: relative;
-  left: 2rem;
+  position: absolute;
+  left: 17rem;
   margin-bottom: 0.2rem;
+  justify-content: center;
 }
 
 #pericias-card {
