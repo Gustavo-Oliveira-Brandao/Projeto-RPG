@@ -1,97 +1,96 @@
 <form>
-  <div class="atributos">
+  <div class="atributos borda-10px">
     <button class="atributo-nome">Força</button>
+    <span class="modificador"> {{ AtributosService.atributos["forca"].modificador }} </span>
     <input
       type="text"
       id="valor-forca"
-      value="forca"
       name="forca"
-      class="input-atributo"
+      class="input-atributo ff-inter"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['forca'].atributo"
     />
-    <span class="modificador"> ({{ AtributosService.atributos["forca"].modificador }}) </span>
+
   </div>
 
-  <div class="atributos">
+  <div class="atributos borda-10px">
     <button class="atributo-nome">Destreza</button>
+    <span class="modificador"> {{ AtributosService.atributos["destreza"].modificador }} </span>
     <input
       type="text"
       id="valor-destreza"
-      value="destreza"
       name="destreza"
-      class="input-atributo"
+      class="input-atributo ff-inter"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['destreza'].atributo"
     />
-    <span class="modificador"> ({{ AtributosService.atributos["destreza"].modificador }}) </span>
   </div>
 
-  <div class="atributos">
+  <div class="atributos borda-10px">
     <button class="atributo-nome">Constituição</button>
+    <span class="modificador">
+      {{ AtributosService.atributos["constituicao"].modificador }}
+    </span>
     <input
       type="text"
       id="valor-constituicao"
-      value="constituicao"
       name="constituicao"
-      class="input-atributo"
+      class="input-atributo ff-inter"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['constituicao'].atributo"
     />
-    <span class="modificador">
-      ({{ AtributosService.atributos["constituicao"].modificador }})
-    </span>
+
   </div>
 
-  <div class="atributos">
+  <div class="atributos borda-10px">
     <button class="atributo-nome">Inteligência</button>
+    <span class="modificador">
+      {{ AtributosService.atributos["inteligencia"].modificador }}
+    </span>
     <input
       type="text"
       id="valor-inteligencia"
-      value="inteligencia"
       name="inteligencia"
-      class="input-atributo"
+      class="input-atributo ff-inter"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['inteligencia'].atributo"
     />
-    <span class="modificador">
-      ({{ AtributosService.atributos["inteligencia"].modificador }})
-    </span>
+
   </div>
 
-  <div class="atributos">
+  <div class="atributos borda-10px">
     <button class="atributo-nome">Sabedoria</button>
+    <span class="modificador">
+      {{ AtributosService.atributos["sabedoria"].modificador }}
+    </span>
     <input
       type="text"
       id="valor-sabedoria"
-      value="sabedoria"
       name="sabedoria"
-      class="input-atributo"
+      class="input-atributo ff-inter"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['sabedoria'].atributo"
     />
-    <span class="modificador">
-      ({{ AtributosService.atributos["sabedoria"].modificador }})
-    </span>
+
   </div>
 
-  <div class="atributos">
+  <div class="atributos borda-10px">
     <button class="atributo-nome">Carisma</button
-    ><input
+    >
+    <span class="modificador"> {{ AtributosService.atributos["carisma"].modificador }} </span>
+    <input
       type="text"
       id="valor-carisma"
-      value="carisma"
       name="carisma"
-      class="input-atributo"
+      class="input-atributo ff-inter"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['carisma'].atributo"
     />
-    <span class="modificador"> ({{ AtributosService.atributos["carisma"].modificador }}) </span>
   </div>
 </form>

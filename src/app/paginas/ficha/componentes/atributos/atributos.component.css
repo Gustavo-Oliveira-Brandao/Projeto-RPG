@@ -1,31 +1,26 @@
 
 .atributos {
-  border: 1px solid #ffffffff;
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   background-color: #202124;
-  border-radius: 20px;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 1.2rem;
   align-items: center;
-  margin-right: 3rem;
+  margin-right: 2rem;
 }
 
 .input-atributo {
   background-color: transparent;
   color: #ffffffff;
-  width: 2rem;
-  height: 2rem;
-  font-size: x-large;
   border: none;
   position: relative;
-  bottom: 0.5rem;
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  font-style: normal;
+  bottom: 0.8rem;
   text-align: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: large;
 }
 
 .atributo-nome {
@@ -42,7 +37,12 @@
 
 .modificador {
   position: relative;
-  bottom: 0.5rem;
+  bottom: 0.7rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: 0.3rem;
 }
 
 button:hover{

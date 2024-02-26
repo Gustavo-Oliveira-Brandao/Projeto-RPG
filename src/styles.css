@@ -12,21 +12,17 @@
   font-style: normal;
 }
 
+.borda-10px{
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
 .ff-roboto-mono {
   font-family: "Roboto Mono", monospace;
 }
 
 .header {
   margin: 1rem auto 2rem;
-}
-
-.container {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 @media (min-width: 576px) {

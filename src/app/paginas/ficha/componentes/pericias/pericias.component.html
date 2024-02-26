@@ -1,9 +1,9 @@
-<div class="teste-resistencia">
+<div class="teste-resistencia borda-10px">
   <h3 class="cards-titulo">Testes de resistência</h3>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('fortitude'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -14,14 +14,14 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["fortitude"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('fortitude')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('fortitude')">
       Fortitude (Con)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('reflexos') ; AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -32,14 +32,14 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["reflexos"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('reflexos')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('reflexos')">
       Reflexos (Des)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('vontade'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -50,18 +50,18 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["vontade"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('vontade')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('vontade')">
       Vontade (Sab)
     </button>
   </div>
 </div>
 
-<div id="pericias-card">
+<div id="pericias-card" class="borda-10px">
   <h3 class="cards-titulo">Pericias</h3>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('acrobacia') ; AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -73,7 +73,7 @@
     <h4 class="pericias-valor">{{ AtributosService.pericias["acrobacia"].atributo }}</h4>
     <button
       id="acrobacia"
-      class="texto-pericias"
+      class="texto-pericias ff-inter"
       (click)="RolagensService.rolagemPericia('acrobacia')"
     >
       Acrobacia (Des)
@@ -82,7 +82,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('arcanismo'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -92,14 +92,14 @@
       <option value="lendario">L</option>
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["arcanismo"].atributo }}</h4>
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('arcanismo')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('arcanismo')">
       Arcanismo (Int)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('atletismo'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -109,14 +109,14 @@
       <option value="lendario">L</option>
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["atletismo"].atributo }}</h4>
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('atletismo')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('atletismo')">
       Atletismo (For)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('cavalgar'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -126,14 +126,14 @@
       <option value="lendario">L</option>
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["cavalgar"].atributo }}</h4>
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('cavalgar')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('cavalgar')">
       Cavalgar (Des)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('conhecimento')"
     >
       <option value="destreinado">D</option>
@@ -147,7 +147,7 @@
     </h4>
 
     <button
-      class="texto-pericias"
+      class="texto-pericias ff-inter"
       (click)="RolagensService.rolagemPericia('conhecimento')"
     >
       Conhecimento (Int)
@@ -156,7 +156,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('conhecimento2')"
     >
       <option value="destreinado">D</option>
@@ -170,7 +170,7 @@
     </h4>
 
     <button
-      class="texto-pericias"
+      class="texto-pericias ff-inter"
       (click)="RolagensService.rolagemPericia('conhecimento2')"
     >
       Conhecimento (Int)
@@ -179,7 +179,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('diplomacia'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -189,14 +189,14 @@
       <option value="lendario">L</option>
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["diplomacia"].atributo }}</h4>
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('diplomacia')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('diplomacia')">
       Diplomacia (Car)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('enganacao'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -206,14 +206,14 @@
       <option value="lendario">L</option>
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["enganacao"].atributo }}</h4>
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('enganacao')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('enganacao')">
       Enganação (Car)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('furtividade'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -223,14 +223,14 @@
       <option value="lendario">L</option>
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["furtividade"].atributo }}</h4>
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('furtividade')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('furtividade')">
       Furtividade (Des)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('intimidacao'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -240,14 +240,14 @@
       <option value="lendario">L</option>
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["intimidacao"].atributo }}</h4>
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('intimidacao')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('intimidacao')">
       Intimidação (Car)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('ladroagem'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -257,14 +257,14 @@
       <option value="lendario">L</option>
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["ladroagem"].atributo }}</h4>
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('ladroagem')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('ladroagem')">
       Ladroagem (Des)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('manufatura'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -275,14 +275,14 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["manufatura"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('manufatura')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('manufatura')">
       Manufatura (Int)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('medicina'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -293,14 +293,14 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["medicina"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('medicina')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('medicina')">
       Medicina (Sab)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('natureza'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -311,14 +311,14 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["natureza"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('natureza')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('natureza')">
       Natureza (Sab)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('ocultismo'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -329,14 +329,14 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["ocultismo"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('ocultismo')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('ocultismo')">
       Ocultismo (Int)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('percepcao'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -347,14 +347,14 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["percepcao"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('percepcao')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('percepcao')">
       Percepção (Sab)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('perfomance'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -365,14 +365,14 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["perfomance"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('perfomance')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('perfomance')">
       Perfomance (Car)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('religiao'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -383,7 +383,7 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["religiao"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('religiao')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('religiao')">
       Religião (Sab)
     </button>
   </div>
@@ -391,7 +391,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('sociedade'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -402,14 +402,14 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["sociedade"].atributo }}</h4>
 
-    <button class="texto-pericias" (click)="RolagensService.rolagemPericia('sociedade')">
+    <button class="texto-pericias ff-inter" (click)="RolagensService.rolagemPericia('sociedade')">
       Sociedade (Int)
     </button>
   </div>
   <div class="pericias">
     <select
       name="grauTreinamento"
-      class="caixa-selecao"
+      class="caixa-selecao ff-inter"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('sobrevivencia'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -423,7 +423,7 @@
     </h4>
 
     <button
-      class="texto-pericias"
+      class="texto-pericias ff-inter"
       (click)="RolagensService.rolagemPericia('sobrevivencia')"
     >
       Sobrevivência (Sab)

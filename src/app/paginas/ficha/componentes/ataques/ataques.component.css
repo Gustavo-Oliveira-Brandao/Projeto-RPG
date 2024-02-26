@@ -1,13 +1,10 @@
 
 .ataque-card{
   background-color: #202124;
-  border: 1px solid #ffffff;
-  border-radius: 20px;
   width: 25rem;
   min-height: 15rem;
   max-height: 80rem;
   margin-left: 2.5rem;
-  margin-right: 0.5rem;
 }
 
 .alinhar-nomes-ataque{
@@ -49,7 +46,6 @@
   text-align: center;
   background-color: #202124;
   color:#ffffff;
-
 }
 
 :host ::ng-deep .bonus{
@@ -143,4 +139,10 @@
 
 .nome-ataque-dano{
   padding-top: 0.5rem;
+}
+
+.botao-adicionar{
+  background: transparent;
+  padding: 0.5rem;
+  margin-left: 1rem;
 }

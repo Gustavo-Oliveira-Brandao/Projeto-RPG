@@ -2,17 +2,19 @@ import { AtributosService } from '../../../../Shared/servicos/atributos.service'
 import { Component } from '@angular/core';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {AtaquesService} from "../../../../Shared/servicos/ataques.service";
+import {MatButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-ataques',
   standalone: true,
-  imports: [ MatExpansionModule,  ],
+  imports: [MatExpansionModule, MatButton,],
   templateUrl: './ataques.component.html',
   styleUrl: './ataques.component.css'
 })
 export class AtaquesComponent {
 
   constructor(public AtributosService:AtributosService, public AtaquesService:AtaquesService){}
+  panelOpenState: boolean = false;
 
   adicionarAtaque() {
 
@@ -73,6 +75,7 @@ export class AtaquesComponent {
     divElemento.appendChild(elementoDano)
     elementoPai?.appendChild(divElemento)
 
+    this.panelOpenState = false;
   }
 
 

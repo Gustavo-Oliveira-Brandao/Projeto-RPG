@@ -6,11 +6,10 @@
   width: 10rem;
   height: 10rem;
   font-size: large;
-  margin-right: 1.5rem;
 }
 
 #pv-max-input {
-  background-image: url("../../assets/icon\ coracao.svg");
+  background-image: url("../../assets/icon coracao.svg");
   background-size: 100%;
   background-repeat: no-repeat;
 
@@ -49,9 +48,6 @@
   text-align: center;
   height: 5rem;
   width: 5rem;
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .input-defesas {

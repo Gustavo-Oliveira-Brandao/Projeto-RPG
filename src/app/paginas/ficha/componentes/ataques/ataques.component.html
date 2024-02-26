@@ -1,4 +1,4 @@
-<div class="ataque-card">
+<div class="ataque-card borda-10px">
   <h3 class="cards-titulo">Ataques & magias</h3>
   <div class="alinhar-nomes-ataque">
     <h4 class="nome-ataque">Nome</h4>
@@ -9,7 +9,7 @@
   <div id="ataques">
   </div>
 
-  <mat-expansion-panel hideToggle class="bg-transparente mat-elevation-z0">
+  <mat-expansion-panel [(expanded)]="panelOpenState" hideToggle class="bg-transparente mat-elevation-z0">
     <mat-expansion-panel-header class="expandir">
     <button class="adicionar">+</button>
   </mat-expansion-panel-header>
@@ -38,6 +38,6 @@
       <input id="input-dano" class="input-dano quantidade ff-inter" placeholder="1d6" />
       <input id="input-tipo" class="ff-inter tipo-dano" placeholder="Tipo de dano" />
     </div>
-    <button class="" (click)="adicionarAtaque()">Adicionar</button>
+    <button class="ff-inter borda-10px botao-adicionar " (click)="adicionarAtaque();">Adicionar</button>
 </mat-expansion-panel>
 </div>
