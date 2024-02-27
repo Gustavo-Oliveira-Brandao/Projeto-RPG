@@ -36,15 +36,9 @@
   width: 10rem;
   height: 1.5rem;
   margin-right: 1rem;
-  border-bottom: 1px solid white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
   margin-left: 1rem;
   padding-left: 0.5rem;
-  text-align: center;
-  background-color: #202124;
+  text-align: left;
   color:#ffffff;
 }
 
@@ -52,13 +46,7 @@
   width: 3rem;
   height: 1.5rem;
   margin-right: 1rem;
-  background-color: #202124;
   color:#ffffff;
-  border-bottom: 1px solid white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
 }
 
 :host ::ng-deep .dano{
@@ -66,13 +54,14 @@
   text-align: left;
   padding-left: 0.5rem;
   height: 1.5rem;
-  background-color: #202124;
   color:#ffffff;
-  border-bottom: 1px solid white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
+
+}
+
+:host ::ng-deep .borda-4px-ataques{
+  background-color: #363943;
+  border: 1px solid #363943;
+  border-radius: 4px;
 }
 
 .adicionar{
@@ -85,6 +74,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 
 .alinhar-ataque{
@@ -100,11 +90,6 @@
 .quantidade{
   margin-left: 1rem;
   margin-right: 0.5rem;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid white;
-  background-color: transparent;
   width: 1.5rem;
   border-radius: 0;
   text-align: center;
@@ -112,13 +97,7 @@
 }
 
 .tipo-dano{
-  border-bottom: 1px solid white;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-radius: 0;
-  text-align: center;
-  background-color: transparent;
+  text-align: left;
   padding-top: 0.5rem;
   font-size: small;
 }

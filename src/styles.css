@@ -5,7 +5,13 @@
   padding: 0;
 }
 
-.ff-inter {
+:host ::ng-deep .borda-4px-ataques{
+  background-color: #363943;
+  border: 1px solid #363943;
+  border-radius: 4px;
+}
+
+.vt323 {
   color: #ffffff;
   font-family: "VT323", monospace;
   font-weight: 400;
@@ -94,8 +100,11 @@ hr {
   margin-bottom: 2rem;
 }
 
-html, body { height: 1073px; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 1073px;
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  }
 
 
 .cards-titulo {
