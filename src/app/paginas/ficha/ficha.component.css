@@ -7,8 +7,52 @@
   display: flex;
   position: relative;
   left: 21.5rem;
-  bottom: 33.2rem;
+  bottom: 32.8rem;
 }
 
-.status{
+.abas-mobile{
+  display: none;
+}
+
+.mostrar{
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px){
+  .alinhar-atributos-pericias-defesas{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .alinhar-ataques-inventario{
+    left: 0;
+    bottom: 0;
+  }
+
+  .atributos{
+    order: 2;
+  }
+
+  .status{
+    order: 1;
+  }
+
+  .pericias{
+    order: 3;
+  }
+
+  .section{
+    position: relative;
+    bottom: 3rem;
+  }
+
+  .abas-mobile{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    position: relative;
+    right: 0.7rem;
+  }
 }

@@ -25,16 +25,56 @@
   margin: 1rem auto 2rem;
 }
 
+.botao-aba {
+  border: 1px white solid;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: transparent;
+  color: #ffffff;
+  width: 100px;
+  margin-right: 2rem;
+  font-size: large;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.botao-aba:hover {
+  color: #e50914;
+}
+
+.activebutton{
+  background-color: #b63035;
+}
+
+.activebutton:hover {
+  color: white;
+}
+
 @media (min-width: 576px) {
   .container {
     width: 540px;
   }
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 720px;
+@media (max-width: 768px) {
+  .fileiras{
+    display: flex;
   }
+
+  .esconder{
+    display: none;
+  }
+
+  .acoes{
+    width: 315px;
+  }
+
+  .inventario{
+    width: 315px;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -50,11 +90,11 @@
 }
 
 hr {
-  margin-top: 5rem;
+  margin-top: 10rem;
   margin-bottom: 2rem;
 }
 
-html, body { height: 100%; }
+html, body { height: 1073px; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
@@ -65,6 +105,3 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-weight: 500;
 }
 
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -52,6 +52,38 @@
 
 .input-defesas {
   display: flex;
-  flex-direction: row;
   margin:auto;
+}
+
+.fileiras{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px){
+
+  .fileiras{
+    align-self: center;
+  }
+
+  .deslocamento{
+    align-self: center;
+  }
+
+  .input-defesas{
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .alinhar-pv-ca{
+    height: 8rem;
+  }
+  .fonte-mobile{
+    font-size: medium;
+  }
+
+  .acoes{
+    width: 315px;
+  }
 }

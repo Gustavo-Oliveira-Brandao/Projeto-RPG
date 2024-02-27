@@ -5,19 +5,19 @@ import {AtaquesService} from "../../../../Shared/servicos/ataques.service";
 import {MatButton} from "@angular/material/button";
 
 @Component({
-  selector: 'app-ataques',
+  selector: 'app-acoes',
   standalone: true,
   imports: [MatExpansionModule, MatButton,],
-  templateUrl: './ataques.component.html',
-  styleUrl: './ataques.component.css'
+  templateUrl: './acoes.component.html',
+  styleUrl: './acoes.component.css'
 })
-export class AtaquesComponent {
+export class AcoesComponent {
 
   constructor(public AtributosService:AtributosService, public AtaquesService:AtaquesService){}
   panelOpenState: boolean = false;
 
   adicionarAtaque() {
-
+    console.log('fds')
     let inputAtaque = (<HTMLInputElement>document.getElementById("input-ataque")).value
     let atributo = (<HTMLSelectElement>document.getElementById("atributo-ataque")).value
     let proficiencia = (<HTMLSelectElement>document.getElementById("grau-ataque")).value

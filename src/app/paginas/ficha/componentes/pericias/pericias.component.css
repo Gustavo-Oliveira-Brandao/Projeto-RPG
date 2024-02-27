@@ -30,7 +30,7 @@
 
 #pericias-card {
   background-color: #202124;
-  height: 515px;
+  height: 100%;
   width: 230px;
   padding: 5px 5px 15px;
   box-sizing: border-box;
@@ -38,9 +38,9 @@
 
 .teste-resistencia{
   background-color: #202124;
-  height: 115px;
   padding: 5px 5px 15px;
   box-sizing: border-box;
+  height: 100%;
   width: 230px;
   margin-right: 2rem;
   margin-bottom: 1rem;
@@ -57,4 +57,25 @@
 button:hover{
   cursor: pointer;
   color: #e50914;
+}
+
+@media(max-width: 768px){
+  #pericias-card{
+    height: 100%;
+    width: 100%;
+  }
+  .teste-resistencia{
+    height: 100%;
+    width: 100%;
+  }
+  .pericias{
+    margin-bottom: 1rem;
+  }
+  .texto-pericias{
+    left: 5.5rem;
+  }
+
+  .cards{
+    width: 280px;
+  }
 }

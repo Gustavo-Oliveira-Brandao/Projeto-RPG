@@ -1,6 +1,7 @@
 <form class="input-defesas">
+  <div class="fileiras">
   <div class="alinhar-pv-ca">
-    <label>PV máximos</label>
+    <label class="fonte-mobile">PV máximos</label>
     <input
       type="text"
       class="input-pv-ca ff-inter"
@@ -10,7 +11,7 @@
     />
   </div>
   <div class="alinhar-pv-ca">
-    <label>PV atuais</label>
+    <label class="fonte-mobile">PV atuais</label>
     <input
       type="text"
       class="input-pv-ca ff-inter"
@@ -19,9 +20,10 @@
       [(ngModel)]="statusJogador.vidaAtual.atributo"
     />
   </div>
-
+  </div>
+  <div class="fileiras">
   <div class="alinhar-pv-ca">
-    <label>Classe de Armadura</label>
+    <label class="fonte-mobile">Armadura</label>
     <input
       type="text"
       class="input-pv-ca ff-inter"
@@ -31,7 +33,7 @@
     />
   </div>
   <div class="alinhar-pv-ca">
-    <label>PV temporários</label>
+    <label class="fonte-mobile">PV temporários</label>
     <input
       type="text"
       class="input-pv-ca ff-inter"
@@ -40,8 +42,11 @@
       [(ngModel)]="statusJogador.vidaTemporaria.atributo"
     />
   </div>
-  <div class="alinhar-pv-ca">
-    <label>Deslocamento</label>
+
+  </div>
+
+  <div class="deslocamento alinhar-pv-ca">
+    <label class="fonte-mobile">Deslocamento</label>
     <input
       type="text"
       class="input-pv-ca ff-inter"

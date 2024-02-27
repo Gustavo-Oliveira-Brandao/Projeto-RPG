@@ -1,12 +1,21 @@
-<section class="ff-inter">
-  <app-info-jogador></app-info-jogador>
+<section class="section ff-inter">
+  <nav class="abas-mobile">
+    <button (click)="exibir('inventario')" class="inventario-botao botao-aba">Inventario</button>
+    <button (click)="exibir('pericias')" class="pericias-botao botao-aba">Pericias</button>
+    <button (click)="exibir('acoes')" class="acoes-botao botao-aba">Ações</button>
+  </nav>
+
+  <div class="alinhar-atributos-acoes-mobile">
   <div class="alinhar-atributos-pericias-defesas">
-    <app-atributos></app-atributos>
-    <app-pericias></app-pericias>
+    <app-atributos class="atributos"></app-atributos>
+    <app-pericias class="pericias"></app-pericias>
     <app-status-jogador class="status"></app-status-jogador>
   </div>
   <div class="alinhar-ataques-inventario">
-    <app-ataques></app-ataques>
-    <app-inventario></app-inventario>
+    <app-acoes class="acoes"></app-acoes>
+    <app-inventario class="inventario"></app-inventario>
   </div>
+  </div>
+
 </section>
+

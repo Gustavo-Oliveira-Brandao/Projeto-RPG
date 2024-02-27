@@ -5,29 +5,27 @@ main {
     padding: 3rem;
 }
 
-.botao-aba {
-  border: 1px white solid;
-  border-radius: 8px;
-  padding: 0.5rem;
-  background-color: transparent;
-  color: #ffffff;
-  width: 100px;
-  margin-right: 2rem;
-  font-size: large;
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  font-style: normal;
-  cursor: pointer;
+abas-mobile {
+  display: none;
 }
 
-.botao-aba:hover {
-  color: #e50914;
-}
+@media (max-width: 768px){
+  main{
+  background: url(/assets/background.png) no-repeat center center;
+  background-size: cover;
+  min-height: 60vh;
+  padding: 3rem;
+  }
 
-.activebutton{
-  background-color: #b63035;
-}
+  .botao-aba{
+    margin-bottom: 1rem;
+    margin-right: 0.8rem;
+  }
 
-.activebutton:hover {
-  color: white;
+  .abas{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2rem;
+  }
 }

@@ -4,6 +4,9 @@ import { HabilidadesComponent } from './paginas/habilidades/habilidades.componen
 import { MagiasComponent } from './paginas/magias/magias.component';
 import { PetsComponent } from './paginas/pets/pets.component';
 import { NgModule } from '@angular/core';
+import {PericiasComponent} from "./paginas/ficha/componentes/pericias/pericias.component";
+import {InventarioComponent} from "./paginas/ficha/componentes/inventario/inventario.component";
+import {AcoesComponent} from "./paginas/ficha/componentes/acoes/acoes.component";
 
 export const routes: Routes = [
   { path: '', redirectTo: '/ficha', pathMatch: 'full' },

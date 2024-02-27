@@ -1,6 +1,7 @@
 <form>
-  <div class="card-info container">
-    <label>Nome do personagem: </label>
+  <div class="card-info">
+    <div class="alinhar-nome-input">
+    <label>Nome: </label>
     <input
       name="nomePersonagem"
       type="text"
@@ -8,7 +9,9 @@
       class="input-info espacamento-info-direita ff-inter"
       [(ngModel)]="AtributosService.personagem.nome.id"
     />
+    </div>
 
+    <div class="alinhar-nome-input">
     <label>Raça: </label>
     <input
       name="racaPersonagem"
@@ -17,7 +20,8 @@
       class="input-info espacamento-info-direita ff-inter"
       [(ngModel)]="AtributosService.personagem.raca.id"
     />
-
+    </div>
+    <div class="alinhar-nome-input">
     <label>Classe: </label>
     <input
       name="classePersonagem"
@@ -26,7 +30,8 @@
       class="input-info espacamento-info-direita ff-inter"
       [(ngModel)]="AtributosService.personagem.classe.id"
     />
-
+    </div>
+    <div class="alinhar-nome-input">
     <label>Nivel: </label>
     <input
       name="nivelPersonagem"
@@ -36,7 +41,8 @@
       [(ngModel)]="AtributosService.personagem.nivel.atributo"
       (change)="AtributosService.atualizar()"
     />
-
+    </div>
+    <div class="alinhar-nome-input">
     <label>Exp: </label>
     <input
       name="expPersonagem"
@@ -45,5 +51,6 @@
       class="input-exp espacamento-info-direita ff-inter"
       [(ngModel)]="AtributosService.personagem.exp.atributo"
     />
+  </div>
   </div>
 </form>
