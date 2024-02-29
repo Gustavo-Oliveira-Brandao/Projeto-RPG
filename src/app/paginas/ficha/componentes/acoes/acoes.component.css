@@ -1,60 +1,40 @@
-
-.ataque-card{
-  background-color: #202124;
-  width: 25rem;
-  min-height: 15rem;
-  max-height: 80rem;
-  margin-left: 2.5rem;
+.acoes-card{
+  width: 75%;
+  margin: auto;
+  padding: 1rem;
 }
 
-.alinhar-nomes-ataque{
+.titulos-acoes{
+  text-align: center;
+}
+
+:host ::ng-deep .coluna-ataque{
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
   display: flex;
-  margin-bottom: 0.5rem;
-
-}
-
-.nome-ataque{
-  margin-left: 1.5rem;
-  margin-right: 9.5rem;
-  font-weight: 500;
-}
-
-.qntd-bonus{
-  margin-right: 2.5rem;
-  font-weight: 500;
-}
-
-.qntd-dano{
-  font-weight: 500;
-}
-
-.bg-transparente{
-  background-color: transparent;
 }
 
 :host ::ng-deep .ataque{
-  width: 10rem;
+  width: 7rem;
   height: 1.5rem;
-  margin-right: 1rem;
-  padding-left: 0.5rem;
+  font-size: medium;
   text-align: left;
-  color:#ffffff;
 }
 
 :host ::ng-deep .bonus{
-  width: 3rem;
+  width: 2rem;
   height: 1.5rem;
+  margin-left: 1rem;
   margin-right: 1rem;
-  color:#ffffff;
+  font-size: medium;
+  text-align: center;
 }
 
 :host ::ng-deep .dano{
-  width: 8rem;
-  text-align: left;
-  padding-left: 0.5rem;
+  width: 7rem;
   height: 1.5rem;
-  color:#ffffff;
-
+  font-size: medium;
+  text-align: left;
 }
 
 :host ::ng-deep .borda-4px-ataques{
@@ -63,111 +43,24 @@
   border-radius: 4px;
 }
 
-.adicionar{
-  margin-top: 0.5rem;
+.botao-expandir{
+  background-color: #363943;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #363943;
-  color: white;
-  font-size: large;
-
+  font-size: larger;
 }
 
-:host ::ng-deep .ataques-div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.expandir{
+  background: transparent;
+}
+
+.campos{
   margin-bottom: 0.5rem;
 }
 
-.alinhar-campos{
-  display: flex;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-.grau{
-  margin-left: 1rem;
-}
-.input-dano{
-  margin-right: 0.5rem;
-  width: 2.5rem;
-  text-align: center;
-  height: 1.5rem;
-}
-
-.nome-campo{
-  margin-right: 1rem;
-}
-
-.alinhar-valor-input{
-  text-align: left;
+.expandir-header{
   padding-left: 0.5rem;
-  justify-content: center;
-}
-
-.selecao-dado{
-  background-color: #202124;
-  border: none;
-  font-size: 1rem;
-  text-align: center;
-  height: 1rem;
-}
-
-:host ::ng-deep button:hover{
-  cursor: pointer;
-  color: #e50914;
-}
-
-.nome-ataque-dano{
-  font-size: small;
-}
-
-.botao-adicionar{
-  padding: 0.5rem;
-  margin-left: 1rem;
-}
-
-@media (max-width: 768px){
-  .ataque-card{
-    width: 310px;
-    position: relative;
-    right: 3.5rem;
-  }
-
-  .nome-ataque{
-    margin-right: 5.5rem;
-  }
-
-  :host ::ng-deep .ataque{
-    width: 6rem;
-  }
-
-  :host ::ng-deep .ataques-div{
-    position: relative;
-    right: 0.5rem;
-  }
-
-  :host ::ng-deep .dano{
-    width: 6rem;
-  }
-
-  .painel{
-    position: relative;
-    right: 1.5rem;
-  }
-
-  .adicionar{
-    position: relative;
-    left: 1.5rem;
-  }
-
-  .grau{
-    position: relative;
-    right: 1rem;
-  }
-  .selecao-dado{
-    position: relative;
-    right: 1rem;
-  }
+  background: transparent;
+  height: 2rem;
+  width: 2rem;
 }

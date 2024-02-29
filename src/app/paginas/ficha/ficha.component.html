@@ -1,18 +1,11 @@
 <section class="section vt323">
-  <nav class="abas-mobile">
-    <button (click)="exibir('bio')" class="bio-aba botao-aba">Bio</button>
-    <button (click)="exibir('inventario')" class="inventario-botao botao-aba">Inventario</button>
-    <button (click)="exibir('pericias')" class="pericias-botao botao-aba">Pericias</button>
-    <button (click)="exibir('acoes')" class="acoes-botao botao-aba">Ações</button>
-  </nav>
-
-  <div class="alinhar-atributos-acoes-mobile">
-  <div class="alinhar-atributos-pericias-defesas">
+  <div class="">
+  <div class="">
+    <app-status-jogador class="status"></app-status-jogador>
     <app-atributos class="atributos"></app-atributos>
     <app-pericias class="pericias"></app-pericias>
-    <app-status-jogador class="status"></app-status-jogador>
   </div>
-  <div class="alinhar-ataques-inventario">
+  <div class="">
     <app-acoes class="acoes"></app-acoes>
     <app-inventario class="inventario"></app-inventario>
   </div>

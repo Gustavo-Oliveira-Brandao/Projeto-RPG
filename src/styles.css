@@ -23,10 +23,6 @@
   border-radius: 10px;
 }
 
-.ff-roboto-mono {
-  font-family: "Roboto Mono", monospace;
-}
-
 .header {
   margin: 1rem auto 2rem;
 }
@@ -38,11 +34,8 @@
   background-color: transparent;
   color: #ffffff;
   width: 100px;
-  margin-right: 2rem;
+  margin-right: 1rem;
   font-size: large;
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  font-style: normal;
   cursor: pointer;
 }
 
@@ -58,59 +51,31 @@
   color: white;
 }
 
-@media (min-width: 576px) {
-  .container {
-    width: 540px;
-  }
-}
-
-@media (max-width: 768px) {
-  .fileiras{
-    display: flex;
-  }
-
-  .esconder{
-    display: none;
-  }
-
-  .acoes{
-    width: 315px;
-  }
-
-  .inventario{
-    width: 315px;
-  }
-
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1140px;
-  }
-}
-
-hr {
-  margin-top: 10rem;
-  margin-bottom: 2rem;
-}
-
 html, body {
-  height: 1073px;
+  height: 100%;
+  background: url("assets/background.png");
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  }
+body { margin: 0; }
 
 
 .cards-titulo {
   text-align: center;
-  margin-bottom: 0.5rem;
-  font-size: large;
+  margin-bottom: 1rem;
+  font-size: x-large;
   font-weight: 500;
 }
 
+.titulo-secao{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.background-input-botao{
+  background-color: #363943;
+}
+
+.background-cards{
+  background-color: #202124;
+}

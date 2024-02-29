@@ -1,21 +1,9 @@
-
 .inventario-card{
-  background-color: #202124;
-  width: 25rem;
-  min-height: 15rem;
-  max-height: 80rem;
-  margin-left: 2rem;
+  width: 75%;
+  margin: auto;
+  padding: 1rem;
 }
 
-.itens {
-  margin-left: 2rem;
-  padding-bottom: 0.5rem;
-}
-
-@media(max-width:768px){
-  .inventario-card {
-    position: relative;
-    right: 3rem;
-    width: 310px;
-  }
+.cards-titulo{
+  margin-top: 1rem;
 }

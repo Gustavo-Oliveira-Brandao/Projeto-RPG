@@ -1,13 +1,14 @@
 <form>
+  <h2 class="titulo-secao">Atributos</h2>
   <div class="fileiras">
-  <div class="atributos borda-10px">
-    <button class="atributo-nome">Força</button>
+  <div class="atributos-cards background-cards borda-10px">
+    <button class="nome-atributo vt323">Força</button>
     <span class="modificador"> {{ AtributosService.atributos["forca"].modificador }} </span>
     <input
       type="text"
       id="valor-forca"
       name="forca"
-      class="input-atributo vt323"
+      class="vt323 input-atributos background-input-botao"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['forca'].atributo"
@@ -15,22 +16,22 @@
 
   </div>
 
-  <div class="atributos borda-10px">
-    <button class="atributo-nome">Destreza</button>
+  <div class="atributos-cards background-cards borda-10px">
+    <button class="nome-atributo vt323">Destreza</button>
     <span class="modificador"> {{ AtributosService.atributos["destreza"].modificador }} </span>
     <input
       type="text"
       id="valor-destreza"
       name="destreza"
-      class="input-atributo vt323"
+      class="vt323 input-atributos background-input-botao"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['destreza'].atributo"
     />
   </div>
 
-  <div class="atributos borda-10px">
-    <button class="atributo-nome">Constituição</button>
+  <div class="atributos-cards background-cards borda-10px">
+    <button class="nome-atributo vt323">Constituição</button>
     <span class="modificador">
       {{ AtributosService.atributos["constituicao"].modificador }}
     </span>
@@ -38,17 +39,16 @@
       type="text"
       id="valor-constituicao"
       name="constituicao"
-      class="input-atributo vt323"
+      class="vt323 input-atributos background-input-botao"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['constituicao'].atributo"
     />
-
   </div>
   </div>
   <div class="fileiras">
-  <div class="atributos borda-10px">
-    <button class="atributo-nome">Inteligência</button>
+  <div class="atributos-cards background-cards borda-10px">
+    <button class="nome-atributo vt323">Inteligência</button>
     <span class="modificador">
       {{ AtributosService.atributos["inteligencia"].modificador }}
     </span>
@@ -56,15 +56,15 @@
       type="text"
       id="valor-inteligencia"
       name="inteligencia"
-      class="input-atributo vt323"
+      class="vt323 input-atributos background-input-botao"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['inteligencia'].atributo"
     />
 
   </div>
-  <div class="atributos borda-10px">
-    <button class="atributo-nome">Sabedoria</button>
+  <div class="atributos-cards background-cards borda-10px">
+    <button class="nome-atributo vt323">Sabedoria</button>
     <span class="modificador">
       {{ AtributosService.atributos["sabedoria"].modificador }}
     </span>
@@ -72,7 +72,7 @@
       type="text"
       id="valor-sabedoria"
       name="sabedoria"
-      class="input-atributo vt323"
+      class="vt323 input-atributos background-input-botao"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['sabedoria'].atributo"
@@ -80,15 +80,15 @@
 
   </div>
 
-  <div class="atributos borda-10px">
-    <button class="atributo-nome">Carisma</button
+  <div class="atributos-cards background-cards borda-10px">
+    <button class="nome-atributo vt323">Carisma</button
     >
     <span class="modificador"> {{ AtributosService.atributos["carisma"].modificador }} </span>
     <input
       type="text"
       id="valor-carisma"
       name="carisma"
-      class="input-atributo vt323"
+      class="vt323 input-atributos background-input-botao"
       (change)="AtributosService.atualizar()"
       placeholder="0"
       [(ngModel)]="AtributosService.atributos['carisma'].atributo"

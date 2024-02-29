@@ -1,11 +1,28 @@
+.input-defesas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .alinhar-pv-ca {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 10rem;
-  height: 10rem;
+  width: 100%;
   font-size: large;
+  margin-bottom: 1rem;
+}
+
+.input-pv-ca {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: x-large;
+  margin-top: 1rem;
+  border: none;
+  text-align: center;
+  height: 4rem;
+  width: 4rem;
 }
 
 #pv-max-input {
@@ -29,7 +46,7 @@
 
 #ca-input{
   background-image: url("../../assets/shield.svg");
-  background-size: 80rem;
+  background-size: 65rem;
   background-repeat: no-repeat;
 }
 
@@ -39,51 +56,8 @@
   background-repeat: no-repeat;
 }
 
-.input-pv-ca {
-  background-color: transparent;
-  color: #ffffff;
-  font-size: xx-large;
-  margin-top: 1rem;
-  border: none;
-  text-align: center;
-  height: 5rem;
-  width: 5rem;
-}
-
-.input-defesas {
-  display: flex;
-  margin:auto;
-}
-
 .fileiras{
   display: flex;
-  flex-direction: row;
+  width: 320px;
 }
 
-@media (max-width: 768px){
-
-  .fileiras{
-    align-self: center;
-  }
-
-  .deslocamento{
-    align-self: center;
-  }
-
-  .input-defesas{
-      align-self: center;
-      display: flex;
-      flex-direction: column;
-  }
-
-  .alinhar-pv-ca{
-    height: 8rem;
-  }
-  .fonte-mobile{
-    font-size: medium;
-  }
-
-  .acoes{
-    width: 315px;
-  }
-}

@@ -78,12 +78,13 @@ export class AcoesComponent {
       textoDano = document.createTextNode( inputDano + "/" + inputTipo)
     }
 
-    ataqueElemento.classList.add("ataque", "vt323", "borda-4px-ataques")
-    elementoBonus.classList.add("bonus", "vt323", "borda-4px-ataques")
-    elementoDano.classList.add("dano", "vt323", "borda-4px-ataques")
+    ataqueElemento.classList.add("ataque", "vt323", "borda-4px-ataques", "background-input-botao", "borda-4px-ataques")
+    elementoBonus.classList.add("bonus", "vt323", "borda-4px-ataques", "background-input-botao", "borda-4px-ataques")
+    elementoDano.classList.add("dano", "vt323", "borda-4px-ataques", "background-input-botao", "borda-4px-ataques")
 
     let textoNomeAtaque = document.createTextNode(inputAtaque)
 
+    elementoDiv.classList.add('coluna-ataque')
     ataqueElemento.appendChild(textoNomeAtaque)
     elementoDiv.appendChild(ataqueElemento)
     elementoBonus.appendChild(bonusTexto)

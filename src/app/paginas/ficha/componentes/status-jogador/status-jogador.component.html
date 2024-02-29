@@ -1,7 +1,8 @@
 <form class="input-defesas">
+  <h2 class="titulo-secao">Status</h2>
   <div class="fileiras">
   <div class="alinhar-pv-ca">
-    <label class="fonte-mobile">PV máximos</label>
+    <label class="">PV máximos</label>
     <input
       type="text"
       class="input-pv-ca vt323"
@@ -10,8 +11,9 @@
       [(ngModel)]="statusJogador.vidaMax.atributo"
     />
   </div>
+
   <div class="alinhar-pv-ca">
-    <label class="fonte-mobile">PV atuais</label>
+    <label class="">PV atuais</label>
     <input
       type="text"
       class="input-pv-ca vt323"
@@ -20,10 +22,22 @@
       [(ngModel)]="statusJogador.vidaAtual.atributo"
     />
   </div>
+
+    <div class="alinhar-pv-ca">
+      <label class="">PV temporários</label>
+      <input
+        type="text"
+        class="input-pv-ca vt323"
+        id="pv-temporario-input"
+        name="pvTemporario"
+        [(ngModel)]="statusJogador.vidaTemporaria.atributo"
+      />
+    </div>
   </div>
+
   <div class="fileiras">
   <div class="alinhar-pv-ca">
-    <label class="fonte-mobile">Armadura</label>
+    <label class="">Armadura</label>
     <input
       type="text"
       class="input-pv-ca vt323"
@@ -32,27 +46,18 @@
       [(ngModel)]="statusJogador.ca.atributo"
     />
   </div>
-  <div class="alinhar-pv-ca">
-    <label class="fonte-mobile">PV temporários</label>
-    <input
-      type="text"
-      class="input-pv-ca vt323"
-      id="pv-temporario-input"
-      name="pvTemporario"
-      [(ngModel)]="statusJogador.vidaTemporaria.atributo"
-    />
+
+    <div class="deslocamento alinhar-pv-ca">
+      <label class="">Deslocamento</label>
+      <input
+        type="text"
+        class="input-pv-ca vt323"
+        id="deslocamento-input"
+        name="deslocamento"
+        [(ngModel)]="statusJogador.velocidade.atributo"
+      />
+    </div>
   </div>
 
-  </div>
 
-  <div class="deslocamento alinhar-pv-ca">
-    <label class="fonte-mobile">Deslocamento</label>
-    <input
-      type="text"
-      class="input-pv-ca vt323"
-      id="deslocamento-input"
-      name="deslocamento"
-      [(ngModel)]="statusJogador.velocidade.atributo"
-    />
-  </div>
 </form>

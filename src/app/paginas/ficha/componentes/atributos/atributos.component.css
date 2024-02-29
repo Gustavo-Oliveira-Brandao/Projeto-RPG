@@ -1,67 +1,34 @@
 
-.atributos {
-  width: 1.6rem;
-  height: 1.6rem;
-  background-color: #202124;
-  padding: 2rem;
+.atributos-cards{
+  padding: 0.5rem;
+  height: 4rem;
+  width: 4rem;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.2rem;
   align-items: center;
-  margin-right: 2rem;
+  margin: auto;
 }
 
-.input-atributo {
-  background-color: transparent;
-  color: #ffffffff;
-  border: none;
-  position: relative;
-  bottom: 0.8rem;
-  text-align: center;
+.input-atributos{
   width: 2rem;
   height: 2rem;
-  font-size: large;
-}
-
-.atributo-nome {
-  position: relative;
-  bottom: 1rem;
-  background-color: transparent;
-  color: #ffffffff;
-  border: none;
-  font-size: medium;
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.modificador {
-  position: relative;
-  bottom: 0.7rem;
-  width: 2rem;
-  height: 2rem;
+  border: transparent;
+  border-radius: 4px;
   text-align: center;
+}
+
+.modificador{
   font-size: x-large;
-  margin-bottom: 0.3rem;
+  margin-top: 0.5rem;
 }
 
-button:hover{
-  cursor: pointer;
-  color: #e50914;
+.fileiras{
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
-@media (max-width: 768px){
-  .fileiras{
-    align-self: center;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  .atributos{
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    position: relative;
-    left: 0.5rem;
-  }
-
-
+.nome-atributo{
+  border: none;
+  background: transparent;
 }

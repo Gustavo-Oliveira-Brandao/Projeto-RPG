@@ -1,54 +1,49 @@
 <form>
-  <div class="card-info">
-    <div class="alinhar-nome-input">
+  <div class="">
+    <div class="">
     <label>Nome: </label>
     <input
       name="nomePersonagem"
       type="text"
-      value="nome"
-      class="input-info espacamento-info-direita vt323"
+      class="vt323"
       [(ngModel)]="AtributosService.personagem.nome.id"
     />
     </div>
 
-    <div class="alinhar-nome-input">
+    <div class="">
     <label>Raça: </label>
     <input
       name="racaPersonagem"
       type="text"
-      value="raca"
-      class="input-info espacamento-info-direita vt323"
+      class="vt323"
       [(ngModel)]="AtributosService.personagem.raca.id"
     />
     </div>
-    <div class="alinhar-nome-input">
+    <div class="">
     <label>Classe: </label>
     <input
       name="classePersonagem"
       type="text"
-      value="classe"
-      class="input-info espacamento-info-direita vt323"
+      class="vt323"
       [(ngModel)]="AtributosService.personagem.classe.id"
     />
     </div>
-    <div class="alinhar-nome-input">
+    <div class="">
     <label>Nivel: </label>
     <input
       name="nivelPersonagem"
       type="number"
-      value="nivel"
-      class="input-nivel espacamento-info-direita vt323"
+      class="vt323"
       [(ngModel)]="AtributosService.personagem.nivel.atributo"
       (change)="AtributosService.atualizar()"
     />
     </div>
-    <div class="alinhar-nome-input">
+    <div class="">
     <label>Exp: </label>
     <input
       name="expPersonagem"
       type="number"
-      value="exp"
-      class="input-exp espacamento-info-direita vt323"
+      class="vt323"
       [(ngModel)]="AtributosService.personagem.exp.atributo"
     />
   </div>

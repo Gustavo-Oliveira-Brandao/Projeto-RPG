@@ -1,33 +1,35 @@
-<div class="acoes-aba ataque-card borda-10px">
-  <h3 class="cards-titulo">Ações</h3>
-  <div class="alinhar-nomes-ataque">
-    <h4 class="nome-ataque">Nome</h4>
-    <h4 class="qntd-bonus">ATQ</h4>
-    <h4 class="qntd-dano">Dano/Tipo</h4>
+<div class="">
+  <h2 class="titulo-secao">Ações</h2>
+  <div class="acoes-card borda-10px background-cards">
+    <h3 class="titulos-acoes">Ataques/Magias</h3>
+    <div class="coluna-ataque">
+    <h4 class="ataque">Nome</h4>
+    <h4 class="bonus bonus-nome">ATQ</h4>
+    <h4 class="dano">Dano/Tipo</h4>
   </div>
 
   <div id="ataques">
   </div>
 
-  <mat-expansion-panel [(expanded)]="panelOpenState" hideToggle class="bg-transparente painel mat-elevation-z0">
-    <mat-expansion-panel-header class="expandir">
-    <button class="vt323 borda-4px-ataques adicionar">+</button>
+  <mat-expansion-panel [(expanded)]="panelOpenState" hideToggle class="expandir mat-elevation-z0">
+    <mat-expansion-panel-header class="expandir-header">
+    <button class="vt323 borda-4px-ataques botao-expandir">+</button>
   </mat-expansion-panel-header>
-    <div class="alinhar-campos">
-      <h4 class="vt323 nome-campo">Nome</h4>
-      <input id="input-ataque" class="ataque alinhar-valor-input borda-4px-ataques vt323" placeholder="Nome da ação">
+    <div class="campos">
+      <h4 class="vt323">Nome</h4>
+      <input id="input-ataque" class="vt323 background-input-botao borda-4px-ataques" placeholder="Nome da ação">
     </div>
-    <div class="alinhar-campos">
-      <h4 class="vt323 nome-campo">Dano</h4>
-      <input id="input-dano" class="input-dano borda-4px-ataques vt323" placeholder="1d6" />
+    <div class="">
+      <h4 class="vt323">Dano</h4>
+      <input id="input-dano" class="vt323 background-input-botao borda-4px-ataques" placeholder="1d6" />
     </div>
-    <div class="alinhar-campos">
-    <h4 class="vt323 nome-campo">Tipo de dano</h4>
-    <input id="input-tipo" class="vt323 alinhar-valor-input borda-4px-ataques" placeholder="Cortante" />
+    <div class="campos">
+    <h4 class="vt323">Tipo de dano</h4>
+    <input id="input-tipo" class="vt323 background-input-botao borda-4px-ataques" placeholder="Cortante"/>
     </div>
-    <div class="alinhar-campos">
-      <h4 class="vt323 atributo nome-campo">Atributo</h4>
-    <select id="atributo-ataque" class="caixa-selecao-acoes borda-4px-ataques vt323">
+    <div class="campos">
+      <h4 class="vt323">Atributo</h4>
+    <select id="atributo-ataque" class="caixa-selecao background-input-botao borda-4px-ataques vt323">
       <option value="default">-</option>
       <option value="forca">For</option>
       <option value="destreza">Des</option>
@@ -35,8 +37,10 @@
       <option value="Sabedoria">Sab</option>
       <option value="Carisma">Car</option>
     </select>
-    <h4 class="vt323 grau nome-campo">Grau</h4>
-    <select id="grau-ataque" class="vt323 caixa-selecao-acoes borda-4px-ataques">
+      </div>
+    <div class="campos">
+    <h4 class="vt323">Grau</h4>
+    <select id="grau-ataque" class="caixa-selecao background-input-botao borda-4px-ataques vt323">
       <option value="destreinado">D</option>
       <option value="treinado">T</option>
       <option value="especialista">E</option>
@@ -44,6 +48,7 @@
       <option value="lendario">L</option>
     </select>
     </div>
-    <button class="vt323 borda-4px-ataques botao-adicionar " (click)="adicionarAtaque();">Adicionar</button>
+    <button class="vt323 borda-4px-ataques botao-adicionar" (click)="adicionarAtaque();">Adicionar</button>
 </mat-expansion-panel>
+</div>
 </div>

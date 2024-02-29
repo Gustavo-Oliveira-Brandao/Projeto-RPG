@@ -1,31 +1,5 @@
-main {
-    background: url(/assets/background.png) no-repeat center center;
-    background-size: cover;
-    min-height: 60vh;
-    padding: 3rem;
-}
-
-abas-mobile {
-  display: none;
-}
-
-@media (max-width: 768px){
-  main{
-  background: url(/assets/background.png) no-repeat center center;
-  background-size: cover;
-  min-height: 60vh;
-  padding: 3rem;
-  }
-
-  .botao-aba{
-    margin-bottom: 1rem;
-    margin-right: 0.8rem;
-  }
-
-  .abas{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 2rem;
-  }
+.abas{
+  display: flex;
+  margin-top: 1rem;
+  margin-left: 0.8rem;
 }
