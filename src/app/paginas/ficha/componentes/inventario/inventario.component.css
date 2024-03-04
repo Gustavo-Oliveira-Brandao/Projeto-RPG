@@ -4,6 +4,20 @@
   padding: 1rem;
 }
 
-.cards-titulo{
-  margin-top: 1rem;
+.titulo-inventario{
+  display: none;
+}
+
+@media (min-width: 992px){
+  .inventario-card{
+    width: 30rem;
+    min-height: 10rem;
+  }
+  .titulo-secao{
+    display: none;
+  }
+  .titulo-inventario{
+    display: block;
+    text-align: center;
+  }
 }

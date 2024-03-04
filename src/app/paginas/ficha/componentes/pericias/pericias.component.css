@@ -37,3 +37,34 @@
 .pericias-valor{
   font-size: larger;
 }
+
+@media (min-width: 992px){
+  .pericias-aba{
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+  .teste-resistencia-card{
+    width: 14rem;
+  }
+  .pericias-card{
+    width: 14rem;
+  }
+  .pericias{
+    margin-bottom: 0.3rem;
+  }
+  .texto-pericias{
+    left: 14rem;
+    font-size: medium;
+  }
+  .cards-titulo{
+    font-size: large;
+  }
+  .caixa-selecao{
+    font-size: medium;
+  }
+  .pericias-valor{
+    font-size: medium;
+    font-weight: 500;
+  }
+
+}

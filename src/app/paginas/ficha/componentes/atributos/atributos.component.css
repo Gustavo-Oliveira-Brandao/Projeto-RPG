@@ -32,3 +32,21 @@
   border: none;
   background: transparent;
 }
+
+@media (min-width: 992px){
+  .atributos-secao{
+    margin-top: 2rem;
+  }
+  .fileiras{
+    display: unset;
+  }
+  .titulo-secao{
+    display: none;
+  }
+  .atributos-cards{
+    margin-left: 1.5rem;
+    margin-bottom: 2.4rem;
+    flex-direction: column;
+  }
+
+}
