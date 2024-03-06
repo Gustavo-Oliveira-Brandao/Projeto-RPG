@@ -1,6 +1,7 @@
 .inventario-card{
-  width: 75%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
   padding: 1rem;
 }
 
@@ -12,6 +13,8 @@
   .inventario-card{
     width: 30rem;
     min-height: 10rem;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
   }
   .titulo-secao{
     display: none;

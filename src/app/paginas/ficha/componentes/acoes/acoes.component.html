@@ -2,10 +2,11 @@
   <h2 class="titulo-secao">Ações</h2>
   <div class="acoes-card borda-10px background-cards">
     <h3 class="titulos-acoes">Ataques/Magias</h3>
-    <div class="coluna-ataque">
+    <div class="linha-ataque">
     <h4 class="ataque">Nome</h4>
-    <h4 class="bonus bonus-nome">ATQ</h4>
+    <h4 class="bonus">ATQ</h4>
     <h4 class="dano">Dano/Tipo</h4>
+      <h4 class="qntd">Ações</h4>
   </div>
 
   <div id="ataques">
@@ -47,6 +48,14 @@
       <option value="mestre">M</option>
       <option value="lendario">L</option>
     </select>
+    </div>
+    <div class="campos">
+      <h4 class="vt323">Qntd de ações</h4>
+      <select id="qntd-acao" class="caixa-selecao background-input-botao borda-4px-ataques vt323">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
     </div>
     <button class="vt323 borda-4px-ataques botao-adicionar" (click)="adicionarAtaque();">Adicionar</button>
 </mat-expansion-panel>

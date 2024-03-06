@@ -1,5 +1,4 @@
 .acoes-card{
-  width: 75%;
   margin: auto;
   padding: 1rem;
 }
@@ -7,37 +6,45 @@
 .titulos-acoes{
   text-align: center;
 }
-
-:host ::ng-deep .coluna-ataque{
-  margin-left: 0.5rem;
+:host ::ng-deep .linha-ataque{
   margin-top: 0.5rem;
   display: flex;
+  justify-content: space-around;
 }
-
 :host ::ng-deep .ataque{
-  width: 7rem;
+  width: 6rem;
   height: 1.5rem;
   font-size: medium;
   text-align: left;
   padding-left: 0.5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
 :host ::ng-deep .bonus{
   width: 2rem;
   height: 1.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
   font-size: medium;
   text-align: center;
-  padding-left: 0.5rem;
+  box-sizing: border-box;
 }
-
 :host ::ng-deep .dano{
-  width: 7rem;
+  width: 6rem;
   height: 1.5rem;
   font-size: medium;
   text-align: left;
   padding-left: 0.5rem;
+  box-sizing: border-box;
+}
+
+:host ::ng-deep .qntd{
+  width: 2rem;
+  height: 1.5rem;
+  text-align: center;
+  font-size: medium;
+  box-sizing: border-box;
+  vertical-align: middle;
 }
 
 :host ::ng-deep .borda-4px-ataques{
@@ -83,9 +90,10 @@
   .acoes-card{
     min-height: 10rem;
     width: 30rem;
+    margin-left: 1.5rem;
   }
   :host ::ng-deep .ataque{
-    width: 10rem;
+    width: 13rem;
   }
   :host ::ng-deep .bonus{
   }

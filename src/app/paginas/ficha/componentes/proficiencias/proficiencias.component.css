@@ -1,0 +1,58 @@
+.proficiencia-card{
+  margin: 2rem auto;
+  min-height: 10rem;
+}
+.expandir-header{
+  background: transparent;
+  padding-left: 0.5rem;
+  width: 2rem;
+}
+.expandir{
+  background: transparent;
+}
+:host ::ng-deep .borda-4px-proficiencia{
+  background-color: #3C3E43;
+  border: 1px solid #3C3E43;
+  border-radius: 4px;
+}
+:host ::ng-deep .input{
+  height: 1rem;
+  width: 7rem;
+  text-align: center;
+  font-size: medium;
+  padding: 4px;
+}
+.background-input-botao{
+  padding: 0.5rem;
+}
+.botao-adicionar{
+  padding: 0.5rem;
+}
+.campos{
+  margin-bottom: 1rem;
+}
+.botao-expandir{
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: large;
+}
+
+:host ::ng-deep .linha-proficiencia{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+:host ::ng-deep .atributo-proficiencia{
+  width: 2rem;
+  text-align: center;
+  padding: 4px;
+}
+
+@media(min-width: 992px){
+  .proficiencia-card{
+    margin-left: 1rem;
+  }
+}

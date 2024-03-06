@@ -1,0 +1,38 @@
+<div class="proficiencia-card background-cards borda-10px">
+  <h3 class="titulo-secao">Proficiências e idiomas</h3>
+  <div id="proficiencias">
+
+  </div>
+  <mat-expansion-panel [(expanded)]="panelOpenState" hideToggle class="expandir mat-elevation-z0">
+    <mat-expansion-panel-header class="expandir-header">
+      <button class="vt323 borda-4px-proficiencia botao-expandir">+</button>
+    </mat-expansion-panel-header>
+    <div class="campos">
+      <h4 class="vt323">Nome</h4>
+      <input id="input-proficiencia" class="vt323 background-input-botao borda-4px-proficiencia" placeholder="Nome da ação">
+    </div>
+    <div class="campos">
+      <h4 class="vt323">Atributo</h4>
+      <select id="atributo-proficiencia" class="caixa-selecao background-input-botao borda-4px-proficiencia vt323">
+        <option value="-">-</option>
+        <option value="For">For</option>
+        <option value="Des">Des</option>
+        <option value="Con">Con</option>
+        <option value="Int">Int</option>
+        <option value="Sab">Sab</option>
+        <option value="Car">Car</option>
+      </select>
+    </div>
+    <div class="campos">
+      <h4 class="vt323">Tipo</h4>
+      <select id="tipo-proficiencia" class="caixa-selecao background-input-botao borda-4px-proficiencia vt323">
+        <option value="Armadura">Armadura</option>
+        <option value="Arma">Arma</option>
+        <option value="Idioma">Idioma</option>
+        <option value="Instrumento">Instrumento</option>
+        <option value="Profissao">Profissão</option>
+      </select>
+    </div>
+    <button class="vt323 borda-4px-proficiencia botao-adicionar" (click)="adicionarProficiencia();">Adicionar</button>
+  </mat-expansion-panel>
+</div>

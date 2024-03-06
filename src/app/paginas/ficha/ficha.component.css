@@ -7,16 +7,25 @@
   display: none;
 }
 
+.status{
+  order: 1;
+}
+
+.atributos{
+  order: 2;
+}
+
+.pericias{
+  order: 3;
+}
+
+.alinhar-acoes-inventario-desktop{
+  order: 4;
+}
+
 @media (min-width: 992px){
   .alinhar-desktop{
     display: flex;
-  }
-  .alinhar-acoes-inventario-desktop{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 37.5rem;
-    bottom: 30.75rem;
   }
   .atributos{
     order: 1;
@@ -30,16 +39,14 @@
     order: 2;
   }
 
-  .status{
+  .alinhar-status-acoes{
     order: 3;
   }
   .acoes{
     width: 38rem;
   }
   .inventario{
-    width: 30rem;
-    margin-top: 2rem;
-    margin-left: 4rem;
+    width: 38rem;
   }
 
 }

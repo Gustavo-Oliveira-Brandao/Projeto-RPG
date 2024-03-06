@@ -8,6 +8,7 @@ import { InventarioComponent } from './componentes/inventario/inventario.compone
 import { AcoesComponent } from './componentes/acoes/acoes.component';
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import {InfoPersonagemComponent} from "./componentes/info-personagem/info-personagem.component";
+import {ProficienciasComponent} from "./componentes/proficiencias/proficiencias.component";
 
 @Component({
   selector: 'app-ficha',
@@ -17,6 +18,7 @@ import {InfoPersonagemComponent} from "./componentes/info-personagem/info-person
     CabecalhoComponent,
     InfoPersonagemComponent,
     AtributosComponent,
+    ProficienciasComponent,
     PericiasComponent,
     StatusJogadorComponent,
     InventarioComponent,

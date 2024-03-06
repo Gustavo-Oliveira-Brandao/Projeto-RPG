@@ -40,7 +40,11 @@ hr{
 .pericias-valor{
   font-size: larger;
   width: 15px;
-  margin-right: 2rem;
+  margin-right: 3rem;
+}
+
+.cards-titulo{
+  font-size: larger;
 }
 
 button:hover{
@@ -67,9 +71,6 @@ button:hover{
   .texto-pericias{
     font-size: medium;
   }
-  .cards-titulo{
-    font-size: large;
-  }
   .caixa-selecao{
     margin-left: 0;
     font-size: medium;
@@ -77,6 +78,7 @@ button:hover{
   .pericias-valor{
     font-size: medium;
     font-weight: 500;
+    margin-right: 1rem;
   }
 
 }

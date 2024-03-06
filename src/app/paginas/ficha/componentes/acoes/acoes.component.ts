@@ -23,6 +23,7 @@ export class AcoesComponent {
     let proficiencia = this.coletarValorInput("grau-ataque")
     let inputDano = this.coletarValorInput("input-dano")
     let inputTipo = this.coletarValorInput("input-tipo")
+    let inputQntdAcao = this.coletarValorInput("qntd-acao")
 
     let inputQntdChar = this.separarNumberDano(inputDano)
 
@@ -40,7 +41,7 @@ export class AcoesComponent {
 
     let bonus = this.AtaquesService.adicionarAoObjeto(inputAtaque, atributo, bonusProficiencia, inputQntd, inputDado, inputTipo, valorGrau)
 
-    this.adicionarAtaqueHTML(inputAtaque, bonus, inputDano, inputTipo)
+    this.adicionarAtaqueHTML(inputAtaque, bonus, inputDano, inputTipo, inputQntdAcao)
     this.panelOpenState = false;
   }
 
@@ -52,7 +53,7 @@ export class AcoesComponent {
     return dado.split('d')
   }
 
-  adicionarAtaqueHTML(inputAtaque: string, bonus: number, inputDano: string, inputTipo: string){
+  adicionarAtaqueHTML(inputAtaque: string, bonus: number, inputDano: string, inputTipo: string, inputQntdAcao: string){
 
     let elementoPai = document.getElementById("ataques")
 
@@ -60,6 +61,9 @@ export class AcoesComponent {
     let ataqueElemento = document.createElement('button')
     let elementoBonus = document.createElement('button')
     let elementoDano = document.createElement('button')
+    let elementoQntd = document.createElement('span')
+
+    let textoQntd = document.createTextNode(inputQntdAcao)
 
     let bonusTextoString = String(bonus)
     let bonusTexto
@@ -78,22 +82,28 @@ export class AcoesComponent {
       textoDano = document.createTextNode( inputDano + "/" + inputTipo)
     }
 
-    ataqueElemento.classList.add("ataque", "vt323", "borda-4px-ataques", "background-input-botao", "borda-4px-ataques")
-    elementoBonus.classList.add("bonus", "vt323", "borda-4px-ataques", "background-input-botao", "borda-4px-ataques")
-    elementoDano.classList.add("dano", "vt323", "borda-4px-ataques", "background-input-botao", "borda-4px-ataques")
+    ataqueElemento.classList.add("ataque", "vt323", "borda-4px-ataques", "background-input-botao")
+    elementoBonus.classList.add("bonus", "vt323", "borda-4px-ataques", "background-input-botao")
+    elementoDano.classList.add("dano", "vt323", "borda-4px-ataques", "background-input-botao")
+    elementoQntd.classList.add('qntd', 'vt323', 'borda-4px-ataques', 'background-input-botao')
 
     let textoNomeAtaque = document.createTextNode(inputAtaque)
 
-    elementoDiv.classList.add('coluna-ataque')
+    elementoDiv.classList.add('linha-ataque')
     ataqueElemento.appendChild(textoNomeAtaque)
     elementoDiv.appendChild(ataqueElemento)
+
     elementoBonus.appendChild(bonusTexto)
     elementoDiv.appendChild(elementoBonus)
+
     elementoDano.appendChild(textoDano)
 
     elementoDiv.classList.add("ataques-div")
 
     elementoDiv.appendChild(elementoDano)
+
+    elementoQntd.appendChild(textoQntd)
+    elementoDiv.appendChild(elementoQntd)
 
     elementoPai?.appendChild(elementoDiv)
 
