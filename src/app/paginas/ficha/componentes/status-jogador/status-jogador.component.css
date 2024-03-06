@@ -69,8 +69,8 @@
   .input-defesas{
     display: flex;
     flex-direction: row;
-    margin-top: 3rem;
-    margin-left: 3rem;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
   }
   .titulo-secao{
     display: none;

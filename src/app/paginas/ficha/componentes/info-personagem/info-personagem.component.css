@@ -1,0 +1,27 @@
+form{
+  margin-top: 2rem;
+}
+.info{
+  display: flex;
+}
+.campo{
+  font-size: larger;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.input-info{
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #3C3E43;
+  font-size: medium;
+}
+.input-number{
+  width: 2rem;
+  height: 2rem;
+  border: transparent;
+  border-radius: 4px;
+  text-align: center;
+}

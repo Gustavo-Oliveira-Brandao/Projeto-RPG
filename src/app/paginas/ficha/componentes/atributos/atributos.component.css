@@ -1,4 +1,9 @@
-
+.atributos-secao{
+  margin: auto;
+  border-radius: 0;
+  border-right: none;
+  border-left: none;
+}
 .atributos-cards{
   padding: 0.5rem;
   height: 4rem;
@@ -31,22 +36,33 @@
 .nome-atributo{
   border: none;
   background: transparent;
+  font-size: large;
+}
+
+button:hover{
+  cursor: pointer;
+  color: red;
 }
 
 @media (min-width: 992px){
   .atributos-secao{
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    border-left: 1px solid #3C3E43;
+    border-right: 1px solid #3C3E43;
+    border-radius: 10px;
   }
   .fileiras{
-    display: unset;
+    margin-bottom: 0;
   }
-  .titulo-secao{
-    display: none;
+  form{
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
   }
   .atributos-cards{
-    margin-left: 1.5rem;
-    margin-bottom: 2.4rem;
     flex-direction: column;
+    padding: 1rem 1rem 2rem 1rem;
   }
 
 }

@@ -1,0 +1,52 @@
+<form>
+  <div class="info">
+    <div class="campo">
+      <label>Nome </label>
+      <input
+        name="nomePersonagem"
+        type="text"
+        class="input-info vt323"
+        [(ngModel)]="AtributosService.personagem.nome.id"
+      />
+    </div>
+
+    <div class="campo">
+      <label>Raça </label>
+      <input
+        name="racaPersonagem"
+        type="text"
+        class="input-info vt323"
+        [(ngModel)]="AtributosService.personagem.raca.id"
+      />
+    </div>
+    <div class="campo">
+      <label>Classe </label>
+      <input
+        name="classePersonagem"
+        type="text"
+        class="input-info vt323"
+        [(ngModel)]="AtributosService.personagem.classe.id"
+      />
+    </div>
+    <div class="campo">
+
+      <label>Nivel </label>
+      <input
+        name="nivelPersonagem"
+        type="number"
+        class="input-info input-number background-input-botao vt323"
+        [(ngModel)]="AtributosService.personagem.nivel.atributo"
+        (change)="AtributosService.atualizar()"
+      />
+    </div>
+    <div class="campo">
+      <label>Exp </label>
+      <input
+        name="expPersonagem"
+        type="number"
+        class="input-info input-number background-input-botao vt323"
+        [(ngModel)]="AtributosService.personagem.exp.atributo"
+      />
+    </div>
+  </div>
+</form>

@@ -19,6 +19,7 @@
   height: 1.5rem;
   font-size: medium;
   text-align: left;
+  padding-left: 0.5rem;
 }
 
 :host ::ng-deep .bonus{
@@ -28,6 +29,7 @@
   margin-right: 1rem;
   font-size: medium;
   text-align: center;
+  padding-left: 0.5rem;
 }
 
 :host ::ng-deep .dano{
@@ -35,6 +37,7 @@
   height: 1.5rem;
   font-size: medium;
   text-align: left;
+  padding-left: 0.5rem;
 }
 
 :host ::ng-deep .borda-4px-ataques{
@@ -65,6 +68,10 @@
   width: 2rem;
 }
 
+.botao-adicionar{
+  padding: 0.5rem;
+}
+
 @media(min-width: 992px){
 
   .acoes-aba{
@@ -84,10 +91,6 @@
   }
   :host ::ng-deep .dano{
     width: 10rem;
-  }
-
-  .botao-adicionar{
-    padding: 0.5rem;
   }
 
   #input-ataque,
