@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {AtributosService} from "../servicos/atributos.service";
 
 @Component({
   selector: 'app-cabecalho',
@@ -9,5 +10,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './cabecalho.component.css'
 })
 export class CabecalhoComponent {
-
+  constructor(protected AtributosService:AtributosService) {
+  }
 }

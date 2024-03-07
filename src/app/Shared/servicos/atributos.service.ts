@@ -7,6 +7,7 @@ export class AtributosService {
 
   constructor() { }
 
+
   personagem = {
     nome: {
       id: '',
@@ -75,27 +76,18 @@ export class AtributosService {
 
   }
 
-  pericias: {
-    [key: string]: {
-      id: string;
-      atributo: number;
-      grau: string;
-      valorGrau: number;
-      tipoAtributo: string;
-      passiva?: number
-    };
-  } = {
+  pericias: any = {
     acrobacia: {
       id: 'acrobacia',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'destreza',
     },
     arcanismo: {
       id: 'arcanismo',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'inteligencia',
     },
@@ -103,7 +95,7 @@ export class AtributosService {
     atletismo: {
       id: 'atletismo',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'forca',
     },
@@ -111,7 +103,7 @@ export class AtributosService {
     cavalgar: {
       id: 'cavalgar',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'destreza',
     },
@@ -119,7 +111,7 @@ export class AtributosService {
     conhecimento: {
       id: 'conhecimento',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'inteligencia',
     },
@@ -127,7 +119,7 @@ export class AtributosService {
     conhecimento2: {
       id: 'conhecimento2',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'inteligencia',
     },
@@ -135,7 +127,7 @@ export class AtributosService {
     diplomacia: {
       id: 'diplomacia',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'carisma',
     },
@@ -143,7 +135,7 @@ export class AtributosService {
     enganacao: {
       id: 'enganacao',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'carisma',
     },
@@ -151,7 +143,7 @@ export class AtributosService {
     fortitude: {
       id: 'fortitude',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'constituicao',
     },
@@ -159,7 +151,7 @@ export class AtributosService {
     furtividade: {
       id: 'furtividade',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'destreza',
     },
@@ -167,7 +159,7 @@ export class AtributosService {
     intimidacao: {
       id: 'intimidacao',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'carisma',
     },
@@ -175,7 +167,7 @@ export class AtributosService {
     ladroagem: {
       id: 'ladroagem',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'destreza',
     },
@@ -183,7 +175,7 @@ export class AtributosService {
     manufatura: {
       id: 'manufatura',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'inteligencia',
     },
@@ -191,7 +183,7 @@ export class AtributosService {
     medicina: {
       id: 'medicina',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'sabedoria',
     },
@@ -199,7 +191,7 @@ export class AtributosService {
     natureza: {
       id: 'natureza',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'sabedoria',
     },
@@ -207,7 +199,7 @@ export class AtributosService {
     ocultismo: {
       id: 'ocultismo',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'inteligencia',
     },
@@ -215,7 +207,7 @@ export class AtributosService {
     percepcao: {
       id: 'percepcao',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'sabedoria',
       passiva: 10
@@ -224,7 +216,7 @@ export class AtributosService {
     perfomance: {
       id: 'perfomance',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'carisma',
     },
@@ -232,7 +224,7 @@ export class AtributosService {
     reflexos: {
       id: 'reflexos',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'destreza',
     },
@@ -240,7 +232,7 @@ export class AtributosService {
     religiao: {
       id: 'religiao',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'sabedoria',
     },
@@ -248,7 +240,7 @@ export class AtributosService {
     sobrevivencia: {
       id: 'sobrevivencia',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'sabedoria',
     },
@@ -256,7 +248,7 @@ export class AtributosService {
     sociedade: {
       id: 'sociedade',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'inteligencia',
     },
@@ -264,7 +256,7 @@ export class AtributosService {
     vontade: {
       id: 'vontade',
       atributo: 0,
-      grau: 'D',
+      grau: 'destreinado',
       valorGrau: 0,
       tipoAtributo: 'sabedoria',
     },
@@ -279,10 +271,11 @@ export class AtributosService {
   atualizarPericias() {
     Object.keys(this.pericias).forEach((pericia) => {
       if (this.pericias[pericia].tipoAtributo === this.atributos['forca'].id) {
-        if(this.pericias[pericia].grau === "D"){
+        if(this.pericias[pericia].grau === "destreinado"){
         this.pericias[pericia].atributo =
           this.atributos['forca'].modificador +
           this.pericias[pericia].valorGrau;
+        console.log('DEU MUITO RUIM')
         } else {
           this.pericias[pericia].atributo =
             this.atributos['forca'].modificador +
@@ -291,7 +284,7 @@ export class AtributosService {
       } else if (
         this.pericias[pericia].tipoAtributo === this.atributos['destreza'].id
       ) {
-        if(this.pericias[pericia].grau === "D"){
+        if(this.pericias[pericia].grau === "destreinado"){
           this.pericias[pericia].atributo =
             this.atributos['destreza'].modificador +
             this.pericias[pericia].valorGrau;
@@ -304,7 +297,7 @@ export class AtributosService {
         this.pericias[pericia].tipoAtributo ===
         this.atributos['constituicao'].id
       ) {
-        if (this.pericias[pericia].grau === "D"){
+        if (this.pericias[pericia].grau === "destreinado"){
         this.pericias[pericia].atributo =
           this.atributos['constituicao'].modificador +
           this.pericias[pericia].valorGrau;
@@ -317,7 +310,7 @@ export class AtributosService {
         this.pericias[pericia].tipoAtributo ===
         this.atributos['inteligencia'].id
       ) {
-        if (this.pericias[pericia].grau === "D"){
+        if (this.pericias[pericia].grau === "destreinado"){
         this.pericias[pericia].atributo =
           this.atributos['inteligencia'].modificador +
           this.pericias[pericia].valorGrau;
@@ -329,7 +322,7 @@ export class AtributosService {
       } else if (
         this.pericias[pericia].tipoAtributo === this.atributos['sabedoria'].id
       ) {
-        if (this.pericias[pericia].grau === "D"){
+        if (this.pericias[pericia].grau === "destreinado"){
           this.pericias[pericia].atributo =
           this.atributos['sabedoria'].modificador +
           this.pericias[pericia].valorGrau;
@@ -341,7 +334,7 @@ export class AtributosService {
       } else if (
         this.pericias[pericia].tipoAtributo === this.atributos['carisma'].id
       ) {
-        if (this.pericias[pericia].grau === "D"){
+        if (this.pericias[pericia].grau === "destreinado"){
         this.pericias[pericia].atributo =
           this.atributos['carisma'].modificador +
           this.pericias[pericia].valorGrau;
@@ -356,7 +349,6 @@ export class AtributosService {
 
     this.pericias['percepcao'].passiva = 10 + this.pericias['percepcao'].atributo;
   }
-
 
 
   selectedValue?: string;

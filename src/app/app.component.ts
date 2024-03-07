@@ -7,6 +7,8 @@ import { HabilidadesComponent } from './paginas/habilidades/habilidades.componen
 import { MagiasComponent } from './paginas/magias/magias.component';
 import { PetsComponent } from './paginas/pets/pets.component';
 import { FormsModule } from '@angular/forms';
+import {AtributosService} from "./Shared/servicos/atributos.service";
+import {CarregarService} from "./Shared/servicos/carregar.service";
 
 @Component({
   selector: 'app-root',
@@ -27,6 +29,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  constructor(protected AtributoService:AtributosService, protected CarregarService:CarregarService) {}
+
   title = 'ficha-de-rpg';
 }
 

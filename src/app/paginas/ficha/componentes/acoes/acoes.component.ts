@@ -3,11 +3,13 @@ import {Component} from '@angular/core';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {AtaquesService} from "../../../../Shared/servicos/ataques.service";
 import {MatButton} from "@angular/material/button";
+import {FormsModule} from "@angular/forms";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-acoes',
   standalone: true,
-  imports: [MatExpansionModule, MatButton,],
+  imports: [MatExpansionModule, MatButton, FormsModule, NgForOf,],
   templateUrl: './acoes.component.html',
   styleUrl: './acoes.component.css'
 })

@@ -48,8 +48,7 @@ button:hover{
   .atributos-secao{
     margin-top: 0.5rem;
     margin-left: 1rem;
-    border-left: 1px solid #3C3E43;
-    border-right: 1px solid #3C3E43;
+    border: 1px solid #3C3E43;
     border-radius: 10px;
   }
   .fileiras{

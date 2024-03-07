@@ -4,6 +4,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="fortitude"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('fortitude'); AtributosService.atualizar()"
     >
@@ -22,6 +23,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="reflexos"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('reflexos') ; AtributosService.atualizar()"
     >
@@ -40,6 +42,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="vontade"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('vontade'); AtributosService.atualizar()"
     >
@@ -60,6 +63,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="acrobacia"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('acrobacia') ; AtributosService.atualizar()"
     >
@@ -71,7 +75,6 @@
     </select>
     <h4 class="pericias-valor">{{ AtributosService.pericias["acrobacia"].atributo }}</h4>
     <button
-      id="acrobacia"
       class="texto-pericias vt323"
       (click)="RolagensService.rolagemPericia('acrobacia')"
     >
@@ -82,6 +85,7 @@
     <select
       name="grauTreinamento"
       class="caixa-selecao vt323"
+      id="arcanismo"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('arcanismo'); AtributosService.atualizar()"
     >
       <option value="destreinado">D</option>
@@ -98,6 +102,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="atletismo"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('atletismo'); AtributosService.atualizar()"
     >
@@ -115,6 +120,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="cavalgar"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('cavalgar'); AtributosService.atualizar()"
     >
@@ -132,6 +138,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="conhecimento"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('conhecimento')"
     >
@@ -155,6 +162,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="conhecimento2"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('conhecimento2')"
     >
@@ -178,6 +186,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="diplomacia"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('diplomacia'); AtributosService.atualizar()"
     >
@@ -195,6 +204,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="enganacao"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('enganacao'); AtributosService.atualizar()"
     >
@@ -212,6 +222,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="furtividade"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('furtividade'); AtributosService.atualizar()"
     >
@@ -229,6 +240,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="intimidacao"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('intimidacao'); AtributosService.atualizar()"
     >
@@ -246,6 +258,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="ladroagem"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('ladroagem'); AtributosService.atualizar()"
     >
@@ -263,6 +276,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="manufatura"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('manufatura'); AtributosService.atualizar()"
     >
@@ -281,6 +295,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="medicina"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('medicina'); AtributosService.atualizar()"
     >
@@ -299,6 +314,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="natureza"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('natureza'); AtributosService.atualizar()"
     >
@@ -317,6 +333,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="ocultismo"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('ocultismo'); AtributosService.atualizar()"
     >
@@ -335,6 +352,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="percepcao"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('percepcao'); AtributosService.atualizar()"
     >
@@ -353,6 +371,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="perfomance"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('perfomance'); AtributosService.atualizar()"
     >
@@ -371,6 +390,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="religiao"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('religiao'); AtributosService.atualizar()"
     >
@@ -390,6 +410,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="sociedade"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('sociedade'); AtributosService.atualizar()"
     >
@@ -408,6 +429,7 @@
   <div class="pericias">
     <select
       name="grauTreinamento"
+      id="sobrevivencia"
       class="caixa-selecao vt323"
       (change)="AtributosService.onSelect($event); AtributosService.treinamento('sobrevivencia'); AtributosService.atualizar()"
     >

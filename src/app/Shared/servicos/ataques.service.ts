@@ -8,18 +8,8 @@ export class AtaquesService {
 
   constructor(public AtributosService:AtributosService) { }
 
-  ataques: {
-    [key: string]: {
-      nome: string;
-      atributo: string;
-      bonus: number;
-      modificadorDano: number;
-      quantidadeDados: number;
-      dadoDano: number;
-      tipo: string;
-      valorGrau: number;
-    }; } = {
-  };
+  ataques: any= [];
+
   adicionarAoObjeto(nome: string, atributo: string, bonusProficiencia: number, quantidadeDados: number, dadoDano: number, tipo: string, valorGrau: number) {
     let bonus;
     let modificadorDano = 0;
@@ -80,13 +70,4 @@ export class AtaquesService {
 
     return bonus;
   }
-
-  atualizarNivelArma(){
-    Object.keys(this.ataques).forEach((ataque) => {
-      if(this.ataques[ataque].valorGrau == 1){
-        this.ataques[ataque].bonus += this.AtributosService.personagem.nivel.atributo
-      }
-    })
-  }
-
 }

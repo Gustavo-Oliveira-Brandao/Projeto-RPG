@@ -10,6 +10,15 @@
   </div>
 
   <div id="ataques">
+    @for(ataque of AtaquesService.ataques){
+      <div class="linha-ataque">
+        <button class="ataque vt323 background-input-botao">{{  }}</button>
+        <button class="bonus vt323 background-input-botao">+5</button>
+        <button class="dano vt323 background-input-botao">2d6/Cortante</button>
+        <span class="qntd background-input-botao">2</span>
+      </div>
+    }
+
   </div>
 
   <mat-expansion-panel [(expanded)]="panelOpenState" hideToggle class="expandir mat-elevation-z0">
