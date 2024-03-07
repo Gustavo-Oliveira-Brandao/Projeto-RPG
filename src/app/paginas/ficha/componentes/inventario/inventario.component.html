@@ -1,6 +1,68 @@
 <h3 class="titulo-secao">Inventario</h3>
 <div class="inventario-card borda-10px background-cards">
   <h3 class="titulo-inventario">Inventario</h3>
-  <h3>texto</h3>
-  <h3>texto</h3>
+  <div class="linha-inventario">
+    <h3 class="vt323 nome-item">Nome</h3>
+    <h3 class="vt323 peso-item">Peso</h3>
+    <h3 class="vt323 descricao-item">Descrição</h3>
+    <h3 class="vt323 valor-item">Valor</h3>
+  </div>
+  <div id="itens">
+
+    @for(item of InventarioService.inventario; track InventarioService.inventario.id){
+      <div class="linha-inventario">
+        <span class="vt323 borda-4px-inventario background-input-botao nome-item">{{ item.id }}</span>
+        <span class="vt323 borda-4px-inventario background-input-botao peso-item">{{ item.peso }}</span>
+        <span class="vt323 borda-4px-inventario background-input-botao descricao-item">{{ item.descricao }}</span>
+        <span class="vt323 borda-4px-inventario background-input-botao valor-item">{{ item.valor }}</span>
+      </div>
+    }
+  </div>
+
+  <mat-expansion-panel
+    [(expanded)]="panelOpenState"
+    hideToggle
+    class="expandir mat-elevation-z0"
+  >
+    <mat-expansion-panel-header class="expandir-header">
+      <button class="vt323 borda-4px-inventario botao-expandir">+</button>
+    </mat-expansion-panel-header>
+    <div class="campos">
+      <h4 class="vt323">Nome</h4>
+      <input
+        id="input-nome-item"
+        class="vt323 background-input-botao borda-4px-inventario"
+        placeholder="Nome do item"
+      />
+    </div>
+    <div class="campos">
+      <h4 class="vt323">Peso</h4>
+      <input
+        id="input-peso-item"
+        class="vt323 background-input-botao borda-4px-inventario"
+        placeholder="10kg"
+      />
+    </div>
+    <div class="campos">
+      <h4 class="vt323">Descrição</h4>
+      <input
+      id="input-descricao-item"
+      class="vt323 background-input-botao borda-4px-inventario"
+      placeholder="Suprimento para viagem">
+    </div>
+    <div class="campos">
+      <h4 class="vt323">Valor</h4>
+      <input
+        id="input-valor-item"
+        class="vt323 background-input-botao borda-4px-inventario"
+        placeholder="5po"
+      />
+    </div>
+    <button
+      class="vt323 borda-4px-inventario botao-adicionar"
+      (click)="adicionarItem()"
+    >
+      Adicionar
+    </button>
+  </mat-expansion-panel>
 </div>

@@ -1,7 +1,13 @@
 <div class="proficiencia-card background-cards borda-10px">
   <h3 class="titulo-secao">Proficiências e idiomas</h3>
   <div id="proficiencias">
-
+    @for(proficiencia of ProficienciaService.proficiencias; track ProficienciaService.proficiencias.id){
+      <div class="linha-proficiencia">
+        <span class="nome-proficiencia campo-span borda-4px-proficiencia">{{ proficiencia.id }}</span>
+        <span class="atributo-proficiencia campo-span borda-4px-proficiencia">{{ proficiencia.atributo }}</span>
+        <span class="tipo-proficiencia borda-4px-proficiencia campo-span">{{ proficiencia.tipo }}</span>
+      </div>
+    }
   </div>
   <mat-expansion-panel [(expanded)]="panelOpenState" hideToggle class="expandir mat-elevation-z0">
     <mat-expansion-panel-header class="expandir-header">

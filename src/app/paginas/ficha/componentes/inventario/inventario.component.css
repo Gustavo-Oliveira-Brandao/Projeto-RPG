@@ -9,10 +9,72 @@
   display: none;
 }
 
+.linha-inventario{
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+#input-nome-item,
+#input-peso-item,
+#input-descricao-item,
+#input-valor-item{
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.nome-item,
+.descricao-item{
+  width: 10rem;
+  height: 1.5rem;
+  padding: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.peso-item,
+.valor-item{
+  width: 3rem;
+  height: 1.5rem;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 4px;
+}
+
+
+.botao-expandir{
+  background-color: #363943;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: larger;
+}
+:host ::ng-deep .borda-4px-inventario{
+  background-color: #363943;
+  border: 1px solid #363943;
+  border-radius: 4px;
+}
+.expandir{
+  background: transparent;
+}
+
+.campos{
+  margin-bottom: 0.5rem;
+}
+
+.expandir-header{
+  padding-left: 0;
+  background: transparent;
+  height: 2rem;
+  width: 2rem;
+}
+
+.botao-adicionar{
+  padding: 0.5rem;
+}
+
 @media (min-width: 992px){
   .inventario-card{
     width: 30rem;
-    min-height: 10rem;
+    overflow-y:scroll;
+    height: 11.3rem;
     margin-top: 1.5rem;
     margin-left: 1.5rem;
   }

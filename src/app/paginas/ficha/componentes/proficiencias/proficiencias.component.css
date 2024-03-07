@@ -1,10 +1,11 @@
 .proficiencia-card{
   margin: 2rem auto;
-  min-height: 10rem;
+  height: 19rem;
+  overflow-y: scroll;
 }
 .expandir-header{
   background: transparent;
-  padding-left: 0.5rem;
+  padding-left: 0.7rem;
   width: 2rem;
 }
 .expandir{
@@ -31,6 +32,9 @@
 .campos{
   margin-bottom: 1rem;
 }
+.campo-span{
+  padding: 0.5rem;
+}
 .botao-expandir{
   width: 1.5rem;
   height: 1.5rem;
@@ -38,17 +42,25 @@
 }
 
 :host ::ng-deep .linha-proficiencia{
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+:host ::ng-deep .nome-proficiencia{
+  width: 6rem;
+  padding: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 :host ::ng-deep .atributo-proficiencia{
   width: 2rem;
   text-align: center;
-  padding: 4px;
+}
+:host ::ng-deep .tipo-proficiencia{
+  width: 5rem;
+  padding: 0.5rem;
 }
 
 @media(min-width: 992px){
