@@ -23,7 +23,6 @@ Currently, the project is at the 30% development stage, and I am targeting to co
 * Adicionar atualização de armas ao alterar nivel
 
 * Adicionar Inventario
-  - Função de adicionar nome do item, descrição breve e valor
   - Adição de carteira
     
 * Criação da pagina Habilidades
