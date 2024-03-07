@@ -275,7 +275,6 @@ export class AtributosService {
         this.pericias[pericia].atributo =
           this.atributos['forca'].modificador +
           this.pericias[pericia].valorGrau;
-        console.log('DEU MUITO RUIM')
         } else {
           this.pericias[pericia].atributo =
             this.atributos['forca'].modificador +

@@ -18,15 +18,17 @@ export class CarregarService {
     carregar(){
 
       let personagem = localStorage.getItem('personagem');
-      let atributos = localStorage.getItem('atributos')
+      let atributos = localStorage.getItem('atributos');
       let pericias = localStorage.getItem('pericias');
+      let ataques = localStorage.getItem('ataques');
 
-      if(personagem === null || atributos === null || pericias === null){
+      if(personagem === null || atributos === null || pericias === null || ataques === null){
         console.log('personagem não existe');
       } else{
         this.AtributosService.personagem = JSON.parse(personagem);
         this.AtributosService.atributos = JSON.parse(atributos);
         this.AtributosService.pericias = JSON.parse(pericias);
+        this.AtaquesService.ataques = JSON.parse(ataques);
       }
 
       Object.keys(this.AtributosService.pericias).forEach((pericia)=>{

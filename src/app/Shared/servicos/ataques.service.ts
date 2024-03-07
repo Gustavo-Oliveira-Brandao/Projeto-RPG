@@ -10,40 +10,45 @@ export class AtaquesService {
 
   ataques: any= [];
 
-  adicionarAoObjeto(nome: string, atributo: string, bonusProficiencia: number, quantidadeDados: number, dadoDano: number, tipo: string, valorGrau: number) {
+  adicionarAoArray(nomeAtaque: string, danoAtaque: string, tipoAtaque: string, atributoAtaque: string, grauAtaque: string, qntdAcaoAtaque: string){
     let bonus;
     let modificadorDano = 0;
+    let danoAtaqueChar = danoAtaque.split('d')
+    let qntdDados = danoAtaqueChar[0]
+    let dano = danoAtaqueChar[1]
 
-    if (atributo === this.AtributosService.atributos['forca'].id) {
-      if(bonusProficiencia > 0){
+    let bonusProficiencia = this.AtributosService.grauTreinamento(grauAtaque)
+
+    if (atributoAtaque=== this.AtributosService.atributos['forca'].id) {
+      if(grauAtaque !== 'destreinado'){
         bonus = this.AtributosService.atributos['forca'].modificador + bonusProficiencia + this.AtributosService.personagem.nivel.atributo
       } else {
         bonus = this.AtributosService.atributos['forca'].modificador + bonusProficiencia
       }
       modificadorDano = this.AtributosService.atributos['forca'].modificador
-    } else if (atributo === this.AtributosService.atributos['destreza'].id) {
-      if(bonusProficiencia > 0) {
+    } else if (atributoAtaque=== this.AtributosService.atributos['destreza'].id) {
+      if(grauAtaque !== 'destreinado') {
         bonus = this.AtributosService.atributos['destreza'].modificador + bonusProficiencia + this.AtributosService.personagem.nivel.atributo
       } else {
         bonus = this.AtributosService.atributos['forca'].modificador + bonusProficiencia
       }
       modificadorDano = this.AtributosService.atributos['destreza'].modificador
-    } else if (atributo === this.AtributosService.atributos['inteligencia'].id) {
-      if(bonusProficiencia > 0) {
+    } else if (atributoAtaque=== this.AtributosService.atributos['inteligencia'].id) {
+      if(grauAtaque !== 'destreinado') {
         bonus = this.AtributosService.atributos['inteligencia'].modificador + bonusProficiencia + this.AtributosService.personagem.nivel.atributo
       } else {
         bonus = this.AtributosService.atributos['forca'].modificador + bonusProficiencia
       }
       modificadorDano = this.AtributosService.atributos['inteligencia'].modificador
-    } else if (atributo === this.AtributosService.atributos['sabedoria'].id) {
-      if(bonusProficiencia > 0) {
+    } else if (atributoAtaque=== this.AtributosService.atributos['sabedoria'].id) {
+      if(grauAtaque !== 'destreinado') {
         bonus = this.AtributosService.atributos['sabedoria'].modificador + bonusProficiencia + this.AtributosService.personagem.nivel.atributo
       } else {
         bonus = this.AtributosService.atributos['forca'].modificador + bonusProficiencia
       }
       modificadorDano = this.AtributosService.atributos['sabedoria'].modificador
-    } else if (atributo === this.AtributosService.atributos['carisma'].id) {
-      if(bonusProficiencia > 0) {
+    } else if (atributoAtaque=== this.AtributosService.atributos['carisma'].id) {
+      if(grauAtaque !== 'destreinado') {
         bonus = this.AtributosService.atributos['carisma'].modificador + bonusProficiencia + this.AtributosService.personagem.nivel.atributo
       } else {
         bonus = this.AtributosService.atributos['forca'].modificador + bonusProficiencia
@@ -53,21 +58,30 @@ export class AtaquesService {
       bonus = bonusProficiencia
     }
 
+    let textoDano = qntdDados + "d" + dano + " " + tipoAtaque
     this.AtributosService.atualizar();
 
-    this.ataques[nome] = {
-      nome,
-      atributo,
-      bonus,
-      modificadorDano,
-      quantidadeDados,
-      dadoDano,
-      tipo,
-      valorGrau
-    };
+    let ataque = {
+      id: nomeAtaque,
+      bonus: bonus,
+      qntdDados: qntdDados,
+      dano: dano,
+      tipoAtaque: tipoAtaque,
+      textoDano: textoDano,
+      atributoAtaque: atributoAtaque,
+      grauAtaque: grauAtaque,
+      qntdAcaoAtaque: qntdAcaoAtaque,
+    }
 
-    console.log(this.ataques)
+    this.ataques.push(ataque)
 
-    return bonus;
+    console.log(this.ataques[0])
+
+    try{
+      console.log(this.ataques[1])
+    } catch(e){
+      console.log("Nao tem segundo ataque")
+    }
+
   }
 }

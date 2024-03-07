@@ -3,70 +3,105 @@
   <div class="acoes-card borda-10px background-cards">
     <h3 class="titulos-acoes">Ataques/Magias</h3>
     <div class="linha-ataque">
-    <h4 class="ataque">Nome</h4>
-    <h4 class="bonus">ATQ</h4>
-    <h4 class="dano">Dano/Tipo</h4>
+      <h4 class="ataque">Nome</h4>
+      <h4 class="bonus">ATQ</h4>
+      <h4 class="dano">Dano/Tipo</h4>
       <h4 class="qntd">Ações</h4>
-  </div>
+    </div>
 
-  <div id="ataques">
-    @for(ataque of AtaquesService.ataques){
+    <div id="ataques">
+      @for(ataque of AtaquesService.ataques; track AtaquesService.ataques.id){
       <div class="linha-ataque">
-        <button class="ataque vt323 background-input-botao">{{  }}</button>
-        <button class="bonus vt323 background-input-botao">+5</button>
-        <button class="dano vt323 background-input-botao">2d6/Cortante</button>
-        <span class="qntd background-input-botao">2</span>
+        <button class="ataque vt323 background-input-botao borda-4px-ataques">
+          {{ ataque.id }}
+        </button>
+        <button class="bonus vt323 background-input-botao borda-4px-ataques">
+          {{ ataque.bonus }}
+        </button>
+        <button class="dano vt323 background-input-botao borda-4px-ataques">
+          {{ ataque.textoDano }}
+        </button>
+        <span class="qntd background-input-botao borda-4px-ataques">{{ ataque.qntdAcaoAtaque }}</span>
       </div>
-    }
+      }
+    </div>
 
+    <mat-expansion-panel
+      [(expanded)]="panelOpenState"
+      hideToggle
+      class="expandir mat-elevation-z0"
+    >
+      <mat-expansion-panel-header class="expandir-header">
+        <button class="vt323 borda-4px-ataques botao-expandir">+</button>
+      </mat-expansion-panel-header>
+      <div class="campos">
+        <h4 class="vt323">Nome</h4>
+        <input
+          id="input-ataque"
+          class="vt323 background-input-botao borda-4px-ataques"
+          placeholder="Nome da ação"
+        />
+      </div>
+      <div class="">
+        <h4 class="vt323">Dano</h4>
+        <input
+          id="input-dano"
+          class="vt323 background-input-botao borda-4px-ataques"
+          placeholder="1d6"
+        />
+      </div>
+      <div class="campos">
+        <h4 class="vt323">Tipo de dano</h4>
+        <input
+          id="input-tipo"
+          class="vt323 background-input-botao borda-4px-ataques"
+          placeholder="Cortante"
+        />
+      </div>
+      <div class="campos">
+        <h4 class="vt323">Atributo</h4>
+        <select
+          id="atributo-ataque"
+          class="caixa-selecao background-input-botao borda-4px-ataques vt323"
+        >
+          <option value="default">-</option>
+          <option value="forca">For</option>
+          <option value="destreza">Des</option>
+          <option value="inteligencia">Int</option>
+          <option value="Sabedoria">Sab</option>
+          <option value="Carisma">Car</option>
+        </select>
+      </div>
+      <div class="campos">
+        <h4 class="vt323">Grau</h4>
+        <select
+          id="grau-ataque"
+          class="caixa-selecao background-input-botao borda-4px-ataques vt323"
+        >
+          <option value="destreinado">D</option>
+          <option value="treinado">T</option>
+          <option value="especialista">E</option>
+          <option value="mestre">M</option>
+          <option value="lendario">L</option>
+        </select>
+      </div>
+      <div class="campos">
+        <h4 class="vt323">Qntd de ações</h4>
+        <select
+          id="qntd-acao"
+          class="caixa-selecao background-input-botao borda-4px-ataques vt323"
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <button
+        class="vt323 borda-4px-ataques botao-adicionar"
+        (click)="adicionarAtaque()"
+      >
+        Adicionar
+      </button>
+    </mat-expansion-panel>
   </div>
-
-  <mat-expansion-panel [(expanded)]="panelOpenState" hideToggle class="expandir mat-elevation-z0">
-    <mat-expansion-panel-header class="expandir-header">
-    <button class="vt323 borda-4px-ataques botao-expandir">+</button>
-  </mat-expansion-panel-header>
-    <div class="campos">
-      <h4 class="vt323">Nome</h4>
-      <input id="input-ataque" class="vt323 background-input-botao borda-4px-ataques" placeholder="Nome da ação">
-    </div>
-    <div class="">
-      <h4 class="vt323">Dano</h4>
-      <input id="input-dano" class="vt323 background-input-botao borda-4px-ataques" placeholder="1d6" />
-    </div>
-    <div class="campos">
-    <h4 class="vt323">Tipo de dano</h4>
-    <input id="input-tipo" class="vt323 background-input-botao borda-4px-ataques" placeholder="Cortante"/>
-    </div>
-    <div class="campos">
-      <h4 class="vt323">Atributo</h4>
-    <select id="atributo-ataque" class="caixa-selecao background-input-botao borda-4px-ataques vt323">
-      <option value="default">-</option>
-      <option value="forca">For</option>
-      <option value="destreza">Des</option>
-      <option value="inteligencia">Int</option>
-      <option value="Sabedoria">Sab</option>
-      <option value="Carisma">Car</option>
-    </select>
-      </div>
-    <div class="campos">
-    <h4 class="vt323">Grau</h4>
-    <select id="grau-ataque" class="caixa-selecao background-input-botao borda-4px-ataques vt323">
-      <option value="destreinado">D</option>
-      <option value="treinado">T</option>
-      <option value="especialista">E</option>
-      <option value="mestre">M</option>
-      <option value="lendario">L</option>
-    </select>
-    </div>
-    <div class="campos">
-      <h4 class="vt323">Qntd de ações</h4>
-      <select id="qntd-acao" class="caixa-selecao background-input-botao borda-4px-ataques vt323">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-    </div>
-    <button class="vt323 borda-4px-ataques botao-adicionar" (click)="adicionarAtaque();">Adicionar</button>
-</mat-expansion-panel>
-</div>
 </div>
